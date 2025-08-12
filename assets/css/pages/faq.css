@@ -1,0 +1,201 @@
+/* FAQ Page Loading States */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity var(--transition-smooth);
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-content p {
+    margin-top: 1rem;
+    color: var(--text-medium);
+}
+
+.faq-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+
+.faq-loading .loading-spinner {
+    margin-bottom: 1rem;
+}
+
+/* FAQ Enhancement Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* FAQ Search Enhancements */
+.search-input-container {
+    position: relative;
+}
+
+.search-input-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    right: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-light), var(--secondary-light));
+    transform: scaleX(0);
+    transition: transform var(--transition-smooth);
+    transform-origin: center;
+}
+
+.faq-search .form-control:focus + .search-input-container::after,
+.faq-search .form-control:not(:placeholder-shown) + .search-input-container::after {
+    transform: scaleX(1);
+}
+
+/* Category Button Enhancements */
+.category-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.category-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.category-btn:hover::before {
+    left: 100%;
+}
+
+/* FAQ Item Enhancements */
+.faq-item {
+    position: relative;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-light), var(--secondary-light));
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.faq-item.active::before {
+    opacity: 1;
+}
+
+/* Highlight search matches */
+mark {
+    background: linear-gradient(120deg, rgba(var(--primary-light-rgb), 0.3) 0%, rgba(var(--secondary-light-rgb), 0.3) 100%);
+    color: inherit;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* CTA Button Enhancements */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    min-width: 160px;
+}
+
+/* Accessibility Improvements */
+.faq-question:focus-visible {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+.category-btn:focus-visible {
+    outline: 2px solid var(--primary-light);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .faq-search,
+    .faq-categories,
+    .faq-contact-cta,
+    .navbar,
+    .footer {
+        display: none !important;
+    }
+    
+    .faq-item {
+        break-inside: avoid;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+    }
+    
+    .faq-answer {
+        max-height: none !important;
+        padding: 15px !important;
+    }
+    
+    .faq-item.active .faq-answer,
+    .faq-answer {
+        display: block !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .glass-card {
+        background: var(--background-light);
+        border: 2px solid var(--text-dark);
+    }
+    
+    .category-btn {
+        border-width: 2px;
+    }
+    
+    .faq-question {
+        border-bottom: 1px solid var(--text-dark);
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up,
+    .faq-item,
+    .category-btn,
+    .faq-question-icon {
+        animation: none !important;
+        transition: none !important;
+    }
+}
