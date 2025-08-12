@@ -351,3 +351,228 @@ class ContactForm {
         if (submitBtn) {
             submitBtn.disabled = true;
             submitBtn.textContent =
+                            submitBtn.textContent = 'Sending...';
+            submitBtn.classList.add('loading');
+        }
+        
+        this.form.classList.add('form-submitting');
+        
+        try {
+            // Collect all form data
+            const formData = this.collectFormData();
+            
+            // Validate complete form
+            if (!this.validateCompleteForm(formData)) {
+                throw new Error('Please check all required fields');
+            }
+            
+            // Submit form
+            await this.submitForm(formData);
+            
+            // Clear saved data
+            localStorage.removeItem('contactFormData');
+            
+            // Show success
+            this.showSuccess();
+            
+        } catch (error) {
+            Utils.error('Form submission error:', error);
+            this.showError(error.message);
+        } finally {
+            // Reset loading state
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+                submitBtn.classList.remove('loading');
+            }
+            this.form.classList.remove('form-submitting');
+        }
+    }
+
+    collectFormData() {
+        const data = { ...this.formData };
+        
+        // Collect any remaining data from current step
+        const inputs = Utils.$$('input, select, textarea', this.form);
+        inputs.forEach(input => {
+            if (input.type === 'checkbox') {
+                if (input.name === 'additionalServices') {
+                    if (!data.additionalServices) data.additionalServices = [];
+                    if (input.checked && !data.additionalServices.includes(input.value)) {
+                        data.additionalServices.push(input.value);
+                    }
+                } else if (input.checked) {
+                    data[input.name] = input.value;
+                }
+            } else if (input.type === 'radio') {
+                if (input.checked) {
+                    data[input.name] = input.value;
+                }
+            } else {
+                data[input.name] = input.value;
+            }
+        });
+        
+        // Add metadata
+        data.timestamp = new Date().toISOString();
+        data.userAgent = navigator.userAgent;
+        data.referrer = document.referrer;
+        data.currentUrl = window.location.href;
+        
+        return data;
+    }
+
+    validateCompleteForm(data) {
+        const required = ['firstName', 'lastName', 'email', 'serviceType', 'projectDescription', 'consent'];
+        
+        for (const field of required) {
+            if (!data[field]) {
+                Utils.error(`Required field missing: ${field}`);
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+    async submitForm(data) {
+        // Simulate API call - replace with your actual endpoint
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: JSON.stringify(data)
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Failed to send message');
+        }
+        
+        return await response.json();
+    }
+
+    showSuccess() {
+        const modal = Utils.$('#success-modal');
+        if (modal) {
+            modal.style.display = 'flex';
+            
+            // Auto-close after 5 seconds
+            setTimeout(() => {
+                this.closeSuccess();
+            }, 5000);
+            
+            // Close button
+            Utils.on('#close-success', 'click', () => this.closeSuccess());
+            
+            // Close on escape
+            Utils.on(document, 'keydown', (e) => {
+                if (e.key === 'Escape') {
+                    this.closeSuccess();
+                }
+            });
+        }
+        
+        // Reset form
+        this.resetForm();
+        
+        // Track success event
+        this.trackEvent('contact_form_submitted');
+    }
+
+    closeSuccess() {
+        const modal = Utils.$('#success-modal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    showError(message) {
+        // Create error notification
+        const notification = document.createElement('div');
+        notification.className = 'error-notification';
+        notification.innerHTML = `
+            <div class="notification-content">
+                <div class="notification-icon">❌</div>
+                <div class="notification-message">${message}</div>
+                <button class="notification-close">&times;</button>
+            </div>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 5000);
+        
+        // Close button
+        const closeBtn = notification.querySelector('.notification-close');
+        Utils.on(closeBtn, 'click', () => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        });
+        
+        // Track error event
+        this.trackEvent('contact_form_error', { error: message });
+    }
+
+    resetForm() {
+        // Reset to step 1
+        this.currentStep = 1;
+        this.showStep(1);
+        
+        // Clear form data
+        this.formData = {};
+        
+        // Reset form fields
+        this.form.reset();
+        
+        // Clear service selector
+        const serviceOptions = Utils.$$('.service-option');
+        serviceOptions.forEach(opt => opt.classList.remove('active'));
+        
+        // Clear errors
+        const errorEls = Utils.$$('.form-error');
+        errorEls.forEach(el => {
+            el.textContent = '';
+            el.classList.remove('show');
+        });
+        
+        const inputEls = Utils.$$('.form-input, .form-select, .form-textarea');
+        inputEls.forEach(el => el.classList.remove('error'));
+    }
+
+    trackEvent(eventName, data = {}) {
+        // Google Analytics 4
+        if (typeof gtag !== 'undefined') {
+            gtag('event', eventName, {
+                event_category: 'Contact Form',
+                ...data
+            });
+        }
+        
+        // Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', eventName, data);
+        }
+        
+        // Custom tracking
+        if (window.customTracker) {
+            window.customTracker.track(eventName, data);
+        }
+    }
+}
+
+// Initialize when DOM is loaded
+Utils.onReady(() => {
+    new ContactForm();
+});
+
+export default ContactForm;
+
