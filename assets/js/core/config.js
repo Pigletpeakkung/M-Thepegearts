@@ -8,9 +8,11 @@ Central configuration for the entire portfolio
 export const CONFIG = {
     // Application Info
     app: {
-        name: 'Thanatsitt Portfolio',
+        name: 'Thanattsitt Portfolio',
         version: '2.0.0',
-        author: 'Thanatsitt Santisamranwilai'
+        author: 'Thanattsitt Santisamranwilai',
+        domain: 'pegearts.com',
+        email: 'Thanattsitt.info@yahoo.co.uk'
     },
 
     // Performance Settings
@@ -46,7 +48,7 @@ export const CONFIG = {
 
     // Theme Settings
     theme: {
-        storageKey: 'portfolio-theme',
+        storageKey: 'pegearts-theme',
         defaultTheme: 'light',
         transitionDuration: 300,
         systemPreference: true
@@ -61,7 +63,8 @@ export const CONFIG = {
                     'Digital Innovator', 
                     'Machine Learning Engineer',
                     'Creative Technologist',
-                    'Voice Actor & Producer'
+                    'Voice Actor & Producer',
+                    'Art Director'
                 ],
                 speed: 80,
                 deleteSpeed: 50,
@@ -97,13 +100,24 @@ export const CONFIG = {
 
     // API Settings
     api: {
-        baseUrl: process.env.NODE_ENV === 'production' ? 'https://api.thanatsitt.com' : 'http://localhost:3001',
+        baseUrl: process.env.NODE_ENV === 'production' ? 'https://pegearts.com' : 'http://localhost:3001',
         endpoints: {
             contact: '/api/contact',
             portfolio: '/api/portfolio',
             testimonials: '/api/testimonials'
         },
         timeout: 10000
+    },
+
+    // Social Links (Updated with correct data)
+    social: {
+        linkedin: 'https://www.linkedin.com/in/thanattsitt-s',
+        github: 'https://github.com/Pigletpeakkung',
+        email: 'Thanattsitt.info@yahoo.co.uk',
+        threads: 'https://www.threads.net/@thanattsitt.s',
+        linktree: 'https://linktr.ee/ThanttEzekiel',
+        paypal: 'https://paypal.me/@thanattsittS',
+        buymeacoffee: 'https://buymeacoffee.com/thanattsitts'
     },
 
     // Feature Flags
@@ -116,7 +130,7 @@ export const CONFIG = {
         animations: true
     },
 
-    // Breakpoints (matches CSS)
+    // Breakpoints
     breakpoints: {
         xs: 0,
         sm: 576,
@@ -124,14 +138,6 @@ export const CONFIG = {
         lg: 992,
         xl: 1200,
         xxl: 1400
-    },
-
-    // Social Links
-    social: {
-        linkedin: 'https://linkedin.com/in/thanatsitt',
-        github: 'https://github.com/thanatsitt',
-        email: 'hello@thanatsitt.com',
-        phone: '+1-xxx-xxx-xxxx'
     },
 
     // Error Messages
@@ -154,23 +160,17 @@ if (typeof window !== 'undefined') {
     // Browser-specific config
     CONFIG.browser = {
         supportsIntersectionObserver: 'IntersectionObserver' in window,
-        supportsWebP: checkWebPSupport(),
-        supportsServiceWorker: 'serviceWorker' in navigator,
-        isMobile: /Mobi|Android/i.test(navigator.userAgent),
+        supportsWebP: false, // Will be detected dynamically
+        isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
         isTouch: 'ontouchstart' in window
     };
+
+    // Detect WebP support
+    const webP = new Image();
+    webP.onload = webP.onerror = function() {
+        CONFIG.browser.supportsWebP = webP.height === 2;
+    };
+    webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
 }
 
-// Utility function to check WebP support
-function checkWebPSupport() {
-    const canvas = document.createElement('canvas');
-    canvas.width = 1;
-    canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-}
-
-// Export individual modules for tree-shaking
-export const ANIMATIONS = CONFIG.animations;
-export const THEME = CONFIG.theme;
-export const PAGES = CONFIG.pages;
-export const FEATURES = CONFIG.features;
+export default CONFIG;
