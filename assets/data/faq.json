@@ -1,0 +1,97 @@
+{
+  "categories": [
+    {
+      "id": "ai",
+      "name": "AI & Machine Learning",
+      "description": "Questions about artificial intelligence and machine learning services",
+      "faqs": [
+        {
+          "id": "ai-training-approach",
+          "question": "How do you approach AI training projects?",
+          "answer": "I follow a structured methodology for AI training projects:\n\n<ul><li><strong>Data Analysis:</strong> Comprehensive data quality assessment and preprocessing</li><li><strong>Model Selection:</strong> Choosing appropriate algorithms based on project requirements</li><li><strong>Training Strategy:</strong> Iterative training with validation and optimization</li><li><strong>Performance Monitoring:</strong> Continuous evaluation and improvement</li><li><strong>Deployment:</strong> Scalable deployment with monitoring systems</li></ul>\n\nEach project is tailored to specific business needs and technical requirements.",
+          "tags": ["ai", "training", "methodology", "machine-learning"],
+          "priority": 1,
+          "lastUpdated": "2024-01-15"
+        },
+        {
+          "id": "ai-model-types",
+          "question": "What types of AI models can you develop?",
+          "answer": "I specialize in developing various types of AI models:\n\n<ul><li><strong>Computer Vision:</strong> Image classification, object detection, facial recognition</li><li><strong>Natural Language Processing:</strong> Text analysis, sentiment analysis, chatbots</li><li><strong>Generative AI:</strong> Image generation, text generation, creative applications</li><li><strong>Recommendation Systems:</strong> Personalized content and product recommendations</li><li><strong>Predictive Analytics:</strong> Forecasting, trend analysis, business intelligence</li></ul>\n\nI work with modern frameworks like TensorFlow, PyTorch, and various cloud AI services.",
+          "tags": ["ai", "models", "computer-vision", "nlp", "generative-ai"],
+          "priority": 2,
+          "lastUpdated": "2024-01-10"
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Creative Design",
+      "description": "Questions about graphic design, web design, and creative services",
+      "faqs": [
+        {
+          "id": "design-tools",
+          "question": "What design tools and software do you use?",
+          "answer": "My design toolkit includes industry-standard software and cutting-edge AI tools:\n\n<ul><li><strong>Adobe Creative Suite:</strong> Photoshop, Illustrator, After Effects, Premiere Pro</li><li><strong>3D & Motion:</strong> Blender, Cinema 4D, DaVinci Resolve</li><li><strong>AI Design Tools:</strong> Midjourney, DALL-E, Stable Diffusion, RunwayML</li><li><strong>UI/UX:</strong> Figma, Adobe XD, Sketch</li><li><strong>Web Development:</strong> VS Code, GitHub, various frameworks</li></ul>\n\nI constantly explore new tools to stay at the forefront of creative technology.",
+          "tags": ["design", "tools", "software", "adobe", "ai-tools"],
+          "priority": 1,
+          "lastUpdated": "2024-01-12"
+        },
+        {
+          "id": "design-process",
+          "question": "What is your design process?",
+          "answer": "My design process is collaborative and iterative:\n\n<ul><li><strong>Discovery:</strong> Understanding brand, audience, and objectives</li><li><strong>Research:</strong> Market analysis, competitor review, trend research</li><li><strong>Concept Development:</strong> Initial ideas, mood boards, style exploration</li><li><strong>Design Creation:</strong> Developing concepts into polished designs</li><li><strong>Feedback & Refinement:</strong> Client collaboration and iterative improvements</li><li><strong>Final Delivery:</strong> Complete asset package with usage guidelines</li></ul>\n\nI ensure every project aligns with your brand vision and business goals.",
+          "tags": ["design", "process", "workflow", "collaboration"],
+          "priority": 2,
+          "lastUpdated": "2024-01-08"
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "Voice Acting",
+      "description": "Questions about voice-over services and audio production",
+      "faqs": [
+        {
+          "id": "voice-acting-experience",
+          "question": "What is your experience in voice acting?",
+          "answer": "I have extensive experience in voice acting across multiple domains:\n\n<ul><li><strong>Commercial Voice-over:</strong> Product advertisements, corporate presentations</li><li><strong>Character Voices:</strong> Animation, gaming, interactive media</li><li><strong>Narration:</strong> Educational content, documentaries, audiobooks</li><li><strong>AI Voice Training:</strong> Creating datasets for AI voice synthesis</li><li><strong>Multilingual Work:</strong> English and Thai voice-over services</li></ul>\n\nMy technical background allows me to optimize recordings for both traditional media and AI training applications.",
+          "tags": ["voice-acting", "narration", "commercial", "multilingual"],
+          "priority": 1,
+          "lastUpdated": "2024-01-14"
+        },
+        {
+          "id": "voice-equipment",
+          "question": "What equipment do you use for voice recording?",
+          "answer": "I use professional-grade equipment for high-quality recordings:\n\n<ul><li><strong>Microphones:</strong> Neumann U87, Audio-Technica AT4040, Shure SM7B</li><li><strong>Audio Interface:</strong> Focusrite Scarlett series, RME Babyface</li><li><strong>Monitoring:</strong> Studio monitors and reference headphones</li><li><strong>Acoustic Treatment:</strong> Professionally treated recording space</li><li><strong>Software:</strong> Pro Tools, Adobe Audition, Logic Pro</li></ul>\n\nAll recordings are delivered in broadcast-quality standards with professional post-production.",
+          "tags": ["voice", "equipment", "recording", "professional"],
+          "priority": 2,
+          "lastUpdated": "2024-01-11"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "name": "Services & Pricing",
+      "description": "Questions about services offered, pricing, and project management",
+      "faqs": [
+        {
+          "id": "project-timeline",
+          "question": "What are typical project timelines?",
+          "answer": "Project timelines vary based on scope and complexity:\n\n<ul><li><strong>AI Model Training:</strong> 2-8 weeks depending on data complexity</li><li><strong>Web Design/Development:</strong> 1-6 weeks for complete websites</li><li><strong>Graphic Design Projects:</strong> 1-3 weeks for comprehensive branding</li><li><strong>Voice-over Work:</strong> 1-5 days for most commercial projects</li><li><strong>Consultation & Strategy:</strong> 1-2 weeks for detailed analysis</li></ul>\n\nI always provide detailed project timelines during the initial consultation phase.",
+          "tags": ["timeline", "project-management", "planning"],
+          "priority": 1,
+          "lastUpdated": "2024-01-13"
+        },
+        {
+          "id": "collaboration-process",
+          "question": "How do you collaborate with clients?",
+          "answer": "My collaboration process is designed for transparency and efficiency:\n\n<ul><li><strong>Initial Consultation:</strong> Understanding goals and requirements</li><li><strong>Proposal & Planning:</strong> Detailed project scope and timeline</li><li><strong>Regular Updates:</strong> Weekly progress reports and milestone reviews</li><li><strong>Feedback Integration:</strong> Iterative refinement based on client input</li><li><strong>Final Delivery:</strong> Complete handover with documentation</li></ul>\n\nI use modern collaboration tools and maintain open communication throughout the project lifecycle.",
+          "tags": ["collaboration", "process", "communication", "project-management"],
+          "priority": 1,
+          "lastUpdated": "2024-01-09"
+        },
+        {
+          "id": "pricing-structure",
+          "question": "How is your pricing structured?",
+          "answer": "My pricing is transparent and project-based:\n\n<ul><li><strong>Fixed Project Rates:</strong> Clear pricing for defined scope and deliverables</li><li><strong>Hourly Consultation:</strong> $150-200/hour for advisory work</li><li><strong>Retainer Packages:</strong> Monthly packages for ongoing support</li><li><strong>Custom Quotes:</strong> Tailored pricing for unique or complex projects</li></ul>\n\nAll quotes include detailed breakdowns and no hidden fees. Payment plans available for larger projects.",
+          "tags": ["pricing", "
