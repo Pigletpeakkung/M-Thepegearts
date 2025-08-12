@@ -1,457 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="auto">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found - Moonlit Portfolio</title>
-    <meta name="description" content="The page you're looking for couldn't be found. Return to the moonlit journey.">
+    <title>404 - Page Not Found | Thanattsitt Santisamranwilai</title>
+    <meta name="description" content="Oops! The page you're looking for seems to have wandered off into the digital void. Let's help you find your way back.">
     <meta name="robots" content="noindex, nofollow">
     
-    <!-- Preload Critical Resources -->
-    <link rel="preload" href="src/styles/404.css" as="style">
-    
-    <!-- Font preconnection for faster loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Inter Variable Font with async loading -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"></noscript>
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="src/styles/variables.css">
-    <link rel="stylesheet" href="src/styles/404.css">
-    
-    <!-- PWA Meta Tags -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#A78BFA">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    
     <!-- Open Graph -->
-    <meta property="og:title" content="Page Not Found - Moonlit Portfolio">
-    <meta property="og:description" content="Lost in space? Let's navigate you back to the moonlit portfolio.">
+    <meta property="og:title" content="404 - Page Not Found">
+    <meta property="og:description" content="Lost in the digital space? Let's navigate back together.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourportfolio.com/404">
-    <meta property="og:image" content="https://yourportfolio.com/assets/images/404/og-404.png">
+    <meta property="og:image" content="/assets/images/404-og-image.jpg">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Page Not Found - Moonlit Portfolio">
-    <meta name="twitter:description" content="Lost in space? Let's navigate you back home.">
-    <meta name="twitter:image" content="https://yourportfolio.com/assets/images/404/twitter-404.png">
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="alternate icon" href="/assets/images/favicon.ico">
     
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "404 - Page Not Found",
-        "description": "The requested page could not be found.",
-        "url": "https://yourportfolio.com/404",
-        "isPartOf": {
-            "@type": "WebSite",
-            "name": "Moonlit Portfolio",
-            "url": "https://yourportfolio.com"
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/assets/css/critical.css" as="style">
+    <link rel="preload" href="/assets/css/pages/404.css" as="style">
+    <link rel="preload" href="/assets/js/components/404-handler.js" as="script">
+    
+    <!-- Critical CSS (Inline) -->
+    <style>
+        /* Critical 404 styles for immediate render */
+        :root {
+            --primary-color: #007bff;
+            --background-primary: #ffffff;
+            --text-primary: #212529;
+            --error-color: #dc3545;
+            --warning-color: #ffc107;
         }
-    }
-    </script>
+        
+        [data-theme="dark"] {
+            --background-primary: #121212;
+            --text-primary: #ffffff;
+        }
+        
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+        
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .error-code {
+            font-size: clamp(4rem, 15vw, 12rem);
+            font-weight: 900;
+            line-height: 0.8;
+            background: linear-gradient(135deg, var(--primary-color), var(--error-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+        
+        .loading-placeholder {
+            height: 2rem;
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+    
+    <!-- Load CSS -->
+    <link rel="stylesheet" href="/assets/css/critical.css">
+    <link rel="stylesheet" href="/assets/css/components/theme-manager.css">
+    <link rel="stylesheet" href="/assets/css/pages/404.css">
 </head>
-<body class="error-404">
+<body class="error-page">
     <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <!-- Header -->
-    <header class="header" role="banner">
-        <nav class="header__navbar" role="navigation" aria-label="Main navigation">
-            <div class="container">
-                <div class="navbar-content">
-                    <a href="/" class="navbar-brand logo" aria-label="Return to Moonlit Portfolio home">
-                        <span class="logo-icon" aria-hidden="true">🌙</span>
-                        <span class="logo-text">Moonlit</span>
-                    </a>
-                    
-                    <div class="nav-links">
-                        <a href="/" class="nav-link" data-section="home">
-                            <span class="nav-icon" aria-hidden="true">🏠</span>
-                            <span class="nav-text">Home</span>
-                        </a>
-                        <a href="/#about" class="nav-link" data-section="about">
-                            <span class="nav-icon" aria-hidden="true">👨‍💻</span>
-                            <span class="nav-text">About</span>
-                        </a>
-                        <a href="/#projects" class="nav-link" data-section="projects">
-                            <span class="nav-icon" aria-hidden="true">💼</span>
-                            <span class="nav-text">Projects</span>
-                        </a>
-                        <a href="/#contact" class="nav-link" data-section="contact">
-                            <span class="nav-icon" aria-hidden="true">📧</span>
-                            <span class="nav-text">Contact</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Theme Toggle -->
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
-                        <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀️</span>
-                        <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">🌙</span>
-                    </button>
-                    
-                    <!-- Mobile Menu Toggle -->
-                    <button class="hamburger" id="mobileMenuToggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-        
-        <!-- Mobile Menu Overlay -->
-        <div class="nav-overlay" id="navOverlay" role="presentation"></div>
-        
-        <!-- Mobile Menu -->
-        <div class="nav-menu" id="navMenu" role="navigation" aria-label="Mobile navigation">
-            <div class="nav-menu__content">
-                <a href="/" class="nav-menu__link" data-section="home">
-                    <span class="nav-menu__icon" aria-hidden="true">🏠</span>
-                    <span class="nav-menu__text">Home</span>
-                </a>
-                <a href="/#about" class="nav-menu__link" data-section="about">
-                    <span class="nav-menu__icon" aria-hidden="true">👨‍💻</span>
-                    <span class="nav-menu__text">About</span>
-                </a>
-                <a href="/#projects" class="nav-menu__link" data-section="projects">
-                    <span class="nav-menu__icon" aria-hidden="true">💼</span>
-                    <span class="nav-menu__text">Projects</span>
-                </a>
-                <a href="/#contact" class="nav-menu__link" data-section="contact">
-                    <span class="nav-menu__icon" aria-hidden="true">📧</span>
-                    <span class="nav-menu__text">Contact</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content" class="error-main" role="main">
-        <!-- Background Elements -->
-        <div class="error-background" aria-hidden="true">
-            <div class="stars-field">
-                <div class="star star--small"></div>
-                <div class="star star--medium"></div>
-                <div class="star star--large"></div>
-                <div class="star star--small"></div>
-                <div class="star star--medium"></div>
-                <div class="star star--large"></div>
-                <div class="star star--small"></div>
-                <div class="star star--medium"></div>
-                <div class="star star--large"></div>
-                <div class="star star--small"></div>
+    <!-- Theme Toggle -->
+    <div class="theme-controls">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">
+            <span class="theme-icon theme-icon-auto"></span>
+        </button>
+    </div>
+    
+    <!-- Background Animation -->
+    <div class="error-background" id="error-background">
+        <div class="floating-shapes" id="floating-shapes"></div>
+        <div class="grid-overlay" id="grid-overlay"></div>
+    </div>
+    
+    <!-- Main Error Content -->
+    <main id="main-content" class="error-container">
+        <div class="error-content">
+            <!-- Animated 404 -->
+            <div class="error-code-container">
+                <h1 class="error-code" id="error-code">404</h1>
+                <div class="error-glitch" id="error-glitch"></div>
             </div>
             
-            <div class="floating-moon" aria-hidden="true">
-                <svg class="moon-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="moonGradient" cx="0.3" cy="0.3">
-                            <stop offset="0%" style="stop-color: #FFF8DC;"/>
-                            <stop offset="70%" style="stop-color: #F0E68C;"/>
-                            <stop offset="100%" style="stop-color: #DDD;"/>
-                        </radialGradient>
-                        <filter id="moonGlow">
-                            <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-                            <feMerge>
-                                <feMergeNode in="coloredBlur"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                    </defs>
-                    <circle cx="100" cy="100" r="80" fill="url(#moonGradient)" filter="url(#moonGlow)"/>
-                    <ellipse cx="75" cy="60" rx="8" ry="6" fill="#DDD" opacity="0.7"/>
-                    <ellipse cx="120" cy="80" rx="12" ry="8" fill="#DDD" opacity="0.7"/>
-                    <ellipse cx="90" cy="130" rx="6" ry="4" fill="#DDD" opacity="0.7"/>
-                    <ellipse cx="130" cy="120" rx="10" ry="7" fill="#DDD" opacity="0.7"/>
-                </svg>
+            <!-- Dynamic Error Messages -->
+            <div class="error-messages">
+                <h2 class="error-title" id="error-title">
+                    <div class="loading-placeholder"></div>
+                </h2>
+                
+                <p class="error-description" id="error-description">
+                    <div class="loading-placeholder"></div>
+                </p>
+                
+                <div class="error-details" id="error-details">
+                    <div class="loading-placeholder"></div>
+                </div>
             </div>
-        </div>
-
-        <!-- Error Content -->
-        <div class="container">
-            <div class="error-content">
-                <!-- Error Illustration -->
-                <div class="error-illustration" role="img" aria-label="Lost astronaut floating in space">
-                    <div class="astronaut-container">
-                        <svg class="astronaut" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="helmetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color: #E6F3FF;"/>
-                                    <stop offset="100%" style="stop-color: #B3D9FF;"/>
-                                </linearGradient>
-                                <linearGradient id="suitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color: #F0F0F0;"/>
-                                    <stop offset="100%" style="stop-color: #D0D0D0;"/>
-                                </linearGradient>
-                            </defs>
-                            
-                            <!-- Astronaut Body -->
-                            <ellipse cx="200" cy="280" rx="60" ry="80" fill="url(#suitGradient)"/>
-                            
-                            <!-- Arms -->
-                            <ellipse cx="140" cy="250" rx="25" ry="50" fill="url(#suitGradient)" transform="rotate(-20 140 250)"/>
-                            <ellipse cx="260" cy="250" rx="25" ry="50" fill="url(#suitGradient)" transform="rotate(20 260 250)"/>
-                            
-                            <!-- Legs -->
-                            <ellipse cx="170" cy="350" rx="20" ry="40" fill="url(#suitGradient)"/>
-                            <ellipse cx="230" cy="350" rx="20" ry="40" fill="url(#suitGradient)"/>
-                            
-                            <!-- Helmet -->
-                            <circle cx="200" cy="180" r="70" fill="url(#helmetGradient)" opacity="0.8"/>
-                            <circle cx="200" cy="180" r="60" fill="none" stroke="#A78BFA" stroke-width="3"/>
-                            
-                            <!-- Face -->
-                            <circle cx="200" cy="180" r="45" fill="#FFDBAC"/>
-                            
-                            <!-- Eyes -->
-                            <ellipse cx="185" cy="170" rx="5" ry="8" fill="#333"/>
-                            <ellipse cx="215" cy="170" rx="5" ry="8" fill="#333"/>
-                            
-                            <!-- Mouth -->
-                            <path d="M 185 195 Q 200 205 215 195" stroke="#333" stroke-width="2" fill="none"/>
-                            
-                            <!-- Chest Controls -->
-                            <rect x="180" y="240" width="40" height="30" rx="5" fill="#4A5568"/>
-                            <circle cx="190" cy="255" r="3" fill="#68D391"/>
-                            <circle cx="200" cy="255" r="3" fill="#F56565"/>
-                            <circle cx="210" cy="255" r="3" fill="#4299E1"/>
+            
+            <!-- Interactive Search -->
+            <div class="search-section" id="search-section" style="display: none;">
+                <div class="search-container">
+                    <input type="search" 
+                           id="site-search" 
+                           class="search-input"
+                           placeholder="Search my portfolio..."
+                           autocomplete="off"
+                           spellcheck="false">
+                    <button class="search-button" type="button" id="search-button">
+                        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
                         </svg>
-                        
-                        <!-- Floating Elements -->
-                        <div class="floating-tools">
-                            <div class="tool tool-wrench">🔧</div>
-                            <div class="tool tool-satellite">🛰️</div>
-                            <div class="tool tool-rocket">🚀</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Error Text -->
-                <div class="error-text">
-                    <h1 class="error-code">
-                        <span class="error-digit error-digit--4">4</span>
-                        <span class="error-digit error-digit--0">0</span>
-                        <span class="error-digit error-digit--4">4</span>
-                    </h1>
-                    
-                    <h2 class="error-title">Houston, we have a problem!</h2>
-                    
-                    <p class="error-description">
-                        Looks like you've drifted into uncharted space. The page you're looking for 
-                        has floated away into the cosmic void. Don't worry, our mission control 
-                        is here to guide you back to safety.
-                    </p>
-                    
-                    <!-- Error Actions -->
-                    <div class="error-actions">
-                        <a href="/" class="button button--primary button--large" id="homeButton">
-                            <span class="button__icon" aria-hidden="true">🏠</span>
-                            <span class="button__text">Return to Base</span>
-                        </a>
-                        
-                        <button class="button button--secondary button--large" id="backButton">
-                            <span class="button__icon" aria-hidden="true">↩️</span>
-                            <span class="button__text">Go Back</span>
-                        </button>
-                        
-                        <button class="button button--ghost button--large" id="searchButton" data-modal="search">
-                            <span class="button__icon" aria-hidden="true">🔍</span>
-                            <span class="button__text">Search Site</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Helpful Links Section -->
-                <div class="error-suggestions">
-                    <h3 class="suggestions-title">Navigation Console</h3>
-                    <div class="suggestions-grid">
-                        <a href="/" class="suggestion-card">
-                            <div class="suggestion-icon" aria-hidden="true">🏠</div>
-                            <h4 class="suggestion-title">Home Base</h4>
-                            <p class="suggestion-desc">Return to the main mission control center</p>
-                        </a>
-                        
-                        <a href="/#about" class="suggestion-card">
-                            <div class="suggestion-icon" aria-hidden="true">👨‍🚀</div>
-                            <h4 class="suggestion-title">About Mission</h4>
-                            <p class="suggestion-desc">Learn about the astronaut behind the portfolio</p>
-                        </a>
-                        
-                        <a href="/#projects" class="suggestion-card">
-                            <div class="suggestion-icon" aria-hidden="true">🚀</div>
-                            <h4 class="suggestion-title">Space Projects</h4>
-                            <p class="suggestion-desc">Explore the portfolio of cosmic creations</p>
-                        </a>
-                        
-                        <a href="/#contact" class="suggestion-card">
-                            <div class="suggestion-icon" aria-hidden="true">📡</div>
-                            <h4 class="suggestion-title">Communication Hub</h4>
-                            <p class="suggestion-desc">Send a transmission to mission control</p>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Fun Facts Section -->
-                <div class="error-fun-facts" role="complementary" aria-labelledby="fun-facts-title">
-                    <h3 id="fun-facts-title" class="fun-facts-title">
-                        <span class="fun-facts-icon" aria-hidden="true">🌟</span>
-                        Space Facts While You're Here
-                    </h3>
-                    <div class="fun-fact" id="funFact">
-                        <p class="fun-fact-text">Loading cosmic knowledge...</p>
-                    </div>
-                    <button class="fun-fact-refresh" id="refreshFact" aria-label="Get new space fact">
-                        <span aria-hidden="true">🔄</span>
-                        <span>New Fact</span>
+                        <span class="sr-only">Search</span>
                     </button>
+                </div>
+                
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+            
+            <!-- Navigation Options -->
+            <div class="navigation-options" id="navigation-options" style="display: none;">
+                <div class="nav-grid">
+                    <!-- Home -->
+                    <a href="/" class="nav-card" data-page="home">
+                        <div class="nav-icon">🏠</div>
+                        <div class="nav-content">
+                            <h3>Home</h3>
+                            <p>Return to homepage</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Portfolio -->
+                    <a href="/portfolio" class="nav-card" data-page="portfolio">
+                        <div class="nav-icon">💼</div>
+                        <div class="nav-content">
+                            <h3>Portfolio</h3>
+                            <p>View my work</p>
+                        </div>
+                    </a>
+                    
+                    <!-- About -->
+                    <a href="/about" class="nav-card" data-page="about">
+                        <div class="nav-icon">👨‍💻</div>
+                        <div class="nav-content">
+                            <h3>About</h3>
+                            <p>Learn about me</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Contact -->
+                    <a href="/contact" class="nav-card" data-page="contact">
+                        <div class="nav-icon">📬</div>
+                        <div class="nav-content">
+                            <h3>Contact</h3>
+                            <p>Get in touch</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons" id="action-buttons" style="display: none;">
+                <button class="btn btn-primary" id="go-home">
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"/>
+                    </svg>
+                    Take Me Home
+                </button>
+                
+                <button class="btn btn-secondary" id="go-back">
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
+                    </svg>
+                    Go Back
+                </button>
+                
+                <button class="btn btn-outline" id="report-issue">
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="currentColor" d="M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z"/>
+                    </svg>
+                    Report Issue
+                </button>
+            </div>
+            
+            <!-- Footer Info -->
+            <div class="error-footer" id="error-footer" style="display: none;">
+                <div class="error-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Error Code:</span>
+                        <span class="stat-value">404</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Timestamp:</span>
+                        <span class="stat-value" id="error-timestamp"></span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Requested URL:</span>
+                        <span class="stat-value" id="requested-url"></span>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Search Modal -->
-    <div class="modal" id="searchModal" role="dialog" aria-labelledby="searchModalTitle" aria-hidden="true">
-        <div class="modal__backdrop"></div>
-        <div class="modal__content">
-            <div class="modal__header">
-                <h2 id="searchModalTitle" class="modal__title">
-                    <span class="modal__icon" aria-hidden="true">🔍</span>
-                    Search the Cosmic Portfolio
-                </h2>
-                <button class="modal__close" aria-label="Close search modal">
-                    <span aria-hidden="true">×</span>
-                </button>
+    
+    <!-- Easter Egg Game -->
+    <div class="easter-egg-trigger" id="easter-egg-trigger">
+        <div class="secret-counter" id="secret-counter">0</div>
+    </div>
+    
+    <div class="mini-game-modal" id="mini-game-modal" style="display: none;">
+        <div class="mini-game-content">
+            <h3>🎮 Mini Game Unlocked!</h3>
+            <p>Help the lost pixel find its way home!</p>
+            <div class="game-container" id="game-container"></div>
+            <button class="btn btn-small" id="close-game">Close Game</button>
+        </div>
+    </div>
+    
+    <!-- Issue Report Modal -->
+    <div class="modal" id="report-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Report an Issue</h3>
+                <button class="modal-close" id="close-report-modal">&times;</button>
             </div>
-            
-            <div class="modal__body">
-                <form class="search-form" role="search">
-                    <div class="search-input-container">
-                        <input 
-                            type="search" 
-                            id="searchInput" 
-                            class="search-input" 
-                            placeholder="Search for pages, projects, or content..."
-                            aria-label="Search input"
-                            autocomplete="off"
-                        >
-                        <button type="submit" class="search-submit" aria-label="Submit search">
-                            <span aria-hidden="true">🔍</span>
-                        </button>
+            <div class="modal-body">
+                <form id="issue-report-form">
+                    <div class="form-group">
+                        <label for="issue-type">Issue Type:</label>
+                        <select id="issue-type" name="issue-type" required>
+                            <option value="">Select issue type</option>
+                            <option value="broken-link">Broken Link</option>
+                            <option value="missing-page">Missing Page</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="issue-description">Description:</label>
+                        <textarea id="issue-description" 
+                                  name="issue-description" 
+                                  rows="4" 
+                                  placeholder="Describe the issue you encountered..."
+                                  required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="user-email">Email (optional):</label>
+                        <input type="email" 
+                               id="user-email" 
+                               name="user-email"
+                               placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Submit Report</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-report">Cancel</button>
                     </div>
                 </form>
-                
-                <div class="search-suggestions">
-                    <h4 class="search-suggestions-title">Popular Destinations</h4>
-                    <div class="search-suggestions-list">
-                        <a href="/#about" class="search-suggestion">About Me</a>
-                        <a href="/#projects" class="search-suggestion">My Projects</a>
-                        <a href="/#skills" class="search-suggestion">Skills & Tech</a>
-                        <a href="/#contact" class="search-suggestion">Contact Info</a>
-                        <a href="/assets/documents/resume.pdf" class="search-suggestion">Resume/CV</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h3 class="footer__title">
-                        <span class="footer__icon" aria-hidden="true">🌙</span>
-                        Moonlit Portfolio
-                    </h3>
-                    <p class="footer__description">
-                        Lost in space? Even the best astronauts need navigation help sometimes. 
-                        Thanks for visiting my cosmic corner of the internet!
-                    </p>
-                </div>
-                
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Quick Links</h4>
-                    <nav class="footer__nav" role="navigation" aria-label="Footer navigation">
-                        <a href="/" class="footer__link">Home</a>
-                        <a href="/#about" class="footer__link">About</a>
-                        <a href="/#projects" class="footer__link">Projects</a>
-                        <a href="/#contact" class="footer__link">Contact</a>
-                    </nav>
-                </div>
-                
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Connect</h4>
-                    <div class="footer__social" role="navigation" aria-label="Social media links">
-                        <a href="#" class="footer__social-link" aria-label="GitHub profile">
-                            <span aria-hidden="true">🐙</span>
-                        </a>
-                        <a href="#" class="footer__social-link" aria-label="LinkedIn profile">
-                            <span aria-hidden="true">💼</span>
-                        </a>
-                        <a href="#" class="footer__social-link" aria-label="Twitter profile">
-                            <span aria-hidden="true">🐦</span>
-                        </a>
-                        <a href="mailto:hello@yourportfolio.com" class="footer__social-link" aria-label="Send email">
-                            <span aria-hidden="true">📧</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer__bottom">
-                <p class="footer__copyright">
-                    © <span id="currentYear">2024</span> Moonlit Portfolio. Made with 🌙 and lots of ☕
-                </p>
-                <div class="footer__links">
-                    <a href="/privacy" class="footer__link">Privacy Policy</a>
-                    <a href="/terms" class="footer__link">Terms of Service</a>
-                    <a href="/sitemap.xml" class="footer__link">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top-button" id="scrollTopButton" aria-label="Scroll to top" title="Back to top">
-        <span class="scroll-top-icon" aria-hidden="true">🚀</span>
-    </button>
-
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen" aria-hidden="true">
-        <div class="loading-content">
-            <div class="loading-spinner">
-                <div class="loading-moon">🌙</div>
-            </div>
-            <p class="loading-text">Navigating through space...</p>
-        </div>
-    </div>
-
-    <!-- JavaScript -->
-    <script src="src/scripts/404.js" defer></script>
     
-    <!-- Analytics (Optional) -->
+    <!-- Loading Scripts -->
     <script>
-        // Track 404 errors
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'page_view', {
-                page_title: '404 Error',
-                page_location: window.location.href,
-                custom_map: {
-                    'error_type': '404',
-                    'error_page': window.location.pathname
-                }
-            });
+        // Immediate theme detection
+        (function() {
+            const saved = localStorage.getItem('portfolio_theme') || 'auto';
+            const resolved = saved === 'auto' ? 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : saved;
+            document.documentElement.setAttribute('data-theme', resolved);
+        })();
+        
+        // Basic loading state management
+        window.errorPageState = {
+            loaded: false,
+            animations: false,
+            interactive: false
+        };
+    </script>
+    
+    <!-- Load JavaScript -->
+    <script src="/assets/js/core/utils.js"></script>
+    <script src="/assets/js/core/config.js"></script>
+    <script src="/assets/js/components/theme-manager.js" defer></script>
+    <script src="/assets/js/components/404-handler.js" defer></script>
+    
+    <!-- Analytics (if consent given) -->
+    <script>
+        if (localStorage.getItem('analytics_consent') === 'true') {
+            // Track 404 error
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_not_found', {
+                    page_location: window.location.href,
+                    page_path: window.location.pathname
+                });
+            }
         }
     </script>
 </body>
