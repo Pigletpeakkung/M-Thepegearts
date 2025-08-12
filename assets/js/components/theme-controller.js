@@ -204,4 +204,47 @@ export class ThemeController {
         
         // Only change if user hasn't manually set a preference
         if (!storedTheme) {
-            this.setTheme(systemTheme
+                        this.setTheme(systemTheme);
+        }
+    }
+
+    getStoredTheme() {
+        return Utils.storage.get(CONFIG.theme.storageKey);
+    }
+
+    storeTheme(theme) {
+        Utils.storage.set(CONFIG.theme.storageKey, theme);
+    }
+
+    getSystemPreference() {
+        return this.prefersDarkScheme.matches ? 'dark' : 'light';
+    }
+
+    // Public API
+    getCurrentTheme() {
+        return this.currentTheme;
+    }
+
+    isDarkMode() {
+        return this.currentTheme === 'dark';
+    }
+
+    isLightMode() {
+        return this.currentTheme === 'light';
+    }
+
+    // Cleanup
+    destroy() {
+        if (this.prefersDarkScheme && CONFIG.theme.systemPreference) {
+            this.prefersDarkScheme.removeListener(this.handleSystemThemeChange);
+        }
+        
+        if (this.toggleButton) {
+            this.toggleButton.removeEventListener('click', this.toggle);
+        }
+        
+        console.log('🎨 Theme Controller destroyed');
+    }
+}
+
+export default ThemeController;
