@@ -1,0 +1,264 @@
+{
+    "metadata": {
+        "version": "1.0",
+        "lastUpdated": "2024-01-16",
+        "language": "en"
+    },
+    "profile": {
+        "name": "Thanattsitt Santisamranwilai",
+        "displayName": "Thanattsitt",
+        "tagline": "Creative Innovator & AI Specialist",
+        "description": "Bridging the gap between artificial intelligence and creative expression, I craft digital experiences that inspire and transform businesses worldwide.",
+        "location": "Thailand",
+        "languages": ["English", "Thai"],
+        "availability": "Available for freelance projects",
+        "images": {
+            "professional": "/assets/images/thanattsitt-professional.jpg",
+            "casual": "/assets/images/thanattsitt-casual.jpg",
+            "workspace": "/assets/images/thanattsitt-workspace.jpg"
+        }
+    },
+    "statistics": {
+        "projectsCompleted": {
+            "value": 50,
+            "label": "Projects Completed",
+            "description": "Successfully delivered projects across AI, design, and voice acting"
+        },
+        "yearsExperience": {
+            "value": 3,
+            "label": "Years Experience",
+            "description": "Continuous learning and professional growth in tech and creative fields"
+        },
+        "happyClients": {
+            "value": 25,
+            "label": "Happy Clients",
+            "description": "Satisfied clients across diverse industries and project types"
+        },
+        "aiModels": {
+            "value": 15,
+            "label": "AI Models Trained",
+            "description": "Custom machine learning models developed and deployed"
+        }
+    },
+    "timeline": [
+        {
+            "year": "2021",
+            "title": "The Spark",
+            "description": "Discovered the fascinating world of AI and machine learning, immediately captivated by the potential to merge technology with creative expression. Started learning Python and basic ML concepts.",
+            "tags": ["Python", "Machine Learning", "Self-Learning"],
+            "icon": "fas fa-play",
+            "milestone": true
+        },
+        {
+            "year": "2022",
+            "title": "Deep Dive into AI",
+            "description": "Completed advanced courses in deep learning, computer vision, and NLP. Started working on personal projects, combining AI with creative design to produce unique digital art and interactive experiences.",
+            "tags": ["Deep Learning", "Computer Vision", "NLP", "Creative AI"],
+            "icon": "fas fa-graduation-cap",
+            "achievements": [
+                "Completed TensorFlow Developer Certificate",
+                "Built first computer vision project",
+                "Started AI art generation experiments"
+            ]
+        },
+        {
+            "year": "2022",
+            "title": "Voice Acting Journey",
+            "description": "Explored voice acting as a creative outlet, developing skills in character voices, commercial narration, and audio production. This added a new dimension to my creative toolkit.",
+            "tags": ["Voice Acting", "Audio Production", "Creative Expression"],
+            "icon": "fas fa-microphone",
+            "projects": [
+                "First commercial voice-over project",
+                "Character voice development",
+                "Audio production workflow setup"
+            ]
+        },
+        {
+            "year": "2023",
+            "title": "Professional Transition",
+            "description": "Started freelancing, combining AI development with creative design services. Worked with diverse clients to create innovative solutions that merge technical capabilities with artistic vision.",
+            "tags": ["Freelancing", "Client Work", "Innovation"],
+            "icon": "fas fa-briefcase",
+            "milestones": [
+                "First major AI consulting project",
+                "Established client base",
+                "Developed signature service offerings"
+            ]
+        },
+        {
+            "year": "2024",
+            "title": "Innovation & Growth",
+            "description": "Established my reputation as an AI creative specialist, working on cutting-edge projects that push the boundaries of what's possible when technology meets creativity. Continuously learning and evolving.",
+            "tags": ["AI Innovation", "Creative Leadership", "Future-Forward"],
+            "icon": "fas fa-rocket",
+            "current": true,
+            "focus": [
+                "Advanced AI model development",
+                "Creative technology consulting",
+                "Thought leadership in AI creativity"
+            ]
+        }
+    ],
+    "skills": {
+        "aiMachineLearning": {
+            "title": "AI & Machine Learning",
+            "description": "Deep expertise in developing and training AI models for various applications",
+            "icon": "fas fa-brain",
+            "gradient": "ai-gradient",
+            "skills": [
+                {
+                    "name": "Python & TensorFlow",
+                    "level": 95,
+                    "experience": "3 years",
+                    "projects": 12
+                },
+                {
+                    "name": "Computer Vision",
+                    "level": 90,
+                    "experience": "2.5 years",
+                    "projects": 8
+                },
+                {
+                    "name": "Natural Language Processing",
+                    "level": 85,
+                    "experience": "2 years",
+                    "projects": 6
+                },
+                {
+                    "name": "Model Deployment",
+                    "level": 88,
+                    "experience": "2.5 years",
+                    "projects": 10
+                }
+            ]
+        },
+        "creativeDesign": {
+            "title": "Creative Design",
+            "description": "Artistic vision combined with technical precision to create stunning visuals",
+            "icon": "fas fa-palette",
+            "gradient": "design-gradient",
+            "skills": [
+                {
+                    "name": "Adobe Creative Suite",
+                    "level": 92,
+                    "experience": "4 years",
+                    "projects": 25
+                },
+                {
+                    "name": "UI/UX Design",
+                    "level": 87,
+                    "experience": "3 years",
+                    "projects": 15
+                },
+                {
+                    "name": "3D Design & Animation",
+                    "level": 83,
+                    "experience": "2.5 years",
+                    "projects": 10
+                },
+                {
+                    "name": "Brand Design",
+                    "level": 90,
+                    "experience": "3.5 years",
+                    "projects": 18
+                }
+            ]
+        },
+        "digitalInnovation": {
+            "title": "Digital Innovation",
+            "description": "Full-stack development and emerging technologies for complete solutions",
+            "icon": "fas fa-code",
+            "gradient": "tech-gradient",
+            "skills": [
+                {
+                    "name": "Web Development",
+                    "level": 89,
+                    "experience": "3 years",
+                    "projects": 20
+                },
+                {
+                    "name": "Voice Acting & Production",
+                    "level": 85,
+                    "experience": "2 years",
+                    "projects": 12
+                },
+                {
+                    "name": "Project Management",
+                    "level": 91,
+                    "experience": "3 years",
+                    "projects": 30
+                },
+                {
+                    "name": "Innovation Strategy",
+                    "level": 87,
+                    "experience": "2.5 years",
+                    "projects": 8
+                }
+            ]
+        }
+    },
+    "values": [
+        {
+            "title": "Innovation First",
+            "description": "I believe in pushing boundaries and exploring new possibilities. Every project is an opportunity to innovate and create something unique that hasn't been done before.",
+            "icon": "fas fa-lightbulb"
+        },
+        {
+            "title": "Human-Centered Design",
+            "description": "Technology should enhance human experience, not complicate it. I design with empathy, ensuring every solution serves real human needs and creates meaningful connections.",
+            "icon": "fas fa-heart"
+        },
+        {
+            "title": "Continuous Learning",
+            "description": "In the rapidly evolving world of AI and technology, staying curious and continuously learning is essential. I'm committed to growing and evolving with each project.",
+            "icon": "fas fa-infinity"
+        }
+    ],
+    "personalInsights": {
+        "title": "Beyond the Professional",
+        "subtitle": "Get to know the person behind the projects - my passions, inspirations, and what drives my creative journey.",
+        "insights": [
+            {
+                "title": "Creative Expression",
+                "description": "Voice acting isn't just a service I offer - it's a passion that allows me to explore different characters and emotions, bringing stories to life through sound.",
+                "icon": "fas fa-music"
+            },
+            {
+                "title": "Cultural Bridge",
+                "description": "Growing up in Thailand and working globally has given me a unique perspective on how technology and creativity transcend cultural boundaries.",
+                "icon": "fas fa-globe-asia"
+            },
+            {
+                "title": "Future Vision",
+                "description": "I envision a future where AI and human creativity work in perfect harmony, amplifying our potential rather than replacing our uniqueness.",
+                "icon": "fas fa-seedling"
+            }
+        ]
+    },
+    "socialLinks": [
+        {
+            "platform": "LinkedIn",
+            "url": "https://www.linkedin.com/in/thanattsitt-s",
+            "icon": "fab fa-linkedin-in",
+            "username": "@thanattsitt-s"
+        },
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/Pigletpeakkung",
+            "icon": "fab fa-github",
+            "username": "@Pigletpeakkung"
+        },
+        {
+            "platform": "Threads",
+            "url": "https://www.threads.net/@thanattsitt.s",
+            "icon": "fab fa-threads",
+            "username": "@thanattsitt.s"
+        },
+        {
+            "platform": "Linktree",
+            "url": "https://linktr.ee/ThanttEzekiel",
+            "icon": "fas fa-link",
+            "username": "ThanttEzekiel"
+        }
+    ]
+}
