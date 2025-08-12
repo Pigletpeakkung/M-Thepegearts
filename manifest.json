@@ -1,182 +1,144 @@
 {
-  "name": "THANATTSITT SANTISAMRANWILAI - Creative Portfolio",
-  "short_name": "PegeArts",
-  "description": "Professional AI Consulting, Voice Acting, Digital Design & Website Development Services by THANATTSITT SANTISAMRANWILAI",
+  "name": "Moonlit Portfolio - Your Name",
+  "short_name": "Moonlit Portfolio",
+  "description": "A modern, accessible portfolio showcasing my work and skills",
   "start_url": "/",
   "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#A78BFA",
   "orientation": "portrait-primary",
-  "theme_color": "#1a365d",
-  "background_color": "#ffffff",
-  "lang": "en-US",
   "scope": "/",
-  "categories": [
-    "business",
-    "productivity",
-    "design",
-    "technology"
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["portfolio", "business", "productivity"],
+  "screenshots": [
+    {
+      "src": "assets/images/screenshots/desktop-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop view of Moonlit Portfolio"
+    },
+    {
+      "src": "assets/images/screenshots/mobile-narrow.png",
+      "sizes": "640x1136",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile view of Moonlit Portfolio"
+    }
   ],
   "icons": [
     {
-      "src": "/assets/icons/icon-72x72.png",
+      "src": "assets/images/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-96x96.png",
+      "src": "assets/images/icons/icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-128x128.png",
+      "src": "assets/images/icons/icon-128x128.png",
       "sizes": "128x128",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-144x144.png",
+      "src": "assets/images/icons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-152x152.png",
+      "src": "assets/images/icons/icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-192x192.png",
+      "src": "assets/images/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-384x384.png",
+      "src": "assets/images/icons/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/icons/icon-512x512.png",
+      "src": "assets/images/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/assets/screenshots/desktop-home.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Homepage featuring AI consulting and creative services"
+      "purpose": "any"
     },
     {
-      "src": "/assets/screenshots/mobile-portfolio.png",
-      "sizes": "375x812",
+      "src": "assets/images/icons/maskable-icon-192x192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Portfolio showcase on mobile device"
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/images/icons/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/images/icons/monochrome-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "monochrome"
     }
   ],
   "shortcuts": [
     {
-      "name": "Portfolio",
-      "short_name": "Portfolio",
-      "description": "View my creative portfolio",
-      "url": "/portfolio",
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "Browse my latest projects",
+      "url": "#projects",
       "icons": [
         {
-          "src": "/assets/icons/shortcut-portfolio.png",
-          "sizes": "96x96",
-          "type": "image/png"
+          "src": "assets/images/icons/shortcut-projects.png",
+          "sizes": "192x192"
         }
       ]
     },
     {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "Explore available services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/assets/icons/shortcut-services.png",
-          "sizes": "96x96",
-          "type": "image/png"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
+      "name": "Contact Me",
       "short_name": "Contact",
-      "description": "Get in touch for projects",
-      "url": "/contact",
+      "description": "Get in touch",
+      "url": "#contact",
       "icons": [
         {
-          "src": "/assets/icons/shortcut-contact.png",
-          "sizes": "96x96",
-          "type": "image/png"
+          "src": "assets/images/icons/shortcut-contact.png",
+          "sizes": "192x192"
         }
       ]
     },
     {
-      "name": "Blog",
-      "short_name": "Blog",
-      "description": "Read latest insights and tutorials",
-      "url": "/blog",
+      "name": "Download Resume",
+      "short_name": "Resume",
+      "description": "Download my resume",
+      "url": "/assets/documents/resume.pdf",
       "icons": [
         {
-          "src": "/assets/icons/shortcut-blog.png",
-          "sizes": "96x96",
-          "type": "image/png"
+          "src": "assets/images/icons/shortcut-resume.png",
+          "sizes": "192x192"
         }
       ]
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "web",
-      "url": "https://pegearts.com/",
-      "id": "pegearts-web"
     }
   ],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
   },
-  "launch_handler": {
-    "client_mode": "navigate-new"
-  },
   "handle_links": "preferred",
-  "id": "pegearts-portfolio",
-  "protocol_handlers": [
-    {
-      "protocol": "mailto",
-      "url": "/contact?email=%s"
-    }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url",
-      "files": [
-        {
-          "name": "files",
-          "accept": [
-            "image/*",
-            "audio/*",
-            ".pdf",
-            ".doc",
-            ".docx"
-          ]
-        }
-      ]
-    }
+  "launch_handler": {
+    "client_mode": "navigate-existing"
   }
 }
