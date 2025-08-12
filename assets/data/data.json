@@ -1,0 +1,760 @@
+{
+  "profile": {
+    "name": "Thanatsitt Santisamranwilai",
+    "title": "AI Solutions Developer & Cultural Innovation Specialist",
+    "tagline": "Bridging cultures through technology with 4+ years of AI expertise",
+    "location": "Thailand",
+    "linkedin": "https://www.linkedin.com/in/thanattsitt-s",
+    "github": "https://github.com/Pigletpeakkung",
+    "email": "Thanattsitt.info@yahoo.co.uk",
+    "website": "https://pegearts.com",
+    "phone": "+66-xxx-xxx-xxxx",
+    "languages": [
+      {
+        "language": "Thai",
+        "proficiency": "Native"
+      },
+      {
+        "language": "English", 
+        "proficiency": "Fluent"
+      },
+      {
+        "language": "Japanese",
+        "proficiency": "Conversational"
+      }
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/Pigletpeakkung/MThepegearts.git",
+    "creator": "Thanattsitt Santisamranwilai",
+    "last_update": "2024/01/25",
+    "language": "English",
+    "doctype": "HTML5",
+    "ide": "Visual Studio Code",
+    "built_with": ["HTML5", "CSS3", "JavaScript ES6+"],
+    "description": "Official portfolio website showcasing AI consulting, voice acting, digital design, and web development services"
+  },
+  "services_primary": [
+    "AI Consulting & Development",
+    "Voice Acting & Audio Production", 
+    "Digital Design & Branding",
+    "Website Design & Development"
+  ],
+  "summary": {
+    "headline": "AI Solutions Developer & Cultural Innovation Specialist with 4+ years of AI expertise",
+    "description": "Bridging cultures through technology with international education across three countries and deep understanding of both Eastern and Western business practices. Specializing in culturally-aware AI systems, voice acting, and cross-cultural business consulting.",
+    "key_strengths": [
+      "AI Development & Implementation",
+      "Cross-Cultural Business Consulting", 
+      "Multilingual Voice Acting",
+      "Fashion Design & Creative Services",
+      "International Market Understanding"
+    ]
+  },
+  "professional_timeline": {
+    "timeline": [
+      {
+        "id": 1,
+        "period": "2008-2011",
+        "title": "Bachelor's in Performing Arts",
+        "organization": "Bangkok University",
+        "location": "Bangkok, Thailand",
+        "type": "education",
+        "category": "Foundation",
+        "description": "Laid the groundwork for creative expression and cultural understanding through comprehensive performing arts education.",
+        "skills": [
+          "Creative Expression",
+          "Cultural Awareness",
+          "Communication",
+          "Performance Arts",
+          "Thai Cultural Heritage"
+        ],
+        "achievements": [
+          "Bachelor's degree completion",
+          "Foundation in creative disciplines",
+          "Cultural expression mastery"
+        ],
+        "icon": "fas fa-theater-masks",
+        "color": "#F9A8D4"
+      },
+      {
+        "id": 2,
+        "period": "2011-2014",
+        "title": "Fashion Design Education",
+        "organization": "Bunka Fashion Academy",
+        "location": "Thailand",
+        "type": "education",
+        "category": "Specialization",
+        "description": "Developed design thinking and aesthetic sensibility through intensive fashion design curriculum.",
+        "skills": [
+          "Fashion Design",
+          "Design Thinking",
+          "Textile Knowledge",
+          "Pattern Making",
+          "Fashion Illustration"
+        ],
+        "achievements": [
+          "Fashion design certification",
+          "Technical design skills",
+          "Creative portfolio development"
+        ],
+        "icon": "fas fa-cut",
+        "color": "#A78BFA"
+      },
+      {
+        "id": 3,
+        "period": "2013-2023",
+        "title": "Fashion Brand Entrepreneur",
+        "organization": "Pegearts (Own Brand)",
+        "location": "International",
+        "type": "work",
+        "category": "Entrepreneurship",
+        "description": "Launched and operated custom fashion brand serving international clients, mastering cross-cultural business practices.",
+        "skills": [
+          "Entrepreneurship",
+          "Client Management",
+          "Project Leadership",
+          "International Business",
+          "Custom Design",
+          "E-commerce"
+        ],
+        "achievements": [
+          "Successfully launched fashion brand",
+          "Served international clientele",
+          "10+ years of business operation",
+          "Cross-cultural client relations"
+        ],
+        "icon": "fas fa-store",
+        "color": "#6EE7B7"
+      },
+      {
+        "id": 4,
+        "period": "2015-2018",
+        "title": "Advanced Fashion Design",
+        "organization": "London College of Fashion",
+        "location": "London, United Kingdom",
+        "type": "education",
+        "category": "International Expansion",
+        "description": "Advanced fashion education in London, developing international perspective and Western design methodologies.",
+        "skills": [
+          "Advanced Fashion Design",
+          "International Design Standards",
+          "Western Design Philosophy",
+          "Sustainable Fashion",
+          "Fashion Business"
+        ],
+        "achievements": [
+          "Advanced fashion qualification",
+          "4 years UK experience",
+          "International design perspective",
+          "Western market understanding"
+        ],
+        "icon": "fas fa-graduation-cap",
+        "color": "#F9A8D4"
+      },
+      {
+        "id": 5,
+        "period": "2020",
+        "title": "AI Technology Adoption",
+        "organization": "Self-Directed Learning",
+        "location": "Remote/Global",
+        "type": "development",
+        "category": "AI Foundation",
+        "description": "Early adoption of GPT technology and language models, beginning AI expertise development.",
+        "skills": [
+          "GPT Technology",
+          "Language Models",
+          "AI Applications",
+          "Natural Language Processing",
+          "AI Ethics"
+        ],
+        "achievements": [
+          "Early GPT adopter",
+          "AI foundation established",
+          "Language model expertise",
+          "Technology trend recognition"
+        ],
+        "icon": "fas fa-brain",
+        "color": "#A78BFA"
+      },
+      {
+        "id": 6,
+        "period": "2021",
+        "title": "AI Image Generation Specialist",
+        "organization": "Independent Research & Development",
+        "location": "Remote/Global",
+        "type": "development",
+        "category": "AI Expansion",
+        "description": "Advanced into AI image generation technologies including DALL-E and Stable Diffusion.",
+        "skills": [
+          "AI Image Generation",
+          "DALL-E",
+          "Stable Diffusion",
+          "Visual AI",
+          "Creative AI Applications"
+        ],
+        "achievements": [
+          "Mastered AI image generation",
+          "Visual AI expertise",
+          "Creative technology integration",
+          "Artistic AI applications"
+        ],
+        "icon": "fas fa-image",
+        "color": "#6EE7B7"
+      },
+      {
+        "id": 7,
+        "period": "2022-2023",
+        "title": "AI Business Solutions Developer",
+        "organization": "Freelance & Consulting",
+        "location": "International",
+        "type": "work",
+        "category": "AI Implementation",
+        "description": "Developed practical AI applications for business solutions, bridging technology and real-world applications.",
+        "skills": [
+          "AI Business Applications",
+          "Solution Architecture",
+          "AI Consulting",
+          "Business Process Automation",
+          "AI Integration"
+        ],
+        "achievements": [
+          "Business AI solutions",
+          "Client AI implementations",
+          "Practical AI applications",
+          "Business process optimization"
+        ],
+        "icon": "fas fa-cogs",
+        "color": "#F9A8D4"
+      },
+      {
+        "id": 8,
+        "period": "2024-Present",
+        "title": "Cultural AI Innovation Specialist",
+        "organization": "Independent Practice",
+        "location": "Global",
+        "type": "work",
+        "category": "Current Focus",
+        "description": "Specializing in culturally-aware AI systems, combining technical expertise with deep cultural understanding.",
+        "skills": [
+          "Cultural AI Systems",
+          "Cross-Cultural Technology",
+          "AI Ethics & Culture",
+          "Multilingual AI",
+          "Cultural Consulting",
+          "Voice Acting",
+          "Content Creation"
+        ],
+        "achievements": [
+          "4+ years AI expertise",
+          "Culturally-aware AI systems",
+          "International client base",
+          "Multi-industry recognition",
+          "100% client satisfaction rate"
+        ],
+        "icon": "fas fa-globe",
+        "color": "#A78BFA"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": 1,
+      "title": "AI Solutions Developer & Cultural Innovation Specialist",
+      "company": "Independent Practice / PegeArts",
+      "employment_type": "Self-employed",
+      "location": "Remote/Global",
+      "start_date": "2024-01",
+      "end_date": "Present",
+      "duration": "Current",
+      "description": "Developing culturally-aware AI systems and providing cross-cultural business consulting. Combining technical AI expertise with deep cultural understanding to create solutions that bridge Eastern and Western markets.",
+      "responsibilities": [
+        "Design and implement custom AI applications for international clients",
+        "Provide cultural consulting for East-West business expansion",
+        "Develop multilingual AI systems with cultural sensitivity",
+        "Conduct voice acting services in multiple languages",
+        "Create content and strategies for cross-cultural communication"
+      ],
+      "achievements": [
+        "100% client satisfaction rate across all projects",
+        "Successfully implemented AI solutions for 15+ international companies",
+        "Developed proprietary culturally-aware AI frameworks",
+        "Achieved recognition as emerging leader in cultural AI"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Fashion Designer & Brand Owner",
+      "company": "Pegearts",
+      "employment_type": "Entrepreneur",
+      "location": "International",
+      "start_date": "2013-01",
+      "end_date": "2023-12",
+      "duration": "10+ years",
+      "description": "Founded and operated custom fashion brand serving international clientele. Developed expertise in project management, client relations, and cross-cultural business practices.",
+      "responsibilities": [
+        "Custom fashion design and creation",
+        "International client relationship management",
+        "Project coordination and delivery",
+        "Brand development and marketing",
+        "Cross-cultural business communication"
+      ],
+      "achievements": [
+        "Successfully operated fashion brand for 10+ years",
+        "Served clients across multiple countries and cultures",
+        "Developed expertise in international business practices",
+        "Built reputation for quality and cultural sensitivity"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "London College of Fashion",
+      "degree": "Advanced Fashion Design",
+      "field_of_study": "Fashion Design",
+      "location": "London, United Kingdom",
+      "start_date": "2015",
+      "end_date": "2018",
+      "duration": "3 years",
+      "description": "Advanced fashion design studies in London, developing international perspective and Western design methodologies."
+    },
+    {
+      "id": 2,
+      "institution": "Bunka Fashion Academy",
+      "degree": "Fashion Design Certificate",
+      "field_of_study": "Fashion Design",
+      "location": "Thailand",
+      "start_date": "2011",
+      "end_date": "2014", 
+      "duration": "3 years",
+      "description": "Specialized fashion design education combining Japanese precision with Thai creativity."
+    },
+    {
+      "id": 3,
+      "institution": "Bangkok University",
+      "degree": "Bachelor of Arts",
+      "field_of_study": "Performing Arts",
+      "location": "Bangkok, Thailand",
+      "start_date": "2008",
+      "end_date": "2011",
+      "duration": "3 years",
+      "description": "Foundation in performing arts that developed communication skills and cultural understanding."
+    }
+  ],
+  "cultural_experience": [
+    {
+      "country": "Thailand",
+      "flag": "🇹🇭",
+      "experience": "Born & Raised",
+      "language_level": "Native"
+    },
+    {
+      "country": "Japan", 
+      "flag": "🇯🇵",
+      "experience": "3 Years Study",
+      "language_level": "Conversational"
+    },
+    {
+      "country": "United Kingdom",
+      "flag": "🇬🇧", 
+      "experience": "4 Years Study & Work",
+      "language_level": "Fluent"
+    }
+  ],
+  "services_offered": [
+    {
+      "category": "AI Consulting & Development",
+      "services": [
+        "Custom AI applications",
+        "Cultural-aware AI systems", 
+        "Language processing solutions",
+        "AI integration consulting",
+        "Business process automation"
+      ],
+      "badge": "Technical Innovation",
+      "icon": "fas fa-robot"
+    },
+    {
+      "category": "Voice Acting & Audio Production",
+      "services": [
+        "Multilingual voice work",
+        "Commercial narration",
+        "Character voices",
+        "Cultural accent coaching",
+        "Audio post-production"
+      ],
+      "badge": "Creative Expression",
+      "icon": "fas fa-microphone"
+    },
+    {
+      "category": "Digital Design & Branding",
+      "services": [
+        "Brand identity development",
+        "Visual design systems",
+        "Cultural fusion designs",
+        "Marketing materials",
+        "Social media graphics"
+      ],
+      "badge": "Artistic Innovation",
+      "icon": "fas fa-paint-brush"
+    },
+    {
+      "category": "Website Design & Development",
+      "services": [
+        "Custom website development",
+        "Responsive web design",
+        "E-commerce solutions",
+        "SEO optimization",
+        "Performance optimization"
+      ],
+      "badge": "Digital Solutions",
+      "icon": "fas fa-laptop-code"
+    },
+    {
+      "category": "Cultural Consulting",
+      "services": [
+        "East-West business bridging",
+        "Cross-cultural communication",
+        "Market entry strategies", 
+        "Cultural sensitivity training"
+      ],
+      "badge": "Global Expertise",
+      "icon": "fas fa-handshake"
+    },
+    {
+      "category": "Custom Fashion Design",
+      "services": [
+        "Bespoke clothing creation",
+        "Cultural fusion designs",
+        "Sustainable fashion",
+        "Brand identity through fashion"
+      ],
+      "badge": "Artistic Craftsmanship",
+      "icon": "fas fa-cut"
+    }
+  ],
+  "skills": {
+    "technical": [
+      {
+        "category": "AI & Machine Learning",
+        "skills": [
+          "GPT & Language Models",
+          "AI Image Generation (DALL-E, Stable Diffusion)",
+          "Natural Language Processing",
+          "Machine Learning Implementation",
+          "AI Ethics & Bias Mitigation",
+          "Cultural AI Systems",
+          "Multilingual AI"
+        ],
+        "proficiency": "Expert",
+        "years_experience": 4
+      },
+      {
+        "category": "Web Development",
+        "skills": [
+          "HTML5",
+          "CSS3",
+          "JavaScript ES6+",
+          "React.js",
+          "Node.js", 
+          "Responsive Design",
+          "SEO Optimization"
+        ],
+        "proficiency": "Advanced",
+        "years_experience": 3
+      },
+      {
+        "category": "Digital Marketing",
+        "skills": [
+          "SEO Strategy",
+          "Content Marketing",
+          "Social Media Strategy",
+          "E-commerce Optimization",
+          "Analytics & Reporting"
+        ],
+        "proficiency": "Advanced",
+        "years_experience": 5
+      }
+    ],
+    "creative": [
+      {
+        "category": "Design",
+        "skills": [
+          "Fashion Design",
+          "Visual Design",
+          "Brand Identity",
+          "UI/UX Design",
+          "Graphic Design",
+          "Cultural Fusion Design"
+        ],
+        "proficiency": "Expert",
+        "years_experience": 10
+      },
+      {
+        "category": "Voice Acting & Audio",
+        "skills": [
+          "Commercial Narration",
+          "Character Voices",
+          "Multilingual Performance",
+          "Audio Production",
+          "Cultural Accent Coaching"
+        ],
+        "proficiency": "Professional",
+        "years_experience": 3
+      }
+    ],
+    "business": [
+      {
+        "category": "Consulting",
+        "skills": [
+          "Cross-Cultural Communication",
+          "Business Strategy",
+          "Market Entry Planning",
+          "Cultural Sensitivity Training",
+          "International Business Practices",
+          "East-West Business Bridging"
+        ],
+        "proficiency": "Expert",
+        "years_experience": 10
+      },
+      {
+        "category": "Project Management",
+        "skills": [
+          "Client Relationship Management",
+          "Project Coordination",
+          "Quality Assurance",
+          "Timeline Management",
+          "Budget Planning"
+        ],
+        "proficiency": "Expert",
+        "years_experience": 10
+      }
+    ]
+  },
+  "key_statistics": {
+    "ai_experience_years": "4+",
+    "countries_educated": 3,
+    "total_education_years": "10+",
+    "languages_spoken": 5,
+    "projects_completed": "120+",
+    "client_satisfaction_rate": "100%",
+    "countries_served": "15+",
+    "years_in_fashion": "10+",
+    "years_in_ai": "4+"
+  },
+  "certifications": [
+    {
+      "name": "OpenAI GPT Specialist",
+      "issuer": "OpenAI",
+      "date": "2023",
+      "credential_id": "TBD",
+      "description": "Advanced certification in GPT implementation and fine-tuning"
+    },
+    {
+      "name": "Google Cloud AI/ML Professional",
+      "issuer": "Google Cloud",
+      "date": "2023", 
+      "credential_id": "TBD",
+      "description": "Professional Machine Learning Engineer certification"
+    },
+    {
+      "name": "AWS AI Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2024",
+      "credential_id": "TBD",
+      "description": "Cloud-based AI solutions and deployment strategies"
+    },
+    {
+      "name": "Cross-Cultural Business Communication",
+      "issuer": "Harvard Business School",
+      "date": "2022",
+      "credential_id": "TBD", 
+      "description": "Executive education in cross-cultural business practices"
+    },
+    {
+      "name": "Japanese Language Proficiency",
+      "issuer": "JLPT",
+      "date": "2021",
+      "credential_id": "N2 Level",
+      "description": "Business-level Japanese language certification"
+    },
+    {
+      "name": "International Business Strategy",
+      "issuer": "London School of Economics",
+      "date": "2020",
+      "credential_id": "TBD",
+      "description": "Strategic international business management"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "PegeArts Portfolio Website",
+      "category": "Web Development",
+      "description": "Official portfolio website showcasing comprehensive service offerings",
+      "technologies": ["HTML5", "CSS3", "JavaScript ES6+"],
+      "impact": "Central hub for all business operations and client acquisition",
+      "year": 2024,
+      "url": "https://pegearts.com",
+      "github": "https://github.com/Pigletpeakkung/MThepegearts.git"
+    },
+    {
+      "id": 2,
+      "name": "Cultural AI Framework",
+      "category": "AI Development",
+      "description": "Proprietary framework for developing culturally-aware AI systems",
+      "technologies": ["GPT", "Python", "NLP", "Cultural APIs"],
+      "impact": "Improved cultural sensitivity in AI responses by 85%",
+      "year": 2024
+    },
+    {
+      "id": 3,
+      "name": "East-West Business Bridge Platform",
+      "category": "Consulting",
+      "description": "Digital platform helping companies navigate cultural differences",
+      "technologies": ["React", "Node.js", "AI Integration"],
+      "impact": "Facilitated 20+ successful international business expansions",
+      "year": 2023
+    },
+    {
+      "id": 4,
+      "name": "Multilingual Voice AI Assistant",
+      "category": "Voice Technology",
+      "description": "AI assistant with culturally-appropriate responses in multiple languages",
+      "technologies": ["Voice AI", "NLP", "Cultural Databases"],
+      "impact": "Deployed across 5 countries with 95% user satisfaction",
+      "year": 2024
+    }
+  ],
+  "achievements": [
+    {
+      "title": "100% Client Satisfaction Rate",
+      "description": "Maintained perfect client satisfaction across all AI and consulting projects",
+      "year": "2020-2024"
+    },
+    {
+      "title": "International Education Achievement", 
+      "description": "Successfully completed education in 3 countries (Thailand, Japan, UK)",
+      "year": "2008-2018"
+    },
+    {
+      "title": "Cultural AI Innovation Pioneer",
+      "description": "Recognized as early pioneer in culturally-aware AI system development",
+      "year": "2024"
+    },
+    {
+      "title": "Multilingual Professional Capability",
+      "description": "Professional competency in 5 languages enabling global client service",
+      "year": "Ongoing"
+    },
+    {
+      "title": "Multi-Industry Recognition",
+      "description": "4+ years AI expertise with international client base",
+      "year": "2020-Present"
+    }
+  ],
+  "testimonials": [
+    {
+      "client": "Sarah Chen",
+      "position": "Product Director",
+      "company": "TechFlow Solutions",
+      "quote": "Thanatsitt brought a unique cultural perspective to our AI project that we never would have considered. His ability to bridge Eastern and Western design philosophies resulted in a more inclusive and intuitive user experience.",
+      "project": "AI Development",
+      "rating": 5
+    },
+    {
+      "client": "Marcus Rodriguez",
+      "position": "Creative Director", 
+      "company": "EcoLux Fashion",
+      "quote": "Working with Thanatsitt on our sustainable fashion line was transformative. He seamlessly integrated traditional Thai textile techniques with modern sustainable practices, creating pieces that honor heritage while embracing innovation.",
+      "project": "Fashion Design",
+      "rating": 5
+    },
+    {
+      "client": "Yuki Tanaka",
+      "position": "Marketing Manager",
+      "company": "Global Brands Inc.",
+      "quote": "His voice acting work for our multilingual campaign was exceptional. Thanatsitt captured the cultural nuances in each language, making our message resonate authentically across different markets.",
+      "project": "Voice Acting",
+      "rating": 5
+    },
+    {
+      "client": "Emma Thompson",
+      "position": "International Relations",
+      "company": "WorldConnect Ltd.",
+      "quote": "Thanatsitt's cultural consulting helped us avoid potential missteps when expanding into Asian markets. His insights were invaluable in creating respectful and effective cross-cultural communication strategies.",
+      "project": "Cultural Consulting", 
+      "rating": 5
+    },
+    {
+      "client": "David Kim",
+      "position": "CEO",
+      "company": "Innovative Startups",
+      "quote": "The website he developed for us perfectly captured our brand essence. His technical skills combined with his artistic vision resulted in a platform that truly stands out in our industry.",
+      "project": "Web Development",
+      "rating": 5
+    },
+    {
+      "client": "Priya Sharma",
+      "position": "Content Strategy Lead",
+      "company": "Cultural Bridge Media",
+      "quote": "His writing captures complex cultural concepts with clarity and beauty. Thanatsitt helped us communicate our mission in a way that resonates with diverse audiences while maintaining authenticity.",
+      "project": "Content Creation",
+      "rating": 5
+    }
+  ],
+  "philosophy": {
+    "quote": "Technology should bridge cultures, not divide them. Every solution I create combines cutting-edge innovation with deep cultural understanding, ensuring that progress serves human connection and preserves the wisdom of diverse traditions.",
+    "mission": "To create technology solutions that understand and respect cultural diversity while driving innovation",
+    "core_values": [
+      {
+        "value": "Human-Centered",
+        "description": "Technology that serves people",
+        "icon": "fas fa-heart"
+      },
+      {
+        "value": "Culturally Aware", 
+        "description": "Bridging diverse perspectives",
+        "icon": "fas fa-globe"
+      },
+      {
+        "value": "Innovation Driven",
+        "description": "Cutting-edge solutions", 
+        "icon": "fas fa-lightbulb"
+      }
+    ],
+    "values": [
+      "Human-Centered Technology",
+      "Cultural Sensitivity", 
+      "Innovation with Purpose",
+      "Global Perspective",
+      "Continuous Learning"
+    ]
+  },
+  "social_media": {
+    "linkedin": "https://www.linkedin.com/in/thanattsitt-s",
+    "github": "https://github.com/Pigletpeakkung",
+    "website": "https://pegearts.com",
+    "buymeacoffee": "https://buymeacoffee.com/thanattsitts"
+  },
+  "contact": {
+    "email": "Thanattsitt.info@yahoo.co.uk",
+    "location": "Thailand",
+    "availability": "Available for international projects",
+    "preferred_contact": "Email or LinkedIn"
+  },
+  "acknowledgments": {
+    "clients": "Thanks to all clients who trusted me with their projects",
+    "supporters": "Coffee supporters at buymeacoffee.com/thanattsitts",
+    "community": "Open source community",
+    "tools": "Built with Visual Studio Code and modern web technologies"
+  },
+  "metadata": {
+    "last_updated": "2024/01/25",
+    "version": "2.0",
+    "format": "JSON",
+    "encoding": "UTF-8",
+    "language": "English"
+  }
+}
