@@ -1,576 +1,543 @@
-# 🌙 Moonlit Portfolio - File Structure & Documentation
+# 🎨 **Thanattsitt Portfolio - Modern Creative Portfolio**
 
-## 📁 Recommended File Structure
+<div align="center">
+
+![Portfolio Banner](https://img.shields.io/badge/Portfolio-Live-brightgreen?style=for-the-badge&logo=vercel)
+![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+
+**A cutting-edge portfolio showcasing AI development, creative design, and digital innovation**
+
+[🌐 **Live Site**](https://pegearts.com) • [📧 **Contact**](mailto:Thanattsitt.info@yahoo.co.uk) • [💼 **LinkedIn**](https://www.linkedin.com/in/thanattsitt-s)
+
+</div>
+
+---
+
+## 🚀 **About**
+
+Welcome to my digital portfolio - a modern, responsive showcase of my work in AI development, creative design, voice acting, and digital innovation. Built with cutting-edge web technologies and featuring a modular architecture for seamless maintenance and scalability.
+
+### **Who I Am**
+- **Name:** Thanattsitt Santisamranwilai
+- **Role:** AI Creative Designer & Digital Innovator
+- **Specialties:** Machine Learning, Creative Design, Voice Acting, Web Development
+- **Domain:** [pegearts.com](https://pegearts.com)
+
+---
+
+## ✨ **Features**
+
+### **🎯 Core Features**
+- **Responsive Design** - Optimized for all devices and screen sizes
+- **Dark/Light Theme** - Seamless theme switching with system preference detection
+- **Glass Morphism UI** - Modern aesthetic with backdrop filters and depth
+- **Smooth Animations** - CSS and JavaScript powered transitions
+- **SEO Optimized** - Meta tags, structured data, and performance optimization
+- **Accessibility First** - WCAG compliant with keyboard navigation and screen reader support
+
+### **📱 Interactive Components**
+- **Dynamic FAQ System** - Searchable, filterable, and categorized questions
+- **Portfolio Gallery** - Interactive project showcase with filtering
+- **Contact Forms** - Integrated contact and consultation booking
+- **Typewriter Effect** - Animated role descriptions
+- **Scroll Animations** - Elements animate into view on scroll
+- **Performance Optimized** - Lazy loading, image optimization, and caching
+
+### **🛠 Technical Features**
+- **Modular Architecture** - Component-based JavaScript and CSS structure
+- **Modern ES6+** - Clean, maintainable JavaScript modules
+- **CSS Custom Properties** - Dynamic theming and consistent design system
+- **Progressive Enhancement** - Works without JavaScript, enhanced with it
+- **Cross-Browser Support** - Tested across all major browsers
+
+---
+
+## 🏗️ **Project Structure**
 
 ```
-moonlit-portfolio/
-├── 📄 README.md
-├── 📄 LICENSE
-├── 📄 .gitignore
-├── 📄 package.json
-├── 📄 package-lock.json
-├── 📄 .env.example
-├── 📄 .env
-├── 📄 netlify.toml
-├── 📄 vercel.json
-├── 📄 robots.txt
-├── 📄 sitemap.xml
-├── 📄 manifest.json
-├── 📄 sw.js (Service Worker)
-│
-├── 📁 public/
-│   ├── 📄 index.html
-│   ├── 📁 assets/
-│   │   ├── 📁 images/
-│   │   │   ├── 📁 icons/
-│   │   │   │   ├── 🖼️ favicon.ico
-│   │   │   │   ├── 🖼️ apple-touch-icon.png
-│   │   │   │   ├── 🖼️ icon-192x192.png
-│   │   │   │   ├── 🖼️ icon-512x512.png
-│   │   │   │   └── 🖼️ maskable-icon.png
-│   │   │   ├── 📁 hero/
-│   │   │   │   ├── 🖼️ moon.svg
-│   │   │   │   ├── 🖼️ moon.webp
-│   │   │   │   ├── 🖼️ moon.png
-│   │   │   │   └── 🖼️ hero-bg.webp
-│   │   │   ├── 📁 projects/
-│   │   │   │   ├── 🖼️ project-1.webp
-│   │   │   │   ├── 🖼️ project-2.webp
-│   │   │   │   └── 🖼️ project-3.webp
-│   │   │   ├── 📁 gallery/
-│   │   │   │   ├── 🖼️ gallery-1.webp
-│   │   │   │   ├── 🖼️ gallery-2.webp
-│   │   │   │   └── 🖼️ gallery-3.webp
-│   │   │   └── 📁 social/
-│   │   │       ├── 🖼️ og-image.png
-│   │   │       ├── 🖼️ twitter-card.png
-│   │   │       └── 🖼️ linkedin-banner.png
-│   │   ├── 📁 fonts/
-│   │   │   ├── 📄 inter-variable.woff2
-│   │   │   ├── 📄 inter-regular.woff2
-│   │   │   ├── 📄 inter-medium.woff2
-│   │   │   └── 📄 inter-bold.woff2
-│   │   ├── 📁 videos/
-│   │   │   ├── 🎬 hero-bg.mp4
-│   │   │   └── 🎬 project-demo.mp4
-│   │   └── 📁 documents/
-│   │       ├── 📄 resume.pdf
-│   │       └── 📄 portfolio-brochure.pdf
+thanattsitt-portfolio/
+├── 📁 assets/
+│   ├── 📁 css/
+│   │   ├── 📄 main.css              # Core styles & variables
+│   │   ├── 📄 components.css        # Reusable UI components
+│   │   ├── 📄 animations.css        # Animation definitions
+│   │   ├── 📄 themes.css            # Theme variants
+│   │   ├── 📄 responsive.css        # Media queries
+│   │   └── 📁 pages/
+│   │       ├── 📄 home.css          # Homepage styles
+│   │       ├── 📄 faq.css           # FAQ page styles
+│   │       ├── 📄 about.css         # About page styles
+│   │       └── 📄 contact.css       # Contact page styles
+│   │
+│   ├── 📁 js/
+│   │   ├── 📁 core/
+│   │   │   ├── 📄 app.js            # Main application controller
+│   │   │   ├── 📄 config.js         # Configuration constants
+│   │   │   └── 📄 utils.js          # Utility functions
+│   │   │
+│   │   ├── 📁 components/
+│   │   │   ├── 📄 theme-controller.js    # Theme switching
+│   │   │   ├── 📄 navbar-controller.js   # Navigation logic
+│   │   │   ├── 📄 scroll-animations.js   # Scroll effects
+│   │   │   ├── 📄 form-controller.js     # Form handling
+│   │   │   ├── 📄 typewriter.js          # Typewriter effect
+│   │   │   └── 📄 performance.js         # Performance optimization
+│   │   │
+│   │   └── 📁 pages/
+│   │       ├── 📄 home.js           # Homepage functionality
+│   │       ├── 📄 faq.js            # FAQ page controller
+│   │       ├── 📄 about.js          # About page logic
+│   │       └── 📄 contact.js        # Contact page handling
+│   │
+│   ├── 📁 images/              # Image assets
+│   ├── 📁 fonts/               # Custom fonts
 │   └── 📁 data/
-│       ├── 📄 projects.json
-│       ├── 📄 skills.json
-│       ├── 📄 experience.json
-│       └── 📄 testimonials.json
+│       ├── 📄 portfolio.json   # Portfolio projects data
+│       ├── 📄 faq.json         # FAQ content
+│       └── 📄 testimonials.json # Client testimonials
 │
-├── 📁 src/
-│   ├── 📁 styles/
-│   │   ├── 📄 main.css
-│   │   ├── 📄 variables.css
-│   │   ├── 📄 base.css
-│   │   ├── 📁 components/
-│   │   │   ├── 📄 buttons.css
-│   │   │   ├── 📄 forms.css
-│   │   │   ├── 📄 cards.css
-│   │   │   ├── 📄 modals.css
-│   │   │   ├── 📄 navigation.css
-│   │   │   ├── 📄 hero.css
-│   │   │   ├── 📄 footer.css
-│   │   │   ├── 📄 gallery.css
-│   │   │   └── 📄 animations.css
-│   │   ├── 📁 utilities/
-│   │   │   ├── 📄 spacing.css
-│   │   │   ├── 📄 typography.css
-│   │   │   ├── 📄 colors.css
-│   │   │   ├── 📄 layout.css
-│   │   │   └── 📄 responsive.css
-│   │   └── 📁 vendors/
-│   │       ├── 📄 normalize.css
-│   │       └── 📄 fontawesome.css
-│   │
-│   ├── 📁 scripts/
-│   │   ├── 📄 main.js
-│   │   ├── 📄 app.js
-│   │   ├── 📁 components/
-│   │   │   ├── 📄 navigation.js
-│   │   │   ├── 📄 hero.js
-│   │   │   ├── 📄 modal.js
-│   │   │   ├── 📄 contact-form.js
-│   │   │   ├── 📄 gallery.js
-│   │   │   ├── 📄 scroll-animations.js
-│   │   │   ├── 📄 theme-switcher.js
-│   │   │   └── 📄 notifications.js
-│   │   ├── 📁 utilities/
-│   │   │   ├── 📄 dom.js
-│   │   │   ├── 📄 api.js
-│   │   │   ├── 📄 storage.js
-│   │   │   ├── 📄 validation.js
-│   │   │   ├── 📄 animations.js
-│   │   │   └── 📄 performance.js
-│   │   ├── 📁 services/
-│   │   │   ├── 📄 email.js
-│   │   │   ├── 📄 analytics.js
-│   │   │   └── 📄 lazy-loading.js
-│   │   └── 📁 config/
-│   │       ├── 📄 constants.js
-│   │       └── 📄 settings.js
-│   │
-│   └── 📁 templates/
-│       ├── 📄 project-card.html
-│       ├── 📄 skill-item.html
-│       ├── 📄 testimonial-card.html
-│       └── 📄 notification.html
+├── 📁 includes/
+│   ├── 📄 header.html          # Common head elements
+│   ├── 📄 navbar.html          # Navigation component
+│   ├── 📄 footer.html          # Footer component
+│   └── 📄 theme-toggle.html    # Theme toggle button
 │
-├── 📁 build/
-│   └── 📄 (Generated build files)
+├── 📁 pages/
+│   ├── 📄 about.html           # About page
+│   ├── 📄 faq.html             # FAQ page
+│   ├── 📄 contact.html         # Contact page
+│   ├── 📄 portfolio.html       # Portfolio gallery
+│   └── 📄 services.html        # Services page
 │
-├── 📁 docs/
-│   ├── 📄 DEPLOYMENT.md
-│   ├── 📄 CUSTOMIZATION.md
-│   ├── 📄 PERFORMANCE.md
-│   ├── 📄 ACCESSIBILITY.md
-│   └── 📁 screenshots/
-│       ├── 🖼️ desktop-view.png
-│       ├── 🖼️ mobile-view.png
-│       └── 🖼️ tablet-view.png
-│
-├── 📁 tools/
-│   ├── 📄 build.js
-│   ├── 📄 optimize-images.js
-│   ├── 📄 generate-sitemap.js
-│   └── 📄 lighthouse-audit.js
-│
-└── 📁 tests/
-    ├── 📄 accessibility.test.js
-    ├── 📄 performance.test.js
-    ├── 📄 visual-regression.test.js
-    └── 📁 fixtures/
-        └── 📄 test-data.json
+├── 📄 index.html               # Homepage
+├── 📄 sitemap.xml              # SEO sitemap
+├── 📄 robots.txt               # Search engine rules
+└── 📄 manifest.json            # PWA manifest
 ```
 
 ---
 
-# 🌙 Moonlit Portfolio
+## 🛠️ **Tech Stack**
 
-> A modern, accessible, and performant portfolio website with stunning animations, glass morphism design, and dark mode support.
+### **Frontend**
+- **HTML5** - Semantic markup with accessibility features
+- **CSS3** - Modern features including Grid, Flexbox, Custom Properties
+- **JavaScript ES6+** - Modern syntax with modules and async/await
+- **Bootstrap 5** - Responsive grid system and components
 
-![Moonlit Portfolio Preview](docs/screenshots/desktop-view.png)
+### **Libraries & Tools**
+- **Font Awesome** - Icon library
+- **Google Fonts** - Typography (Inter, JetBrains Mono)
+- **Intersection Observer API** - Scroll animations
+- **Local Storage API** - Theme persistence
+- **Fetch API** - Data loading
 
-[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100-brightgreen.svg)](https://developers.google.com/web/tools/lighthouse/)
-[![Accessibility](https://img.shields.io/badge/Accessibility-AAA-brightgreen.svg)](https://www.w3.org/WAI/WCAG21/quickref/)
-[![Performance](https://img.shields.io/badge/Performance-A+-brightgreen.svg)](https://gtmetrix.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## ✨ Features
-
-### 🎨 **Design Excellence**
-- **Glass Morphism UI** with backdrop blur effects
-- **Smooth Animations** powered by CSS transitions and transforms
-- **Interactive Moon** with floating animations and pastel glow effects
-- **Gradient Magic** with animated mesh backgrounds
-- **Responsive Design** that looks perfect on all devices
-- **Dark/Light Mode** with system preference detection
-
-### 🚀 **Performance Optimized**
-- **Lighthouse Score: 100** across all metrics
-- **WebP Image Formats** with fallbacks
-- **Lazy Loading** for images and components
-- **Critical CSS** inlined for faster rendering
-- **Service Worker** for offline functionality
-- **Progressive Web App** ready
-
-### ♿ **Accessibility First**
-- **WCAG 2.1 AAA Compliant**
-- **Screen Reader** optimized
-- **Keyboard Navigation** support
-- **Focus Management** with visible indicators
-- **Reduced Motion** support for users with vestibular disorders
-- **High Contrast** mode support
-
-### 🛠️ **Developer Experience**
-- **Modular Architecture** for easy maintenance
-- **CSS Custom Properties** for consistent theming
-- **ES6+ JavaScript** with modern patterns
-- **Build Tools** for optimization
-- **Documentation** for easy customization
+### **Performance**
+- **CSS Custom Properties** - Dynamic theming
+- **Lazy Loading** - Images and components
+- **Code Splitting** - Dynamic imports for page-specific code
+- **Minification** - Optimized assets
+- **Caching Strategies** - Browser and CDN caching
 
 ---
 
-## 🚀 Quick Start
+## 🚀 **Quick Start**
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-- Git
+### **Prerequisites**
+- Modern web browser
+- Local web server (for development)
+- Git (for cloning)
 
-### Installation
+### **Installation**
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/moonlit-portfolio.git
-   cd moonlit-portfolio
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/Pigletpeakkung/MThepegearts.git
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+# Navigate to project directory
+cd MThepegearts
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   ```
-   Edit `.env` with your configuration:
-   ```env
-   # Contact Form
-   EMAILJS_SERVICE_ID=your_service_id
-   EMAILJS_TEMPLATE_ID=your_template_id
-   EMAILJS_PUBLIC_KEY=your_public_key
-   
-   # Analytics (Optional)
-   GOOGLE_ANALYTICS_ID=GA_MEASUREMENT_ID
-   
-   # Site Configuration
-   SITE_URL=https://yoursite.com
-   SITE_NAME=Your Name
-   SITE_DESCRIPTION=Your portfolio description
-   ```
+# Start development server (choose one)
+# Python 3
+python -m http.server 8000
 
-4. **Start development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+# Python 2
+python -m SimpleHTTPServer 8000
 
-5. **Open your browser**
-   Navigate to `http://localhost:3000`
+# Node.js
+npx live-server --port=3000
+
+# PHP
+php -S localhost:8000
+```
+
+### **Development**
+
+```bash
+# Open in browser
+http://localhost:8000
+
+# For live reload during development
+npx live-server --port=3000 --open=/index.html
+```
 
 ---
 
-## 📝 Customization Guide
+## 📄 **Pages Overview**
 
-### 🎨 **Colors & Theming**
+### **🏠 Homepage (`index.html`)**
+- Hero section with animated typewriter effect
+- Services overview with interactive cards
+- Featured portfolio showcase
+- Client testimonials carousel
+- Call-to-action sections
 
-Edit `src/styles/variables.css` to customize the color scheme:
+### **❓ FAQ Page (`pages/faq.html`)**
+- Searchable and filterable FAQ system
+- Categorized questions (AI, Design, Voice, Services, Technical)
+- Accordion-style answers with smooth animations
+- Direct linking to specific questions
+- Contact CTA for additional questions
 
+### **👤 About Page (`pages/about.html`)**
+- Personal story and background
+- Skills and expertise showcase
+- Experience timeline
+- Education and certifications
+- Personal interests and values
+
+### **💼 Services Page (`pages/services.html`)**
+- Detailed service offerings
+- AI Development & Machine Learning
+- Creative Design & Branding
+- Voice Acting & Audio Production
+- Technical Consulting & Strategy
+- Pricing information and packages
+- Process workflow explanations
+
+### **📞 Contact Page (`pages/contact.html`)**
+- Multi-channel contact options
+- Interactive contact form with validation
+- Social media integration
+- Business hours and response times
+- Location and availability information
+- Direct booking for consultations
+
+### **🎨 Portfolio Page (`pages/portfolio.html`)**
+- Interactive project gallery
+- Category filtering (AI, Design, Voice, Web)
+- Project case studies with details
+- Technology stack for each project
+- Live demos and GitHub links
+- Client testimonials per project
+
+---
+
+## 🎨 **Design System**
+
+### **Color Palette**
 ```css
-:root {
-    /* Primary Colors */
-    --primary-light: #A78BFA;     /* Your brand color */
-    --primary-accent: #F9A8D4;    /* Accent color */
-    --secondary-highlight: #6EE7B7; /* Highlight color */
+/* Primary Colors */
+--primary-light: #6366f1;    /* Indigo */
+--primary-dark: #4f46e5;     /* Deep Indigo */
+--secondary-light: #06b6d4;  /* Cyan */
+--accent-light: #f59e0b;     /* Amber */
+
+/* Semantic Colors */
+--success: #10b981;          /* Emerald */
+--warning: #f59e0b;          /* Amber */
+--error: #ef4444;            /* Red */
+
+/* Neutral Colors */
+--text-dark: #1e293b;        /* Slate 800 */
+--text-medium: #64748b;      /* Slate 500 */
+--text-light: #94a3b8;       /* Slate 400 */
+```
+
+### **Typography**
+- **Primary Font:** Inter (Modern, readable sans-serif)
+- **Secondary Font:** JetBrains Mono (Code and technical content)
+- **Font Sizes:** Fluid typography with clamp() functions
+- **Line Heights:** Optimized for readability (1.6 base)
+
+### **Spacing System**
+```css
+/* Consistent spacing scale */
+--space-xs: 0.25rem;    /* 4px */
+--space-sm: 0.5rem;     /* 8px */
+--space-md: 1rem;       /* 16px */
+--space-lg: 1.5rem;     /* 24px */
+--space-xl: 3rem;       /* 48px */
+```
+
+### **Component Library**
+- **Glass Cards** - Frosted glass effect with backdrop filters
+- **Gradient Buttons** - Interactive buttons with hover effects
+- **Form Controls** - Consistent input styling across all forms
+- **Navigation** - Sticky navigation with scroll effects
+- **Loading States** - Skeleton screens and spinners
+
+---
+
+## 🔧 **Configuration**
+
+### **Theme Configuration (`assets/js/core/config.js`)**
+```javascript
+export const CONFIG = {
+    // Application settings
+    app: {
+        name: 'Thanattsitt Portfolio',
+        domain: 'pegearts.com',
+        email: 'Thanattsitt.info@yahoo.co.uk'
+    },
     
-    /* Background Colors */
-    --background-light: #F8FAFC;  /* Light mode background */
-    --background-dark: #1A202C;   /* Dark mode background */
-}
-```
-
-### 📝 **Content Management**
-
-Update your content in `public/data/`:
-
-#### `projects.json`
-```json
-{
-  "projects": [
-    {
-      "id": 1,
-      "title": "Project Name",
-      "description": "Project description",
-      "image": "assets/images/projects/project-1.webp",
-      "technologies": ["React", "Node.js", "MongoDB"],
-      "github": "https://github.com/username/project",
-      "demo": "https://project-demo.com",
-      "featured": true
+    // Social media links
+    social: {
+        linkedin: 'https://www.linkedin.com/in/thanattsitt-s',
+        github: 'https://github.com/Pigletpeakkung',
+        threads: 'https://www.threads.net/@thanattsitt.s',
+        linktree: 'https://linktr.ee/ThanttEzekiel',
+        paypal: 'https://paypal.me/@thanattsittS',
+        buymeacoffee: 'https://buymeacoffee.com/thanattsitts'
+    },
+    
+    // Feature toggles
+    features: {
+        darkMode: true,
+        animations: true,
+        analytics: true
     }
-  ]
-}
+};
 ```
 
-#### `skills.json`
-```json
-{
-  "skills": [
-    {
-      "category": "Frontend",
-      "items": [
-        {
-          "name": "React",
-          "level": 95,
-          "icon": "fab fa-react"
-        }
-      ]
-    }
-  ]
-}
-```
-
-### 🖼️ **Images & Assets**
-
-1. **Optimize images** before adding:
-   ```bash
-   npm run optimize-images
-   ```
-
-2. **Add images** to appropriate folders:
-   - Hero images: `public/assets/images/hero/`
-   - Project screenshots: `public/assets/images/projects/`
-   - Gallery items: `public/assets/images/gallery/`
-
-3. **Update image references** in your data files
-
-### 📧 **Contact Form Setup**
-
-1. **Create EmailJS account** at [emailjs.com](https://www.emailjs.com/)
-2. **Set up email service** (Gmail, Outlook, etc.)
-3. **Create email template**
-4. **Update environment variables**
-5. **Customize form** in `src/scripts/components/contact-form.js`
+### **FAQ Configuration**
+- **Categories:** AI, Design, Voice, Services, Technical
+- **Search:** Real-time search with highlighting
+- **Persistence:** URL parameters for direct linking
+- **Accessibility:** Full keyboard navigation support
 
 ---
 
-## 🔧 Build & Deployment
+## 🎯 **Key Features Deep Dive**
 
-### Development
-```bash
-npm run dev        # Start development server
-npm run watch      # Watch for changes
-npm run lint       # Run linters
-npm run test       # Run tests
-```
+### **🌙 Dark/Light Theme System**
+- **System Preference Detection** - Automatically detects user's preferred color scheme
+- **Manual Toggle** - Users can override system preference
+- **Smooth Transitions** - 300ms transitions between themes
+- **Persistence** - Theme choice saved in localStorage
+- **CSS Custom Properties** - Dynamic color switching
 
-### Production Build
-```bash
-npm run build      # Create production build
-npm run preview    # Preview production build
-npm run analyze    # Analyze bundle size
-```
+### **🔍 FAQ Search & Filter System**
+- **Real-time Search** - Instant results as you type
+- **Category Filtering** - Filter by expertise area
+- **Keyword Highlighting** - Search terms highlighted in results
+- **URL Integration** - Shareable links to specific FAQs
+- **Keyboard Navigation** - Full accessibility support
 
-### Deployment Options
+### **📱 Responsive Design**
+- **Mobile-First Approach** - Designed for mobile, enhanced for desktop
+- **Flexible Grid System** - CSS Grid and Flexbox layouts
+- **Touch-Friendly** - Optimized touch targets and gestures
+- **Performance Optimized** - Fast loading on mobile networks
 
-#### **Netlify** (Recommended)
-1. Connect your GitHub repository
-2. Set build command: `npm run build`
-3. Set publish directory: `build`
-4. Add environment variables in Netlify dashboard
-
-#### **Vercel**
-1. Install Vercel CLI: `npm i -g vercel`
-2. Run: `vercel --prod`
-3. Follow the prompts
-
-#### **GitHub Pages**
-1. Enable GitHub Pages in repository settings
-2. Use GitHub Actions workflow (included)
-3. Push to main branch to deploy
-
-#### **Custom Server**
-1. Build the project: `npm run build`
-2. Upload `build/` contents to your server
-3. Configure your web server for SPA routing
+### **⚡ Performance Optimizations**
+- **Lazy Loading** - Images and components loaded on demand
+- **Code Splitting** - JavaScript modules loaded per page
+- **Asset Optimization** - Compressed images and minified code
+- **Caching Strategy** - Aggressive caching for static assets
+- **Core Web Vitals** - Optimized for Google's performance metrics
 
 ---
 
-## 📊 Performance Optimization
+## 📊 **Analytics & Monitoring**
 
-### Image Optimization
+### **Performance Metrics**
+- **Lighthouse Scores:** 95+ across all categories
+- **Core Web Vitals:** All metrics in green
+- **Page Speed:** Sub-2 second load times
+- **Accessibility:** WCAG 2.1 AA compliant
+
+### **User Experience Tracking**
+- **Interaction Analytics** - Track user engagement
+- **Error Monitoring** - Automatic error reporting
+- **Performance Monitoring** - Real-time performance metrics
+- **A/B Testing** - Component and layout optimization
+
+---
+
+## 🚀 **Deployment**
+
+### **Production Deployment**
 ```bash
-# Convert images to WebP
-npm run optimize-images
+# Build optimized version
+npm run build
 
-# Generate different sizes
-npm run generate-responsive-images
+# Deploy to hosting provider
+# (Instructions vary by provider)
+
+# Update DNS records for pegearts.com
+# Configure SSL certificate
+# Set up CDN if needed
 ```
 
-### CSS & JavaScript
-- **Critical CSS** is automatically inlined
-- **Unused CSS** is purged in production
-- **JavaScript** is minified and compressed
-- **Code splitting** for better caching
-
-### Monitoring
+### **Environment Variables**
 ```bash
-# Run Lighthouse audit
-npm run lighthouse
+# Production
+NODE_ENV=production
+API_URL=https://api.pegearts.com
+ANALYTICS_ID=your-analytics-id
 
-# Check bundle size
-npm run analyze
-
-# Performance testing
-npm run perf-test
+# Development  
+NODE_ENV=development
+API_URL=http://localhost:3001
+ANALYTICS_ID=
 ```
 
 ---
 
-## ♿ Accessibility Features
+## 🤝 **Contributing**
 
-### Built-in Accessibility
-- ✅ **Semantic HTML** structure
-- ✅ **ARIA labels** and roles
-- ✅ **Keyboard navigation**
-- ✅ **Focus management**
-- ✅ **Screen reader** support
-- ✅ **Color contrast** compliance
-- ✅ **Text scaling** support
-- ✅ **Reduced motion** preferences
+While this is a personal portfolio, I welcome suggestions and improvements!
 
-### Testing Accessibility
-```bash
-# Run accessibility tests
-npm run test:a11y
-
-# Generate accessibility report
-npm run a11y-report
-```
-
----
-
-## 🎯 SEO Optimization
-
-### Meta Tags
-Automatically generated based on your content:
-- Open Graph tags for social sharing
-- Twitter Card tags
-- Structured data (JSON-LD)
-- Canonical URLs
-
-### Sitemap
-```bash
-# Generate sitemap
-npm run generate-sitemap
-```
-
-### Analytics Setup
-1. Add Google Analytics ID to `.env`
-2. Configure tracking events
-3. Set up Google Search Console
-
----
-
-## 🧪 Testing
-
-### Test Suite
-```bash
-# Run all tests
-npm run test
-
-# Accessibility tests
-npm run test:a11y
-
-# Performance tests
-npm run test:performance
-
-# Visual regression tests
-npm run test:visual
-```
-
-### Manual Testing Checklist
-- [ ] **Cross-browser** compatibility (Chrome, Firefox, Safari, Edge)
-- [ ] **Responsive design** on different screen sizes
-- [ ] **Keyboard navigation** works properly
-- [ ] **Screen reader** announces content correctly
-- [ ] **Performance** meets benchmarks
-- [ ] **Contact form** sends emails successfully
-
----
-
-## 📁 Browser Support
-
-| Browser | Version | Support |
-|---------|---------|---------|
-| Chrome  | 90+     | ✅ Full |
-| Firefox | 88+     | ✅ Full |
-| Safari  | 14+     | ✅ Full |
-| Edge    | 90+     | ✅ Full |
-| Opera   | 76+     | ✅ Full |
-
-### Graceful Degradation
-- **CSS Grid**: Flexbox fallback for older browsers
-- **CSS Custom Properties**: Static fallback values
-- **Backdrop Filter**: Background fallback for glass effect
-- **Intersection Observer**: Scroll fallback for animations
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Workflow
+### **How to Contribute**
 1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
-3. **Commit** your changes: `git commit -m 'Add amazing feature'`
-4. **Push** to the branch: `git push origin feature/amazing-feature`
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
 5. **Open** a Pull Request
 
-### Code Style
-- **ESLint** for JavaScript
-- **Prettier** for formatting
-- **Stylelint** for CSS
-- **Conventional Commits** for commit messages
+### **Code Standards**
+- **JavaScript:** ES6+ with consistent formatting
+- **CSS:** BEM methodology for class naming
+- **HTML:** Semantic markup with accessibility attributes
+- **Comments:** Clear documentation for complex logic
 
 ---
 
-## 📚 Additional Resources
+## 📈 **Roadmap**
 
-### Documentation
-- [📖 Customization Guide](docs/CUSTOMIZATION.md)
-- [🚀 Deployment Guide](docs/DEPLOYMENT.md)
-- [⚡ Performance Guide](docs/PERFORMANCE.md)
-- [♿ Accessibility Guide](docs/ACCESSIBILITY.md)
+### **🎯 Phase 1 (Current)**
+- ✅ Responsive portfolio showcase
+- ✅ Dark/light theme system
+- ✅ FAQ system with search
+- ✅ Contact form integration
+- ✅ SEO optimization
 
-### Tutorials
-- [Setting up EmailJS for contact forms](docs/tutorials/emailjs-setup.md)
-- [Customizing animations](docs/tutorials/animation-guide.md)
-- [Adding new sections](docs/tutorials/adding-sections.md)
+### **🚀 Phase 2 (Q2 2024)**
+- [ ] Blog system integration
+- [ ] Advanced portfolio filtering
+- [ ] Client testimonials carousel
+- [ ] Performance dashboard
+- [ ] Multi-language support
 
-### Community
-- [Discord Community](https://discord.gg/portfolio-community)
-- [GitHub Discussions](https://github.com/yourusername/moonlit-portfolio/discussions)
-- [Issue Tracker](https://github.com/yourusername/moonlit-portfolio/issues)
+### **🌟 Phase 3 (Q3 2024)**
+- [ ] Progressive Web App (PWA)
+- [ ] Offline functionality
+- [ ] Advanced animations
+- [ ] AI chatbot integration
+- [ ] Real-time collaboration tools
 
 ---
 
-## 📄 License
+## 🐛 **Known Issues**
+
+- **Safari iOS:** Backdrop-filter may not work on older versions
+- **Internet Explorer:** Not supported (modern browsers only)
+- **Print Styles:** Currently optimized for screen viewing
+
+---
+
+## 📝 **License**
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
+## 👤 **Author**
 
-- **Design Inspiration**: Modern glass morphism trends
-- **Icons**: Font Awesome, Lucide Icons
-- **Fonts**: Inter by Rasmus Andersson
-- **Images**: Unsplash contributors
-- **Community**: All the amazing developers who contribute
+<div align="center">
 
----
+**Thanattsitt Santisamranwilai**  
+*AI Creative Designer & Digital Innovator*
 
-## 📞 Support
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thanattsitt-s)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Pigletpeakkung)
+[![Threads](https://img.shields.io/badge/-Threads-000000?style=for-the-badge&logo=threads&logoColor=white)](https://www.threads.net/@thanattsitt.s)
+[![Email](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:Thanattsitt.info@yahoo.co.uk)
 
-Need help? We're here for you:
+</div>
 
-- 📧 **Email**: support@moonlit-portfolio.com
-- 💬 **Discord**: [Join our community](https://discord.gg/portfolio-community)
-- 📝 **Issues**: [GitHub Issues](https://github.com/yourusername/moonlit-portfolio/issues)
-- 📚 **Docs**: [Documentation Site](https://docs.moonlit-portfolio.com)
+### **🌐 Connect With Me**
+- **🌍 Website:** [pegearts.com](https://pegearts.com)
+- **💼 LinkedIn:** [thanattsitt-s](https://www.linkedin.com/in/thanattsitt-s)
+- **🐙 GitHub:** [Pigletpeakkung](https://github.com/Pigletpeakkung)
+- **📧 Email:** [Thanattsitt.info@yahoo.co.uk](mailto:Thanattsitt.info@yahoo.co.uk)
+- **🔗 Linktree:** [ThanttEzekiel](https://linktr.ee/ThanttEzekiel)
+- **🧵 Threads:** [@thanattsitt.s](https://www.threads.net/@thanattsitt.s)
 
----
-
-**Made with 🌙 and ❤️ by [Your Name](https://github.com/yourusername)**
-
----
-
-## 🔗 Links
-
-- **Live Demo**: [https://moonlit-portfolio-demo.netlify.app](https://moonlit-portfolio-demo.netlify.app)
-- **Documentation**: [https://docs.moonlit-portfolio.com](https://docs.moonlit-portfolio.com)
-- **GitHub**: [https://github.com/yourusername/moonlit-portfolio](https://github.com/yourusername/moonlit-portfolio)
+### **☕ Support My Work**
+- **💳 PayPal:** [paypal.me/@thanattsittS](https://paypal.me/@thanattsittS)
+- **☕ Buy Me Coffee:** [buymeacoffee.com/thanattsitts](https://buymeacoffee.com/thanattsitts)
 
 ---
 
-*Star ⭐ this repository if you found it helpful!*
+## 🙏 **Acknowledgments**
+
+- **Bootstrap Team** - For the excellent CSS framework
+- **Font Awesome** - For the comprehensive icon library
+- **Google Fonts** - For beautiful typography
+- **MDN Web Docs** - For excellent web development documentation
+- **CSS-Tricks** - For innovative CSS techniques and tutorials
+- **The Open Source Community** - For inspiration and best practices
+
+---
+
+## 📸 **Screenshots**
+
+<div align="center">
+
+### **🏠 Homepage**
+![Homepage Screenshot](assets/images/screenshots/homepage.png)
+
+### **❓ FAQ Page** 
+![FAQ Screenshot](assets/images/screenshots/faq.png)
+
+### **🌙 Dark Theme**
+![Dark Theme Screenshot](assets/images/screenshots/dark-theme.png)
+
+### **📱 Mobile View**
+![Mobile Screenshot](assets/images/screenshots/mobile.png)
+
+</div>
+
+---
+
+## 🔄 **Changelog**
+
+### **Version 2.0.0** (Current)
+- ✨ Complete redesign with modular architecture
+- ✨ Advanced FAQ system with search and filtering
+- ✨ Dark/light theme system
+- ✨ Performance optimizations
+- ✨ Accessibility improvements
+- 🐛 Fixed mobile navigation issues
+- 🐛 Resolved theme persistence bugs
+
+### **Version 1.0.0**
+- 🚀 Initial portfolio launch
+- 📱 Responsive design implementation
+- 🎨 Basic styling and animations
+- 📧 Contact form integration
+
+---
+
+<div align="center">
+
+**Built with ❤️ by Thanattsitt Santisamranwilai**
+
+*Crafting digital experiences through AI, design, and innovation*
+
+⭐ **Star this repository if you found it helpful!** ⭐
+
+</div>
