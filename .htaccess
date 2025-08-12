@@ -1,0 +1,34 @@
+# Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# Prevent access to sensitive files
+<Files "*.log">
+    Deny from all
+</Files>
+
+<Files ".htaccess">
+    Deny from all
+</Files>
+
+# Security headers
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-XSS-Protection "1; mode=block"
+
+# Cache control for 404 page
+<Files "404.html">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</Files>
+
+# Redirect common misspellings
+RedirectMatch 301 ^/portfoli$ /portfolio
+RedirectMatch 301 ^/contakt$ /contact
+RedirectMatch 301 ^/abot$ /about
+
+# Handle trailing slashes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} /(.+)/$
+RewriteRule ^ /%1 [R=301,L]
