@@ -1,0 +1,139 @@
+/*
+========================================
+SCROLL ANIMATIONS STYLES
+========================================
+Advanced CSS animations for scroll-triggered effects
+*/
+
+/* ===========================================
+   BASE ANIMATION SYSTEM
+   =========================================== */
+
+.aos-element {
+    transition: all var(--animation-duration, 0.8s) var(--animation-easing, cubic-bezier(0.4, 0, 0.2, 1));
+    will-change: opacity, transform;
+}
+
+.aos-animate {
+    will-change: auto;
+}
+
+/* ===========================================
+   FADE ANIMATIONS
+   =========================================== */
+
+[data-aos="fade"],
+[data-aos="fade-in"],
+.fade-in {
+    opacity: 0;
+    transition: opacity var(--animation-duration, 0.8s) var(--animation-easing, ease-out);
+}
+
+[data-aos="fade"].aos-animate,
+[data-aos="fade-in"].aos-animate,
+.fade-in.aos-animate {
+    opacity: 1;
+}
+
+[data-aos="fade-up"],
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+[data-aos="fade-up"].aos-animate,
+.fade-up.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"],
+.fade-down {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+[data-aos="fade-down"].aos-animate,
+.fade-down.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-left"],
+.fade-left {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+[data-aos="fade-left"].aos-animate,
+.fade-left.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-aos="fade-right"],
+.fade-right {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+[data-aos="fade-right"].aos-animate,
+.fade-right.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===========================================
+   SLIDE ANIMATIONS
+   =========================================== */
+
+[data-aos="slide-up"],
+.slide-up {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all var(--animation-duration, 0.8s) var(--animation-easing, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+}
+
+[data-aos="slide-up"].aos-animate,
+.slide-up.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="slide-down"],
+.slide-down {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+[data-aos="slide-down"].aos-animate,
+.slide-down.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="slide-left"],
+.slide-left {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+[data-aos="slide-left"].aos-animate,
+.slide-left.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-aos="slide-right"],
+.slide-right {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+[data-aos="slide-right"].aos-animate,
+.slide-right.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===================
