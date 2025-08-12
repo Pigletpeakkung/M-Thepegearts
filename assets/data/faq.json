@@ -94,4 +94,49 @@
           "id": "pricing-structure",
           "question": "How is your pricing structured?",
           "answer": "My pricing is transparent and project-based:\n\n<ul><li><strong>Fixed Project Rates:</strong> Clear pricing for defined scope and deliverables</li><li><strong>Hourly Consultation:</strong> $150-200/hour for advisory work</li><li><strong>Retainer Packages:</strong> Monthly packages for ongoing support</li><li><strong>Custom Quotes:</strong> Tailored pricing for unique or complex projects</li></ul>\n\nAll quotes include detailed breakdowns and no hidden fees. Payment plans available for larger projects.",
-          "tags": ["pricing", "
+                    "tags": ["pricing", "rates", "consultation", "payment"],
+          "priority": 2,
+          "lastUpdated": "2024-01-07"
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "name": "Technical",
+      "description": "Technical questions about implementation, requirements, and infrastructure",
+      "faqs": [
+        {
+          "id": "technical-requirements",
+          "question": "What are the technical requirements for AI projects?",
+          "answer": "Technical requirements depend on the specific AI application:\n\n<ul><li><strong>Data Requirements:</strong> Clean, structured datasets with appropriate volume</li><li><strong>Computing Resources:</strong> GPU access for training (can be cloud-based)</li><li><strong>Infrastructure:</strong> Scalable deployment environment</li><li><strong>Integration:</strong> APIs and systems for seamless integration</li><li><strong>Monitoring:</strong> Performance tracking and maintenance systems</li></ul>\n\nI can help assess and plan the technical infrastructure needed for your AI initiatives.",
+          "tags": ["technical", "requirements", "infrastructure", "ai", "setup"],
+          "priority": 1,
+          "lastUpdated": "2024-01-16"
+        },
+        {
+          "id": "web-technologies",
+          "question": "What web technologies do you work with?",
+          "answer": "I work with modern web technologies and frameworks:\n\n<ul><li><strong>Frontend:</strong> React, Vue.js, vanilla JavaScript, HTML5, CSS3</li><li><strong>Backend:</strong> Node.js, Python, PHP, RESTful APIs</li><li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL</li><li><strong>Cloud Services:</strong> AWS, Google Cloud, Azure</li><li><strong>DevOps:</strong> Docker, CI/CD pipelines, version control</li></ul>\n\nI choose the right technology stack based on project requirements and scalability needs.",
+          "tags": ["web-development", "technologies", "frontend", "backend", "cloud"],
+          "priority": 2,
+          "lastUpdated": "2024-01-05"
+        },
+        {
+          "id": "data-security",
+          "question": "How do you handle data security and privacy?",
+          "answer": "Data security and privacy are paramount in all my projects:\n\n<ul><li><strong>Encryption:</strong> Data encryption at rest and in transit</li><li><strong>Access Control:</strong> Role-based access and authentication</li><li><strong>Compliance:</strong> GDPR, CCPA, and industry-specific regulations</li><li><strong>Secure Infrastructure:</strong> Best practices for cloud and on-premise security</li><li><strong>Regular Audits:</strong> Security assessments and vulnerability testing</li></ul>\n\nI can provide detailed security documentation and comply with your organization's security requirements.",
+          "tags": ["security", "privacy", "compliance", "encryption", "data-protection"],
+          "priority": 1,
+          "lastUpdated": "2024-01-06"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-01-16",
+    "version": "1.0",
+    "totalFAQs": 12,
+    "categories": 5
+  }
+}
+
