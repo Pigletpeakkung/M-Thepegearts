@@ -136,4 +136,494 @@ Advanced CSS animations for scroll-triggered effects
     transform: translateX(0);
 }
 
-/* ===================
+/* =================== *\
+/* ===========================================
+   SCALE ANIMATIONS
+   =========================================== */
+
+[data-aos="scale"],
+[data-aos="scale-in"],
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all var(--animation-duration, 0.8s) var(--animation-easing, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+[data-aos="scale"].aos-animate,
+[data-aos="scale-in"].aos-animate,
+.scale-in.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-aos="scale-up"],
+.scale-up {
+    opacity: 0;
+    transform: scale(0.6) translateY(50px);
+}
+
+[data-aos="scale-up"].aos-animate,
+.scale-up.aos-animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+[data-aos="scale-down"],
+.scale-down {
+    opacity: 0;
+    transform: scale(0.6) translateY(-50px);
+}
+
+[data-aos="scale-down"].aos-animate,
+.scale-down.aos-animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* ===========================================
+   ROTATE ANIMATIONS
+   =========================================== */
+
+[data-aos="rotate"],
+[data-aos="rotate-in"],
+.rotate-in {
+    opacity: 0;
+    transform: rotate(10deg) scale(0.9);
+    transition: all var(--animation-duration, 0.8s) var(--animation-easing, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+}
+
+[data-aos="rotate"].aos-animate,
+[data-aos="rotate-in"].aos-animate,
+.rotate-in.aos-animate {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+[data-aos="rotate-left"],
+.rotate-left {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.8);
+}
+
+[data-aos="rotate-left"].aos-animate,
+.rotate-left.aos-animate {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+[data-aos="rotate-right"],
+.rotate-right {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.8);
+}
+
+[data-aos="rotate-right"].aos-animate,
+.rotate-right.aos-animate {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* ===========================================
+   FLIP ANIMATIONS
+   =========================================== */
+
+[data-aos="flip-x"],
+.flip-x {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: all var(--animation-duration, 0.8s) var(--animation-easing, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+}
+
+[data-aos="flip-x"].aos-animate,
+.flip-x.aos-animate {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+[data-aos="flip-y"],
+.flip-y {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-90deg);
+}
+
+[data-aos="flip-y"].aos-animate,
+.flip-y.aos-animate {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/* ===========================================
+   ZOOM ANIMATIONS
+   =========================================== */
+
+[data-aos="zoom-in"],
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all var(--animation-duration, 0.8s) var(--animation-easing, cubic-bezier(0.34, 1.56, 0.64, 1));
+}
+
+[data-aos="zoom-in"].aos-animate,
+.zoom-in.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-aos="zoom-out"],
+.zoom-out {
+    opacity: 0;
+    transform: scale(1.2);
+}
+
+[data-aos="zoom-out"].aos-animate,
+.zoom-out.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-aos="zoom-in-up"],
+.zoom-in-up {
+    opacity: 0;
+    transform: scale(0.6) translateY(50px);
+}
+
+[data-aos="zoom-in-up"].aos-animate,
+.zoom-in-up.aos-animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+[data-aos="zoom-in-down"],
+.zoom-in-down {
+    opacity: 0;
+    transform: scale(0.6) translateY(-50px);
+}
+
+[data-aos="zoom-in-down"].aos-animate,
+.zoom-in-down.aos-animate {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* ===========================================
+   CREATIVE ANIMATIONS
+   =========================================== */
+
+[data-aos="bounce-in"],
+.bounce-in {
+    opacity: 0;
+    transform: scale(0.3);
+    transition: all var(--animation-duration, 0.8s) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+[data-aos="bounce-in"].aos-animate,
+.bounce-in.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-aos="elastic-in"],
+.elastic-in {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: all var(--animation-duration, 0.8s) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-aos="elastic-in"].aos-animate,
+.elastic-in.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+[data-aos="swing"],
+.swing {
+    opacity: 0;
+    transform: rotate(-15deg);
+    transform-origin: top center;
+    transition: all var(--animation-duration, 0.8s) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-aos="swing"].aos-animate,
+.swing.aos-animate {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* ===========================================
+   PARALLAX ELEMENTS
+   =========================================== */
+
+[data-parallax] {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.parallax-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-element {
+    transition: transform 0.1s linear;
+}
+
+/* Smooth parallax on slower devices */
+@media (max-width: 768px) {
+    [data-parallax] {
+        transform: none !important;
+    }
+}
+
+/* ===========================================
+   COUNTER ANIMATIONS
+   =========================================== */
+
+[data-counter] {
+    font-variant-numeric: tabular-nums;
+    transition: all 0.3s ease;
+}
+
+[data-counter].counting {
+    color: var(--primary-color, #007bff);
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ===========================================
+   PROGRESS BAR ANIMATIONS
+   =========================================== */
+
+[data-progress] {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    position: relative;
+}
+
+.progress-bar,
+.skill-progress,
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color, #007bff), var(--secondary-color, #28a745));
+    border-radius: inherit;
+    position: relative;
+    overflow: hidden;
+    transition: width var(--progress-duration, 1.5s) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progress-bar::before,
+.skill-progress::before,
+.progress-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* ===========================================
+   STAGGER ANIMATIONS
+   =========================================== */
+
+[data-stagger-group] {
+    --stagger-delay: 0ms;
+    animation-delay: var(--stagger-delay);
+}
+
+/* Stagger presets */
+.stagger-children > * {
+    --stagger-delay: calc(var(--stagger-index, 0) * var(--stagger-duration, 100ms));
+    animation-delay: var(--stagger-delay);
+}
+
+/* ===========================================
+   ANIMATION DURATIONS & EASINGS
+   =========================================== */
+
+/* Duration classes */
+.aos-duration-200 { --animation-duration: 0.2s; }
+.aos-duration-300 { --animation-duration: 0.3s; }
+.aos-duration-400 { --animation-duration: 0.4s; }
+.aos-duration-500 { --animation-duration: 0.5s; }
+.aos-duration-600 { --animation-duration: 0.6s; }
+.aos-duration-800 { --animation-duration: 0.8s; }
+.aos-duration-1000 { --animation-duration: 1s; }
+.aos-duration-1200 { --animation-duration: 1.2s; }
+.aos-duration-1500 { --animation-duration: 1.5s; }
+.aos-duration-2000 { --animation-duration: 2s; }
+
+/* Easing classes */
+.aos-easing-linear { --animation-easing: linear; }
+.aos-easing-ease { --animation-easing: ease; }
+.aos-easing-ease-in { --animation-easing: ease-in; }
+.aos-easing-ease-out { --animation-easing: ease-out; }
+.aos-easing-ease-in-out { --animation-easing: ease-in-out; }
+.aos-easing-bounce { --animation-easing: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.aos-easing-elastic { --animation-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+/* Delay classes */
+.aos-delay-50 { animation-delay: 50ms; }
+.aos-delay-100 { animation-delay: 100ms; }
+.aos-delay-150 { animation-delay: 150ms; }
+.aos-delay-200 { animation-delay: 200ms; }
+.aos-delay-300 { animation-delay: 300ms; }
+.aos-delay-400 { animation-delay: 400ms; }
+.aos-delay-500 { animation-delay: 500ms; }
+.aos-delay-600 { animation-delay: 600ms; }
+.aos-delay-800 { animation-delay: 800ms; }
+.aos-delay-1000 { animation-delay: 1s; }
+
+/* ===========================================
+   RESPONSIVE ANIMATIONS
+   =========================================== */
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+    .aos-element {
+        --animation-duration: 0.6s;
+    }
+    
+    [data-aos*="slide"] {
+        transform: translateY(30px);
+    }
+    
+    [data-aos*="scale"] {
+        transform: scale(0.9);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .aos-element {
+        --animation-duration: 0.4s;
+    }
+    
+    [data-aos*="slide"] {
+        transform: translateY(20px);
+    }
+    
+    [data-aos*="rotate"] {
+        transform: rotate(5deg) scale(0.95);
+    }
+}
+
+/* ===========================================
+   REDUCED MOTION SUPPORT
+   =========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .aos-element,
+    [data-aos],
+    [data-parallax],
+    [data-counter],
+    [data-progress] {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+    
+    .progress-bar::before,
+    .skill-progress::before,
+    .progress-fill::before {
+        animation: none !important;
+    }
+}
+
+/* ===========================================
+   PERFORMANCE OPTIMIZATIONS
+   =========================================== */
+
+/* GPU acceleration for better performance */
+.aos-element,
+[data-aos],
+[data-parallax] {
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform: translate3d(0, 0, 0);
+}
+
+/* Optimize will-change property */
+.aos-animate {
+    will-change: auto;
+}
+
+/* Container queries for better responsive behavior */
+@supports (container-type: inline-size) {
+    .animation-container {
+        container-type: inline-size;
+    }
+    
+    @container (max-width: 500px) {
+        .aos-element {
+            --animation-duration: 0.3s;
+        }
+    }
+}
+
+/* ===========================================
+   UTILITY CLASSES
+   =========================================== */
+
+/* Animation states */
+.animation-paused { animation-play-state: paused; }
+.animation-running { animation-play-state: running; }
+
+/* Visibility helpers */
+.aos-hidden { opacity: 0; visibility: hidden; }
+.aos-visible { opacity: 1; visibility: visible; }
+
+/* Transform helpers */
+.transform-none { transform: none !important; }
+.transform-reset { transform: translate3d(0, 0, 0) scale(1) rotate(0deg) !important; }
+
+/* Debug mode */
+[data-scroll-animations="debug"] .aos-element {
+    outline: 2px dashed rgba(255, 0, 0, 0.3);
+    outline-offset: 2px;
+}
+
+[data-scroll-animations="debug"] .aos-animate {
+    outline-color: rgba(0, 255, 0, 0.3);
+}
+
+/* ===========================================
+   CUSTOM PROPERTIES FOR DYNAMIC CONTROL
+   =========================================== */
+
+:root {
+    --aos-default-duration: 0.8s;
+    --aos-default-easing: cubic-bezier(0.4, 0, 0.2, 1);
+    --aos-default-delay: 0ms;
+    --aos-stagger-increment: 100ms;
+    --aos-parallax-strength: 0.5;
+}
+
+/* Theme-specific animations */
+[data-theme="dark"] {
+    --aos-shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+    --aos-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .aos-element {
+        --animation-duration: 0.3s;
+    }
+    
+    [data-aos*="fade"] {
+        transition: opacity var(--animation-duration) ease;
+    }
+}
+
