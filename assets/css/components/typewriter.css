@@ -1,0 +1,450 @@
+/*
+========================================
+TYPEWRITER COMPONENT STYLES
+========================================
+Advanced styling for typewriter effects with themes and variations
+*/
+
+/* ===========================================
+   BASE TYPEWRITER STYLES
+   =========================================== */
+
+.typewriter-container {
+    position: relative;
+    display: inline-block;
+    font-family: var(--font-family-mono, 'Courier New', monospace);
+}
+
+.typewriter-text {
+    display: inline;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    font-weight: 100;
+    margin-left: 2px;
+    color: currentColor;
+    animation: typewriter-blink var(--cursor-blink-speed, 1s) infinite;
+    transition: opacity 0.1s ease;
+}
+
+/* ===========================================
+   CURSOR ANIMATIONS
+   =========================================== */
+
+@keyframes typewriter-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+@keyframes typewriter-pulse {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.7; 
+        transform: scale(1.1);
+    }
+}
+
+@keyframes typewriter-glow {
+    0%, 100% { 
+        opacity: 1; 
+        text-shadow: 0 0 5px currentColor;
+    }
+    50% { 
+        opacity: 0.8; 
+        text-shadow: 0 0 10px currentColor, 0 0 15px currentColor;
+    }
+}
+
+/* ===========================================
+   CURSOR VARIATIONS
+   =========================================== */
+
+.typewriter-cursor.cursor-block {
+    background-color: currentColor;
+    color: var(--background-color, #fff);
+    padding: 0 2px;
+    margin-left: 0;
+}
+
+.typewriter-cursor.cursor-underline {
+    border-bottom: 2px solid currentColor;
+    animation: typewriter-blink var(--cursor-blink-speed, 1s) infinite;
+}
+
+.typewriter-cursor.cursor-pulse {
+    animation: typewriter-pulse var(--cursor-blink-speed, 1s) infinite;
+}
+
+.typewriter-cursor.cursor-glow {
+    animation: typewriter-glow var(--cursor-blink-speed, 1s) infinite;
+}
+
+.typewriter-cursor.cursor-rainbow {
+    background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: typewriter-rainbow 2s infinite, typewriter-blink var(--cursor-blink-speed, 1s) infinite;
+}
+
+@keyframes typewriter-rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===========================================
+   TYPING STATES
+   =========================================== */
+
+.typing {
+    position: relative;
+}
+
+.typing .typewriter-cursor {
+    animation-play-state: running;
+    opacity: 1;
+}
+
+.typing-complete .typewriter-cursor {
+    animation-play-state: paused;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.typing-paused .typewriter-cursor {
+    animation-play-state: paused;
+    opacity: 1;
+}
+
+/* ===========================================
+   TEXT EFFECTS
+   =========================================== */
+
+.typewriter-highlight {
+    position: relative;
+    background: linear-gradient(120deg, transparent 0%, transparent 50%, var(--highlight-color, #ffeb3b) 50%);
+    background-size: 220% 100%;
+    animation: typewriter-highlight 0.8s ease-in-out forwards;
+}
+
+@keyframes typewriter-highlight {
+    0% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+.typewriter-fade-in {
+    opacity: 0;
+    animation: typewriter-fade-in 0.3s ease forwards;
+}
+
+@keyframes typewriter-fade-in {
+    to { opacity: 1; }
+}
+
+.typewriter-text.mistake {
+    color: var(--error-color, #f44336);
+    text-decoration: line-through;
+    animation: typewriter-mistake 0.2s ease;
+}
+
+@keyframes typewriter-mistake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+/* ===========================================
+   TYPEWRITER THEMES
+   =========================================== */
+
+/* Terminal Theme */
+.typewriter-theme-terminal {
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 2px solid #333;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.typewriter-theme-terminal .typewriter-cursor {
+    background-color: #00ff00;
+    color: #000;
+    animation: typewriter-blink 0.8s infinite;
+}
+
+/* Retro Theme */
+.typewriter-theme-retro {
+    background-color: #1a1a1a;
+    color: #ff6b35;
+    font-family: 'Courier New', monospace;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.typewriter-theme-retro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 107, 53, 0.03) 2px,
+        rgba(255, 107, 53, 0.03) 4px
+    );
+    pointer-events: none;
+}
+
+.typewriter-theme-retro .typewriter-cursor {
+    color: #ff6b35;
+    text-shadow: 0 0 10px #ff6b35;
+    animation: typewriter-glow 1.5s infinite;
+}
+
+/* Modern Theme */
+.typewriter-theme-modern {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-family: 'SF Mono', 'Monaco', monospace;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.typewriter-theme-modern .typewriter-cursor {
+    background-color: white;
+    color: #667eea;
+    border-radius: 2px;
+    animation: typewriter-pulse 1.2s infinite;
+}
+
+/* Neon Theme */
+.typewriter-theme-neon {
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid #ff00ff;
+    box-shadow: 
+        0 0 5px #ff00ff,
+        inset 0 0 5px #ff00ff,
+        0 0 20px #ff00ff;
+}
+
+.typewriter-theme-neon .typewriter-text {
+    text-shadow: 
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 15px currentColor;
+}
+
+.typewriter-theme-neon .typewriter-cursor {
+    color: #00ffff;
+    text-shadow: 
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 15px #00ffff;
+    animation: typewriter-glow 0.8s infinite;
+}
+
+/* Minimal Theme */
+.typewriter-theme-minimal {
+    color: var(--text-color, #333);
+    font-family: var(--font-family, system-ui);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.typewriter-theme-minimal .typewriter-cursor {
+    color: var(--primary-color, #007bff);
+    font-weight: 300;
+    animation: typewriter-blink 1.5s infinite;
+}
+
+/* ===========================================
+   RESPONSIVE BEHAVIOR
+   =========================================== */
+
+@media (max-width: 768px) {
+    .typewriter-container {
+        font-size: 0.9rem;
+    }
+    
+    .typewriter-cursor {
+        margin-left: 1px;
+    }
+    
+    .typewriter-theme-terminal,
+    .typewriter-theme-retro,
+    .typewriter-theme-modern,
+    .typewriter-theme-neon {
+        padding: 1rem;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .typewriter-container {
+        font-size: 0.8rem;
+    }
+    
+    .typewriter-theme-terminal,
+    .typewriter-theme-retro,
+    .typewriter-theme-modern,
+    .typewriter-theme-neon {
+        padding: 0.75rem;
+        border-radius: 4px;
+    }
+}
+
+/* ===========================================
+   ACCESSIBILITY
+   =========================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .typewriter-cursor {
+        border: 2px solid currentColor;
+        background-color: transparent;
+    }
+    
+    .typewriter-theme-terminal,
+    .typewriter-theme-retro,
+    .typewriter-theme-modern,
+    .typewriter-theme-neon {
+        border: 3px solid currentColor;
+        box-shadow: none;
+        text-shadow: none;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .typewriter-cursor {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .typewriter-text.mistake {
+        animation: none;
+        text-decoration: line-through;
+    }
+    
+    .typewriter-highlight {
+        animation: none;
+        background-position: 0 0;
+    }
+    
+    .typewriter-fade-in {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .typewriter-theme-neon .typewriter-text,
+    .typewriter-theme-neon .typewriter-cursor {
+        text-shadow: none;
+    }
+    
+    .typewriter-theme-retro .typewriter-cursor {
+        text-shadow: none;
+    }
+}
+
+/* ===========================================
+   PERFORMANCE OPTIMIZATIONS
+   =========================================== */
+
+.typewriter-container {
+    will-change: auto;
+    contain: layout;
+}
+
+.typing .typewriter-container {
+    will-change: contents;
+}
+
+.typing-complete .typewriter-container {
+    will-change: auto;
+}
+
+/* ===========================================
+   DARK THEME SUPPORT
+   =========================================== */
+
+[data-theme="dark"] .typewriter-theme-minimal {
+    color: var(--text-light, #fff);
+}
+
+[data-theme="dark"] .typewriter-theme-minimal .typewriter-cursor {
+    color: var(--primary-light, #64b5f6);
+}
+
+/* ===========================================
+   PRINT STYLES
+   =========================================== */
+
+@media print {
+    .typewriter-cursor {
+        display: none;
+    }
+    
+    .typewriter-text {
+        color: black !important;
+        text-shadow: none !important;
+    }
+    
+    .typewriter-theme-terminal,
+    .typewriter-theme-retro,
+    .typewriter-theme-modern,
+    .typewriter-theme-neon {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+        border: 1px solid black !important;
+    }
+}
+
+/* ===========================================
+   FOCUS STYLES
+   =========================================== */
+
+.typewriter-container:focus {
+    outline: 2px solid var(--focus-color, #007bff);
+    outline-offset: 2px;
+}
+
+.typewriter-container:focus .typewriter-cursor {
+    animation-play-state: running;
+    opacity: 1;
+}
