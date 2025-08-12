@@ -1,0 +1,25 @@
+/* TEAM */
+Creator: THANATTSITT SANTISAMRANWILAI
+Site: https://pegearts.com
+Email: Thanattsitt.info@yahoo.co.uk
+LinkedIn: https://www.linkedin.com/in/thanattsitt-s
+GitHub: https://github.com/Pigletpeakkung
+Location: Thailand
+
+/* SERVICES */
+AI Consulting & Development
+Voice Acting & Audio Production
+Digital Design & Branding
+Website Design & Development
+
+/* THANKS */
+Thanks to all clients who trusted me with their projects
+Coffee supporters at buymeacoffee.com/thanattsitts
+Open source community
+
+/* SITE */
+Last update: 2024/01/25
+Language: English
+Doctype: HTML5
+IDE: Visual Studio Code
+Built with: HTML5, CSS3, JavaScript ES6+
