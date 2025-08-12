@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include common header -->
+    <script>
+        fetch('/includes/header.html')
+            .then(response => response.text())
+            .then(data => document.head.insertAdjacentHTML('beforeend', data));
+    </script>
+    
+    <!-- Page-specific meta -->
+    <title>FAQ - Frequently Asked Questions | Thanattsitt Santisamranwilai</title>
+    <meta name="description" content="Find answers to frequently asked questions about AI development, creative design services, voice acting, and technical consulting by Thanattsitt Santisamranwilai.">
+    <meta name="keywords" content="FAQ, AI development, creative design, voice acting, consulting, questions, answers">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ - Frequently Asked Questions | Thanattsitt Santisamranwilai">
+    <meta property="og:description" content="Find answers to frequently asked questions about AI development, creative design services, voice acting, and technical consulting.">
+    <meta property="og:url" content="https://pegearts.com/pages/faq.html">
+    <meta property="og:image" content="https://pegearts.com/assets/images/og-faq.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:title" content="FAQ - Frequently Asked Questions | Thanattsitt Santisamranwilai">
+    <meta name="twitter:description" content="Find answers to frequently asked questions about AI development, creative design services, voice acting, and technical consulting.">
+    <meta name="twitter:image" content="https://pegearts.com/assets/images/twitter-faq.jpg">
+    
+    <!-- Page-specific CSS -->
+    <link href="/assets/css/pages/faq.css" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do you approach AI training projects?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "I follow a structured methodology for AI training projects including data analysis, model selection, training strategy, performance monitoring, and deployment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What design tools and software do you use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "My design toolkit includes Adobe Creative Suite, 3D software like Blender, AI design tools like Midjourney and DALL-E, and modern web development tools."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body data-theme="light">
+    <!-- Loading screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading FAQ...</p>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- FAQ Section -->
+        <section class="section faq-section">
+            <div class="container">
+                <!-- Hero -->
+                <div class="faq-hero">
+                    <h1>Frequently Asked Questions</h1>
+                    <p>Find answers to common questions about my services, expertise, and working process. Can't find what you're looking for? Feel free to reach out!</p>
+                </div>
+                
+                <!-- Search -->
+                <div class="faq-search glass-card">
+                    <div class="search-input-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="faqSearch" placeholder="Search FAQs..." class="form-control" 
+                               aria-label="Search frequently asked questions">
+                    </div>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="faq-categories">
+                    <button class="category-btn active" data-category="all" aria-pressed="true">
+                        <i class="fas fa-list"></i>
+                        All Questions
+                    </button>
+                    <button class="category-btn" data-category="ai" aria-pressed="false">
+                        <i class="fas fa-brain"></i>
+                        AI & ML
+                    </button>
+                    <button class="category-btn" data-category="design" aria-pressed="false">
+                        <i class="fas fa-palette"></i>
+                        Creative Design
+                    </button>
+                    <button class="category-btn" data-category="voice" aria-pressed="false">
+                        <i class="fas fa-microphone"></i>
+                        Voice Acting
+                    </button>
+                    <button class="category-btn" data-category="services" aria-pressed="false">
+                        <i class="fas fa-cog"></i>
+                        Services
+                    </button>
+                    <button class="category-btn" data-category="technical" aria-pressed="false">
+                        <i class="fas fa-code"></i>
+                        Technical
+                    </button>
+                </div>
+                
+                <!-- FAQ List -->
+                <div class="faq-list" role="region" aria-label="Frequently asked questions">
+                    <!-- FAQ items will be dynamically loaded here -->
+                    <div class="faq-loading">
+                        <div class="loading-spinner"></div>
+                        <p>Loading questions...</p>
+                    </div>
+                </div>
+                
+                <!-- Empty State -->
+                <div class="faq-empty" role="status" aria-live="polite">
+                    <div class="faq-empty-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>No FAQs found</h3>
+                    <p>Try adjusting your search terms or category filter.</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('faqSearch').value=''; document.querySelector('[data-category=all]').click();">
+                        <i class="fas fa-refresh"></i>
+                        Reset Filters
+                    </button>
+                </div>
+                
+                <!-- Contact CTA -->
+                <div class="faq-contact-cta">
+                    <h3>Still have questions?</h3>
+                    <p>I'm here to help! Get in touch for personalized answers to your specific needs.</p>
+                    <div class="cta-buttons">
+                        <a href="/pages/contact.html" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Contact Me
+                        </a>
+                        <a href="mailto:Thanattsitt.info@yahoo.co.uk" class="btn btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            Email Direct
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Load includes -->
+    <script>
+        // Load navbar
+        fetch('/includes/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+            
+        // Load footer  
+        fetch('/includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+                // Update current year
+                const yearSpan = document.getElementById('currentYear');
+                if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            });
+    </script>
+    
+    <!-- Main Application -->
+    <script type="module">
+        import { PortfolioApp } from '/assets/js/core/app.js';
+        
+        // Initialize app
+        const app = new PortfolioApp({
+            page: 'faq',
+            debug: false
+        });
+        
+        // Hide loading screen when app is ready
+        app.addEventListener('app:ready', () => {
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 300);
+            }
+        });
+        
+        // Global app reference for debugging
+        window.app = app;
+    </script>
+    
+    <!-- Analytics (if enabled) -->
+    <script>
+        // Add your analytics code here
+        // Google Analytics, etc.
+    </script>
+</body>
+</html>
