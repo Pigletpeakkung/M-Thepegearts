@@ -1,0 +1,473 @@
+/*
+========================================
+MOBILE CONTACT STYLES
+========================================
+Mobile-specific contact enhancements
+*/
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.whatsapp-float.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+}
+
+.whatsapp-text {
+    display: none;
+}
+
+/* Mobile Form Navigation */
+.mobile-form-nav {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--background-primary);
+    border-top: 2px solid var(--border-color);
+    padding: 1rem;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.mobile-nav-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-btn:disabled {
+    background: var(--border-color);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+.mobile-nav-btn:not(:disabled):active {
+    transform: scale(0.95);
+}
+
+.mobile-step-indicator {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Call Confirmation Modal */
+.call-confirmation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 1rem;
+}
+
+.confirmation-content {
+    background: var(--background-primary);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    animation: modalSlideUp 0.3s ease;
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.confirmation-header {
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.confirmation-header h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.confirmation-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.confirmation-close:hover {
+    background: var(--error-color);
+    color: white;
+}
+
+.confirmation-actions {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.confirmation-actions .btn {
+    flex: 1;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Mobile Phone/Email Links */
+.mobile-phone-link,
+.mobile-email-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-phone-link::after,
+.mobile-email-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+    pointer-events: none;
+}
+
+.mobile-phone-link:active::after,
+.mobile-email-link:active::after {
+    width: 200px;
+    height: 200px;
+}
+
+/* Error Notification */
+.error-notification,
+.booking-success-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--background-primary);
+    border: 2px solid var(--error-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    animation: slideInRight 0.3s ease;
+    max-width: 350px;
+    margin: 0 1rem;
+}
+
+.booking-success-notification {
+    border-color: var(--success-color);
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.notification-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.notification-message {
+    flex: 1;
+}
+
+.notification-message h4 {
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.notification-message p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    background: var(--error-color);
+    color: white;
+}
+
+/* Booking Error */
+.booking-error {
+    background: rgba(var(--error-color-rgb), 0.1);
+    border: 1px solid var(--error-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    animation: shakeError 0.5s ease;
+}
+
+@keyframes shakeError {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.error-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.error-icon {
+    font-size: 1.2rem;
+}
+
+.error-text {
+    color: var(--error-color);
+    font-weight: 600;
+}
+
+/* Mobile-Specific Responsive Design */
+@media (max-width: 768px) {
+    .mobile-form-nav {
+        display: flex;
+    }
+    
+    .whatsapp-float {
+        bottom: 80px; /* Account for mobile form nav */
+    }
+    
+    /* Expand WhatsApp button on tablet */
+    @media (min-width: 481px) {
+        .whatsapp-float {
+            width: auto;
+            padding: 0 1rem;
+            border-radius: 30px;
+        }
+        
+        .whatsapp-text {
+            display: block;
+            margin-left: 0.5rem;
+            font-weight: 600;
+        }
+    }
+    
+    /* Notification adjustments */
+    .error-notification,
+    .booking-success-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        margin: 0;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-nav-btn {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .mobile-step-indicator {
+        font-size: 0.9rem;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 70px;
+    }
+    
+    .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .confirmation-content {
+        margin: 0.5rem;
+    }
+}
+
+/* Touch-specific styles */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .mobile-nav-btn,
+    .confirmation-close,
+    .notification-close {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .whatsapp-float:hover {
+        transform: none;
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+    
+    /* Enhance active states for touch feedback */
+    .mobile-nav-btn:active {
+        background: var(--primary-color-dark);
+        transform: scale(0.98);
+    }
+    
+    .whatsapp-float:active {
+        transform: scale(0.95);
+    }
+    
+    /* Prevent text selection during interactions */
+    .mobile-form-nav,
+    .whatsapp-float,
+    .call-confirmation {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .whatsapp-float {
+        border: 3px solid #000;
+    }
+    
+    .mobile-form-nav {
+        border-top-width: 3px;
+    }
+    
+    .notification-content {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-float,
+    .confirmation-content,
+    .error-notification,
+    .booking-success-notification {
+        animation: none;
+    }
+    
+    .whatsapp-float:hover,
+    .mobile-nav-btn:active,
+    .whatsapp-float:active {
+        transform: none;
+    }
+    
+    .mobile-phone-link::after,
+    .mobile-email-link::after {
+        transition: none;
+    }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .mobile-form-nav {
+    background: var(--background-primary);
+    border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .call-confirmation {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="dark"] .confirmation-content {
+    background: var(--background-primary);
+}
+
+/* Print styles */
+@media print {
+    .whatsapp-float,
+    .mobile-form-nav,
+    .call-confirmation,
+    .error-notification,
+    .booking-success-notification {
+        display: none !important;
+    }
+}
