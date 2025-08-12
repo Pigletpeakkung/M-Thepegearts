@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include common header -->
+    <script>
+        fetch('/includes/header.html')
+            .then(response => response.text())
+            .then(data => document.head.insertAdjacentHTML('beforeend', data));
+    </script>
+    
+    <!-- Page-specific meta -->
+    <title>About - Thanattsitt Santisamranwilai | AI Creative Designer & Digital Innovator</title>
+    <meta name="description" content="Meet Thanattsitt Santisamranwilai - a creative innovator bridging AI technology and artistic expression. Discover my journey, expertise, and passion for transformative digital experiences.">
+    <meta name="keywords" content="Thanattsitt, AI designer, creative technologist, machine learning, voice actor, digital innovator, Thailand">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About - Thanattsitt Santisamranwilai | AI Creative Designer">
+    <meta property="og:description" content="Meet Thanattsitt - a creative innovator bridging AI technology and artistic expression with unique expertise in machine learning and creative design.">
+    <meta property="og:url" content="https://pegearts.com/pages/about.html">
+    <meta property="og:image" content="https://pegearts.com/assets/images/thanattsitt-professional.jpg">
+    <meta property="og:type" content="profile">
+    
+    <!-- Twitter -->
+    <meta name="twitter:title" content="About - Thanattsitt Santisamranwilai | AI Creative Designer">
+    <meta name="twitter:description" content="Meet Thanattsitt - a creative innovator bridging AI technology and artistic expression.">
+    <meta name="twitter:image" content="https://pegearts.com/assets/images/thanattsitt-professional.jpg">
+    
+    <!-- Page-specific CSS -->
+    <link href="/assets/css/pages/about.css" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thanattsitt Santisamranwilai",
+        "alternateName": "Thanattsitt",
+        "description": "AI Creative Designer, Digital Innovator, Machine Learning Engineer, and Voice Actor",
+        "url": "https://pegearts.com",
+        "image": "https://pegearts.com/assets/images/thanattsitt-professional.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/thanattsitt-s",
+            "https://github.com/Pigletpeakkung",
+            "https://www.threads.net/@thanattsitt.s",
+            "https://linktr.ee/ThanttEzekiel"
+        ],
+        "jobTitle": "AI Creative Designer & Digital Innovator",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+        },
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Creative Design",
+            "Voice Acting",
+            "Digital Innovation",
+            "Web Development"
+        ],
+        "nationality": "Thai"
+    }
+    </script>
+</head>
+
+<body data-theme="light">
+    <!-- Loading screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading About...</p>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 order-lg-2">
+                        <div class="about-image" data-aos="fade-left">
+                            <div class="image-wrapper">
+                                <img src="/assets/images/thanattsitt-professional.jpg" 
+                                     alt="Thanattsitt Santisamranwilai - Professional Portrait"
+                                     class="img-fluid rounded-3 main-portrait">
+                                <div class="image-overlay">
+                                    <div class="overlay-content">
+                                        <p>"Bridging creativity with technology"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Floating Elements -->
+                            <div class="floating-element ai-icon" data-aos="fade-up" data-aos-delay="200">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="floating-element design-icon" data-aos="fade-up" data-aos-delay="400">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div class="floating-element voice-icon" data-aos="fade-up" data-aos-delay="600">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-7 order-lg-1">
+                        <div class="about-content" data-aos="fade-right">
+                            <div class="content-badge">
+                                <span>Hello, I'm Thanattsitt</span>
+                            </div>
+                            
+                            <h1>Creative Innovator & <br><span class="gradient-text">AI Specialist</span></h1>
+                            
+                            <p class="lead">
+                                Bridging the gap between artificial intelligence and creative expression, 
+                                I craft digital experiences that inspire and transform businesses worldwide.
+                            </p>
+                            
+                            <p class="about-description">
+                                With a unique blend of technical expertise in AI/ML and creative design, 
+                                I help businesses and individuals harness the power of technology to 
+                                bring their visions to life. From voice acting to machine learning 
+                                models, every project is an opportunity to push creative boundaries 
+                                and deliver exceptional results.
+                            </p>
+                            
+                            <!-- Key Stats -->
+                            <div class="about-stats" data-aos="fade-up" data-aos-delay="300">
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="50">0</span>
+                                    <span class="stat-label">Projects Completed</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="3">0</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="25">0</span>
+                                    <span class="stat-label">Happy Clients</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" data-count="15">0</span>
+                                    <span class="stat-label">AI Models Trained</span>
+                                </div>
+                            </div>
+                            
+                            <!-- CTA Buttons -->
+                            <div class="about-cta" data-aos="fade-up" data-aos-delay="500">
+                                <a href="/pages/contact.html" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Let's Collaborate
+                                </a>
+                                <a href="#journey" class="btn btn-outline">
+                                    <i class="fas fa-arrow-down"></i>
+                                    My Journey
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Journey Section -->
+        <section id="journey" class="journey-section section">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2>My Journey</h2>
+                    <p class="section-subtitle">
+                        From curiosity-driven exploration to professional mastery - 
+                        discover how I evolved into an AI creative specialist
+                    </p>
+                </div>
+                
+                <div class="journey-timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-marker">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2021</div>
+                            <h3>The Spark</h3>
+                            <p>
+                                Discovered the fascinating world of AI and machine learning, 
+                                immediately captivated by the potential to merge technology 
+                                with creative expression. Started learning Python and basic ML concepts.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Self-Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022</div>
+                            <h3>Deep Dive into AI</h3>
+                            <p>
+                                Completed advanced courses in deep learning, computer vision, and NLP. 
+                                Started working on personal projects, combining AI with creative design 
+                                to produce unique digital art and interactive experiences.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">NLP</span>
+                                <span class="tag">Creative AI</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-marker">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022</div>
+                            <h3>Voice Acting Journey</h3>
+                            <p>
+                                Explored voice acting as a creative outlet, developing skills in 
+                                character voices, commercial narration, and audio production. 
+                                This added a new dimension to my creative toolkit.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Voice Acting</span>
+                                <span class="tag">Audio Production</span>
+                                <span class="tag">Creative Expression</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="timeline-marker">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023</div>
+                            <h3>Professional Transition</h3>
+                            <p>
+                                Started freelancing, combining AI development with creative design services. 
+                                Worked with diverse clients to create innovative solutions that merge 
+                                technical capabilities with artistic vision.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Freelancing</span>
+                                <span class="tag">Client Work</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 5 -->
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="timeline-marker">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024</div>
+                            <h3>Innovation & Growth</h3>
+                            <p>
+                                Established my reputation as an AI creative specialist, working on 
+                                cutting-edge projects that push the boundaries of what's possible 
+                                when technology meets creativity. Continuously learning and evolving.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">AI Innovation</span>
+                                <span class="tag">Creative Leadership</span>
+                                <span class="tag">Future-Forward</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Expertise Section -->
+        <section class="skills-section section bg-gradient">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2>Skills & Expertise</h2>
+                    <p class="section-subtitle">
+                        A comprehensive skill set spanning AI, creative design, and digital innovation
+                    </p>
+                </div>
+                
+                <div class="row">
+                    <!-- AI & Machine Learning -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="skill-icon ai-gradient">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI & Machine Learning</h3>
+                            <p>Deep expertise in developing and training AI models for various applications</p>
+                            
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">Python & TensorFlow</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Computer Vision</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Natural Language Processing</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Model Deployment</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Creative Design -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="skill-icon design-gradient">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Creative Design</h3>
+                            <p>Artistic vision combined with technical precision to create stunning visuals</p>
+                            
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">Adobe Creative Suite</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="92%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">UI/UX Design</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="87%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">3D Design & Animation</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="83%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Brand Design</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Digital Innovation -->
+                    <div class="col-lg-4 mb-4">
+                        <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="skill-icon tech-gradient">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Digital Innovation</h3>
+                            <p>Full-stack development and emerging technologies for complete solutions</p>
+                            
+                            <div class="skill-list">
+                                <div class="skill-item">
+                                    <span class="skill-name">Web Development</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="89%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Voice Acting & Production</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Project Management</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="91%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Innovation Strategy</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="87%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values & Philosophy Section -->
+        <section class="values-section section">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2>Values & Philosophy</h2>
+                    <p class="section-subtitle">
+                        The principles that guide my work and define my approach to innovation
+                    </p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3>Innovation First</h3>
+                            <p>
+                                I believe in pushing boundaries and exploring new possibilities. 
+                                Every project is an opportunity to innovate and create something unique 
+                                that hasn't been done before.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Human-Centered Design</h3>
+                            <p>
+                                Technology should enhance human experience, not complicate it. 
+                                I design with empathy, ensuring every solution serves real human needs 
+                                and creates meaningful connections.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-4">
+                        <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="value-icon">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <h3>Continuous Learning</h3>
+                            <p>
+                                In the rapidly evolving world of AI and technology, staying curious 
+                                and continuously learning is essential. I'm committed to growing 
+                                and evolving with each project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Insights Section -->
+        <section class="insights-section section bg-gradient">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="insights-content" data-aos="fade-right">
+                            <h2>Beyond the Professional</h2>
+                            <p class="lead">
+                                Get to know the person behind the projects - my passions, 
+                                inspirations, and what drives my creative journey.
+                            </p>
+                            
+                            <div class="insight-item">
+                                <h4><i class="fas fa-music"></i> Creative Expression</h4>
+                                <p>
+                                    Voice acting isn't just a service I offer - it's a passion that allows me 
+                                    to explore different characters and emotions, bringing stories to life 
+                                    through sound.
+                                </p>
+                            </div>
+                            
+                            <div class="insight-item">
+                                <h4><i class="fas fa-globe-asia"></i> Cultural Bridge</h4>
+                                <p>
+                                    Growing up in Thailand and working globally has given me a unique 
+                                    perspective on how technology and creativity transcend cultural boundaries.
+                                </p>
+                            </div>
+                            
+                            <div class="insight-item">
+                                <h4><i class="fas fa-seedling"></i> Future Vision</h4>
+                                <p>
+                                    I envision a future where AI and human creativity work in perfect harmony, 
+                                    amplifying our potential rather than replacing our uniqueness.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="insights-visual" data-aos="fade-left">
+                            <div class="visual-grid">
+                                <div class="visual-item ai-item">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI Innovation</span>
+                                </div>
+                                <div class="visual-item design-item">
+                                    <i class="fas fa-palette"></i>
+                                    <span>Creative Design</span>
+                                </div>
+                                <div class="visual-item voice-item">
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Voice Acting</span>
+                                </div>
+                                <div class="visual-item tech-item">
+                                    <i class="fas fa-code"></i>
+                                    <span>Technology</span>
+                                </div>
+                                <div class="visual-item center-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>Thanattsitt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="about-cta-section section">
+            <div class="container text-center">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2>Ready to Create Something Amazing?</h2>
+                    <p class="lead">
+                        Let's collaborate to bring your vision to life with the perfect blend 
+                        of AI technology and creative innovation.
+                    </p>
+                    
+                    <div class="cta-buttons">
+                        <a href="/pages/contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane"></i>
+                            Start a Project
+                        </a>
+                        <a href="/#portfolio" class="btn btn-outline btn-lg">
+                            <i class="fas fa-eye"></i>
+                            View My Work
+                        </a>
+                    </div>
+                    
+                    <div class="cta-social">
+                        <p>Follow my journey:</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/thanattsitt-s" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/Pigletpeakkung" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.threads.net/@thanattsitt.s" target="_blank" rel="noopener">
+                                <i class="fab fa-threads"></i>
+                            </a>
+                            <a href="https://linktr.ee/ThanttEzekiel" target="_blank" rel="noopener">
+                                <i class="fas fa-link"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Load includes -->
+    <script>
+        // Load navbar
+        fetch('/includes/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+            
+        // Load footer  
+        fetch('/includes/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+                // Update current year
+                const yearSpan = document.getElementById('currentYear');
+                if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            });
+    </script>
+    
+    <!-- Main Application -->
+    <script type="module">
+        import { PortfolioApp } from '/assets/js/core/app.js';
+        
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize app
+        const app = new PortfolioApp({
+            page: 'about',
+            debug: false
+        });
+        
+        // Hide loading screen when app is ready
+        app.addEventListener('app:ready', () => {
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 300);
+            }
+        });
+        
+        // Global app reference for debugging
+        window.app = app;
+    </script>
+    
+    <!-- About Page Specific Scripts -->
+    <script>
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-count]');
+            
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.dataset.count);
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                counter.textContent = Math.floor(current);
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                counter.textContent = target + '+';
+                            }
+                        };
+                        
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            };
+            
+            const observer = new IntersectionObserver(observerCallback, {
+                threshold: 0.7
+            });
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+        
+        // Skill Bar Animation
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress[data-width]');
+            
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const width = bar.dataset.width;
+                        
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 200);
+                        
+                        observer.unobserve(bar);
+                    }
+                });
+            };
+            
+            const observer = new IntersectionObserver(observerCallback, {
+                threshold: 0.5
+            });
+            
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', () => {
+            animateCounters();
+            animateSkillBars();
+        });
+    </script>
+</body>
+</html>
