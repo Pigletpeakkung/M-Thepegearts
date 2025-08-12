@@ -1,0 +1,1024 @@
+/*
+========================================
+PORTFOLIO DATA STRUCTURE
+========================================
+Centralized portfolio data for all projects across different categories
+*/
+
+const portfolioData = {
+    // Metadata
+    lastUpdated: '2024-01-25T10:30:00Z',
+    totalProjects: 12,
+    categories: [
+        { id: 'ai-consulting', name: 'AI Consulting', icon: '🤖', count: 4 },
+        { id: 'voice-acting', name: 'Voice Acting', icon: '🎙️', count: 3 },
+        { id: 'digital-design', name: 'Digital Design', icon: '🎨', count: 3 },
+        { id: 'website-design', name: 'Website Design', icon: '🌐', count: 2 }
+    ],
+
+    // Main Projects Array
+    projects: [
+        {
+            id: 'ai-customer-service-chatbot',
+            title: 'AI Customer Service Chatbot Platform',
+            slug: 'ai-customer-service-chatbot',
+            category: 'ai-consulting',
+            subcategory: 'chatbot-development',
+            
+            // Project Details
+            client: {
+                name: 'TechCorp Solutions',
+                industry: 'Software Technology',
+                location: 'San Francisco, CA',
+                website: 'https://techcorp-solutions.com',
+                logo: '/assets/images/clients/techcorp-logo.png'
+            },
+            
+            // Timeline
+            startDate: '2023-10-15',
+            endDate: '2024-01-15',
+            duration: '3 months',
+            status: 'completed', // completed, in-progress, upcoming, on-hold
+            
+            // Project Classification
+            featured: true,
+            priority: 1,
+            complexity: 'advanced', // basic, intermediate, advanced, expert
+            teamSize: 'solo', // solo, small-team, large-team
+            
+            // Media Assets
+            media: {
+                thumbnail: '/assets/images/portfolio/ai-chatbot/thumbnail.jpg',
+                hero: '/assets/images/portfolio/ai-chatbot/hero.jpg',
+                images: [
+                    {
+                        url: '/assets/images/portfolio/ai-chatbot/dashboard-overview.jpg',
+                        alt: 'AI Chatbot Dashboard Overview',
+                        caption: 'Main dashboard showing real-time conversation analytics'
+                    },
+                    {
+                        url: '/assets/images/portfolio/ai-chatbot/conversation-flow.jpg',
+                        alt: 'Conversation Flow Interface',
+                        caption: 'Visual conversation flow builder'
+                    },
+                    {
+                        url: '/assets/images/portfolio/ai-chatbot/analytics-panel.jpg',
+                        alt: 'Analytics Panel',
+                        caption: 'Performance metrics and user satisfaction scores'
+                    },
+                    {
+                        url: '/assets/images/portfolio/ai-chatbot/integration-setup.jpg',
+                        alt: 'Integration Setup',
+                        caption: 'Easy integration with existing customer support systems'
+                    }
+                ],
+                videos: [
+                    {
+                        url: '/assets/videos/portfolio/ai-chatbot-demo.mp4',
+                        poster: '/assets/images/portfolio/ai-chatbot/video-poster.jpg',
+                        title: 'AI Chatbot Demo',
+                        duration: '2:45'
+                    }
+                ],
+                mockups: [
+                    '/assets/images/portfolio/ai-chatbot/mobile-mockup.jpg',
+                    '/assets/images/portfolio/ai-chatbot/desktop-mockup.jpg'
+                ]
+            },
+            
+            // Content
+            description: {
+                short: 'Advanced AI-powered customer service platform with 24/7 automated support, natural language processing, and seamless human handoff capabilities.',
+                
+                full: `
+                    <p>Developed a comprehensive AI customer service platform that revolutionized client support operations, reducing response times by 85% and improving customer satisfaction scores by 40%.</p>
+                    
+                    <p>The platform integrates cutting-edge GPT-4 technology with custom-trained models to provide contextually relevant, brand-consistent responses while maintaining the flexibility for human intervention when needed.</p>
+                    
+                    <h4>Challenge</h4>
+                    <p>TechCorp Solutions was struggling with high support ticket volumes, long response times, and inconsistent service quality across different time zones. Their customer satisfaction scores were declining, and support costs were escalating.</p>
+                    
+                    <h4>Solution</h4>
+                    <p>I designed and implemented a multi-layered AI solution that combines natural language processing, sentiment analysis, and intelligent routing to provide immediate, accurate responses while seamlessly escalating complex issues to human agents.</p>
+                    
+                    <h4>Implementation Process</h4>
+                    <ul>
+                        <li><strong>Discovery Phase:</strong> Analyzed existing support data and identified common query patterns</li>
+                        <li><strong>AI Training:</strong> Fine-tuned GPT-4 models on company-specific knowledge base</li>
+                        <li><strong>Integration:</strong> Connected with existing CRM and ticketing systems</li>
+                        <li><strong>Testing:</strong> Conducted extensive A/B testing with control groups</li>
+                        <li><strong>Deployment:</strong> Gradual rollout with continuous monitoring and optimization</li>
+                    </ul>
+                `
+            },
+            
+            // Technical Information
+            technologies: {
+                primary: ['Node.js', 'React', 'TypeScript', 'OpenAI GPT-4'],
+                secondary: ['MongoDB', 'Redis', 'WebSocket', 'Docker'],
+                tools: ['VS Code', 'Postman', 'MongoDB Compass', 'Docker Desktop'],
+                apis: ['OpenAI API', 'Twilio API', 'Slack API', 'Zendesk API'],
+                hosting: ['AWS EC2', 'AWS RDS', 'AWS S3', 'CloudFlare']
+            },
+            
+            // Project Features
+            features: [
+                {
+                    title: 'Natural Language Processing',
+                    description: 'Advanced NLP with GPT-4 integration for human-like conversations',
+                    icon: '🧠'
+                },
+                {
+                    title: 'Multi-language Support',
+                    description: 'Support for 12 different languages with automatic detection',
+                    icon: '🌐'
+                },
+                {
+                    title: 'Intelligent Routing',
+                    description: 'Smart escalation to human agents based on complexity and sentiment',
+                    icon: '🎯'
+                },
+                {
+                    title: 'Real-time Analytics',
+                    description: 'Comprehensive dashboard with performance metrics and insights',
+                    icon: '📊'
+                },
+                {
+                    title: 'Custom Knowledge Base',
+                    description: 'Integration with company-specific documentation and FAQs',
+                    icon: '📚'
+                },
+                {
+                    title: 'Voice & Text Support',
+                    description: 'Multi-channel support including chat, voice, and email',
+                    icon: '💬'
+                }
+            ],
+            
+            // Results and Metrics
+            results: {
+                metrics: [
+                    { label: 'Response Time Reduction', value: '85%', type: 'percentage' },
+                    { label: 'Customer Satisfaction Increase', value: '40%', type: 'percentage' },
+                    { label: 'Support Ticket Volume Decrease', value: '60%', type: 'percentage' },
+                    { label: 'Cost Reduction', value: '$45,000', type: 'currency', period: 'annually' },
+                    { label: 'Resolution Rate', value: '94%', type: 'percentage' },
+                    { label: 'Average Response Time', value: '< 30 seconds', type: 'time' }
+                ],
+                achievements: [
+                    '24/7 availability achieved without additional staffing',
+                    'Reduced escalation to human agents by 70%',
+                    'Improved first-contact resolution rate to 89%',
+                    'Decreased customer wait time from 12 minutes to under 30 seconds'
+                ]
+            },
+            
+            // Client Testimonial
+            testimonial: {
+                quote: "Thanattsitt delivered an exceptional AI solution that transformed our customer service operations. The platform is intuitive, powerful, and has significantly improved our customer experience while reducing operational costs. The implementation was smooth and the ongoing support has been outstanding.",
+                author: {
+                    name: 'Sarah Johnson',
+                    position: 'Chief Technology Officer',
+                    company: 'TechCorp Solutions',
+                    avatar: '/assets/images/testimonials/sarah-johnson.jpg',
+                    linkedin: 'https://linkedin.com/in/sarah-johnson-cto'
+                },
+                rating: 5,
+                date: '2024-01-20'
+            },
+            
+            // External Links
+            links: {
+                live: 'https://demo.techcorp-ai.com',
+                caseStudy: '/case-studies/ai-customer-service-platform',
+                github: null, // Private repository
+                documentation: '/docs/ai-chatbot-implementation'
+            },
+            
+            // SEO and Tags
+            tags: ['AI', 'ChatGPT', 'Customer Service', 'Integration', 'API', 'Automation', 'NLP', 'Machine Learning'],
+            seo: {
+                metaTitle: 'AI Customer Service Chatbot Platform - Portfolio | Thanattsitt',
+                metaDescription: 'Advanced AI chatbot platform reducing response times by 85% and improving customer satisfaction by 40%. Built with GPT-4 and modern web technologies.',
+                keywords: ['AI chatbot', 'customer service automation', 'GPT-4 integration', 'NLP', 'customer support AI']
+            }
+        },
+
+        {
+            id: 'innovateai-brand-identity',
+            title: 'InnovateAI Complete Brand Identity',
+            slug: 'innovateai-brand-identity',
+            category: 'digital-design',
+            subcategory: 'brand-identity',
+            
+            client: {
+                name: 'InnovateAI Startup',
+                industry: 'Artificial Intelligence',
+                location: 'Austin, TX',
+                website: 'https://innovateai.com',
+                logo: '/assets/images/clients/innovateai-logo.png'
+            },
+            
+            startDate: '2023-12-01',
+            endDate: '2024-02-01',
+            duration: '2 months',
+            status: 'completed',
+            
+            featured: true,
+            priority: 2,
+            complexity: 'advanced',
+            teamSize: 'solo',
+            
+            media: {
+                thumbnail: '/assets/images/portfolio/innovateai-brand/thumbnail.jpg',
+                hero: '/assets/images/portfolio/innovateai-brand/hero.jpg',
+                images: [
+                    {
+                        url: '/assets/images/portfolio/innovateai-brand/logo-variations.jpg',
+                        alt: 'Logo Variations and Guidelines',
+                        caption: 'Complete logo system with multiple variations and usage guidelines'
+                    },
+                    {
+                        url: '/assets/images/portfolio/innovateai-brand/brand-colors.jpg',
+                        alt: 'Brand Color Palette',
+                        caption: 'Carefully selected color palette reflecting innovation and trust'
+                    },
+                    {
+                        url: '/assets/images/portfolio/innovateai-brand/typography-system.jpg',
+                        alt: 'Typography System',
+                        caption: 'Modern typography hierarchy for digital and print applications'
+                    },
+                    {
+                        url: '/assets/images/portfolio/innovateai-brand/business-applications.jpg',
+                        alt: 'Business Card and Stationery',
+                        caption: 'Professional business stationery design'
+                    },
+                    {
+                        url: '/assets/images/portfolio/innovateai-brand/website-mockup.jpg',
+                        alt: 'Website Design Mockup',
+                        caption: 'Brand application on responsive website design'
+                    }
+                ],
+                videos: [
+                    {
+                        url: '/assets/videos/portfolio/brand-reveal.mp4',
+                        poster: '/assets/images/portfolio/innovateai-brand/brand-video-poster.jpg',
+                        title: 'Brand Identity Reveal',
+                        duration: '1:30'
+                    }
+                ]
+            },
+            
+            description: {
+                short: 'Complete brand identity package for AI startup including logo design, brand guidelines, website design, and comprehensive marketing materials that helped secure $2M in seed funding.',
+                
+                full: `
+                    <p>Created a comprehensive brand identity for InnovateAI, an emerging artificial intelligence startup, establishing their visual presence from concept to successful market launch and funding rounds.</p>
+                    
+                    <p>The project encompassed strategic brand positioning, visual identity design, and implementation across all touchpoints, resulting in a cohesive brand that effectively communicates innovation, trust, and technological expertise.</p>
+                    
+                    <h4>Project Scope</h4>
+                    <p>InnovateAI needed to establish credibility in the competitive AI space while standing out from numerous tech startups. The brand needed to appeal to both technical audiences and potential investors.</p>
+                    
+                    <h4>Brand Strategy</h4>
+                    <ul>
+                        <li><strong>Market Research:</strong> Competitive analysis of 50+ AI companies and tech startups</li>
+                        <li><strong>Brand Positioning:</strong> "Accessible AI innovation for everyone"</li>
+                        <li><strong>Target Audiences:</strong> Enterprise clients, developers, and investors</li>
+                        <li><strong>Brand Personality:</strong> Innovative, trustworthy, approachable, cutting-edge</li>
+                    </ul>
+                    
+                    <h4>Design Process</h4>
+                    <ul>
+                        <li><strong>Discovery:</strong> Stakeholder interviews and brand workshops</li>
+                        <li><strong>Concept Development:</strong> 15+ logo concepts and mood boards</li>
+                        <li><strong>Refinement:</strong> Iterative design process with client feedback</li>
+                        <li><strong>Implementation:</strong> Brand guidelines and application designs</li>
+                        <li><strong>Launch:</strong> Brand rollout strategy and asset delivery</li>
+                    </ul>
+                `
+            },
+            
+            technologies: {
+                primary: ['Adobe Illustrator', 'Adobe Photoshop', 'Figma', 'Adobe InDesign'],
+                secondary: ['Sketch', 'Principle', 'Adobe After Effects'],
+                tools: ['Adobe Creative Cloud', 'Figma', 'Brand Guidelines Template'],
+                deliverables: ['Logo Files', 'Brand Guidelines', 'Website Mockups', 'Print Materials'],
+                formats: ['AI', 'EPS', 'PNG', 'SVG', 'PDF', 'JPEG']
+            },
+            
+            features: [
+                {
+                    title: 'Logo Design System',
+                    description: 'Primary logo with 8 variations for different use cases',
+                    icon: '🎨'
+                },
+                {
+                    title: 'Color Psychology',
+                    description: 'Strategic color palette based on AI industry research',
+                    icon: '🌈'
+                },
+                {
+                    title: 'Typography Hierarchy',
+                    description: 'Custom font pairing for digital and print applications',
+                    icon: '📝'
+                },
+                {
+                    title: 'Brand Guidelines',
+                    description: '45-page comprehensive brand manual',
+                    icon: '📚'
+                },
+                {
+                    title: 'Marketing Materials',
+                    description: 'Business cards, presentations, and digital assets',
+                    icon: '💼'
+                },
+                {
+                    title: 'Website Design',
+                    description: 'Responsive website design and UI components',
+                    icon: '🌐'
+                }
+            ],
+            
+            results: {
+                metrics: [
+                    { label: 'Brand Recognition Increase', value: '300%', type: 'percentage' },
+                    { label: 'Website Conversion Rate', value: '45%', type: 'percentage', context: 'improvement' },
+                    { label: 'Social Media Engagement', value: '250%', type: 'percentage', context: 'increase' },
+                    { label: 'Funding Secured', value: '$2M', type: 'currency', context: 'seed round' },
+                    { label: 'Brand Consistency Score', value: '98%', type: 'percentage' },
+                    { label: 'Client Satisfaction', value: '5/5', type: 'rating' }
+                ],
+                achievements: [
+                    'Successful $2M seed funding round within 3 months of brand launch',
+                    'Featured in TechCrunch and AI industry publications',
+                    'Brand guidelines adopted company-wide with 98% compliance',
+                    'Website traffic increased by 180% post-rebrand'
+                ]
+            },
+            
+            testimonial: {
+                quote: "The brand identity Thanattsitt created perfectly captures our vision and has been instrumental in our successful funding rounds. The strategic approach, attention to detail, and creative execution exceeded our expectations. Professional, creative, and strategic - exactly what a startup needs.",
+                author: {
+                    name: 'Michael Chen',
+                    position: 'CEO & Founder',
+                    company: 'InnovateAI',
+                    avatar: '/assets/images/testimonials/michael-chen.jpg',
+                    linkedin: 'https://linkedin.com/in/michael-chen-innovateai'
+                },
+                rating: 5,
+                date: '2024-02-05'
+            },
+            
+            links: {
+                live: 'https://innovateai.com',
+                caseStudy: '/case-studies/innovateai-brand-identity',
+                behance: 'https://behance.net/thanattsitt/innovateai-brand',
+                dribbble: 'https://dribbble.com/thanattsitt/innovateai'
+            },
+            
+            tags: ['Branding', 'Logo Design', 'UI/UX', 'Print Design', 'Brand Guidelines', 'Startup', 'AI', 'Visual Identity'],
+            seo: {
+                metaTitle: 'InnovateAI Brand Identity Design - Complete Startup Branding | Thanattsitt',
+                metaDescription: 'Complete brand identity for AI startup including logo, guidelines, and marketing materials. Helped secure $2M funding with strategic design approach.',
+                keywords: ['brand identity design', 'startup branding', 'logo design', 'AI company branding', 'visual identity']
+            }
+        },
+
+        {
+            id: 'tech-podcast-voice-acting',
+            title: 'TechTalk Podcast Series Voice Acting',
+            slug: 'tech-podcast-voice-acting',
+            category: 'voice-acting',
+            subcategory: 'podcast-narration',
+            
+            client: {
+                name: 'Digital Media Network',
+                industry: 'Media & Entertainment',
+                location: 'Los Angeles, CA',
+                website: 'https://digitalmedianetwork.com',
+                logo: '/assets/images/clients/digital-media-logo.png'
+            },
+            
+            startDate: '2023-11-01',
+            endDate: '2024-01-20',
+            duration: '2.5 months',
+            status: 'completed',
+            
+            featured: false,
+            priority: 3,
+            complexity: 'intermediate',
+            teamSize: 'solo',
+            
+            media: {
+                thumbnail: '/assets/images/portfolio/podcast-voice/thumbnail.jpg',
+                hero: '/assets/images/portfolio/podcast-voice/hero.jpg',
+                images: [
+                    {
+                        url: '/assets/images/portfolio/podcast-voice/recording-studio.jpg',
+                        alt: 'Professional Recording Studio Setup',
+                        caption: 'Home studio setup with professional audio equipment'
+                    },
+                    {
+                        url: '/assets/images/portfolio/podcast-voice/waveform-analysis.jpg',
+                        alt: 'Audio Waveform Analysis',
+                        caption: 'Detailed audio editing and mastering process'
+                    },
+                    {
+                        url: '/assets/images/portfolio/podcast-voice/podcast-artwork.jpg',
+                        alt: 'Podcast Episode Artwork',
+                        caption: 'Custom episode artwork created for the series'
+                    }
+                ],
+                audio: [
+                    {
+                        title: 'Podcast Intro - Episode 1',
+                        url: '/assets/audio/portfolio/podcast-intro-ep1.mp3',
+                        duration: '0:45',
+                        description: 'Opening narration for the flagship episode'
+                    },
+                    {
+                        title: 'Tech Explainer Segment',
+                        url: '/assets/audio/portfolio/tech-explainer-sample.mp3',
+                        duration: '1:20',
+                        description: 'Educational content explaining complex tech concepts'
+                    },
+                    {
+                        title: 'Commercial Spot - AI Tools',
+                        url: '/assets/audio/portfolio/commercial-ai-tools.mp3',
+                        duration: '0:30',
+                        description: 'Professional commercial voice over for sponsor'
+                    },
+                    {
+                        title: 'Interview Transition',
+                        url: '/assets/audio/portfolio/interview-transition.mp3',
+                        duration: '0:15',
+                        description: 'Smooth transition between interview segments'
+                    }
+                ]
+            },
+            
+            description: {
+                short: 'Professional voice acting for 24-episode technology podcast series, including intro narration, character voices, and commercial spots with over 100,000 total downloads.',
+                
+                full: `
+                    <p>Provided comprehensive voice acting services for TechTalk, a popular technology podcast series that explores emerging trends in AI, blockchain, and digital innovation. The project involved creating consistent, engaging narration across 24 episodes with diverse content types.</p>
+                    
+                    <p>Working closely with the production team, I developed a signature voice style that balanced professionalism with approachability, making complex technical topics accessible to a broad audience.</p>
+                    
+                    <h4>Project Scope</h4>
+                    <p>The podcast required various voice acting services including intro/outro narration, technical explanations, character voices for scenarios, and commercial spots for sponsors. Each episode averaged 45-60 minutes with 3-5 minutes of voice work.</p>
+                    
+                    <h4>Voice Characteristics</h4>
+                    <ul>
+                        <li><strong>Tone:</strong> Professional yet conversational, warm and engaging</li>
+                        <li><strong>Pace:</strong> Moderate with clear articulation for technical terms</li>
+                        <li><strong>Style:</strong> Educational but not condescending, enthusiastic about technology</li>
+                        <li><strong>Consistency:</strong> Maintained voice characteristics across all episodes</li>
+                    </ul>
+                    
+                    <h4>Technical Process</h4>
+                    <ul>
+                        <li><strong>Pre-production:</strong> Script review and technical term pronunciation guide</li>
+                        <li><strong>Recording:</strong> Professional home studio with Shure SM7B microphone</li>
+                        <li><strong>Post-production:</strong> Audio editing, noise reduction, and mastering</li>
+                        <li><strong>Delivery:</strong> High-quality 48kHz/24-bit WAV files within 24-48 hours</li>
+                    </ul>
+                `
+            },
+            
+            technologies: {
+                primary: ['Pro Tools', 'Adobe Audition', 'Audacity'],
+                secondary: ['iZotope RX', 'Waves Audio Plugins', 'FabFilter Pro-Q'],
+                equipment: ['Shure SM7B Microphone', 'Focusrite Scarlett Interface', 'Acoustic Treatment', 'Audio-Technica Headphones'],
+                formats: ['WAV', 'MP3', 'AIFF'],
+                specs: ['48kHz/24-bit', 'Stereo/Mono', 'Broadcast Standards']
+            },
+            
+            features: [
+                {
+                    title: 'Podcast Narration',
+                    description: 'Intro, outro, and transition narration for 24 episodes',
+                    icon: '🎙️'
+                },
+                {
+                    title: 'Character Voices',
+                    description: 'Multiple character voices for tech scenario demonstrations',
+                    icon: '🎭'
+                },
+                {
+                    title: 'Commercial Spots',
+                    description: 'Professional sponsor advertisements and product promotions',
+                    icon: '📢'
+                },
+                {
+                    title: 'Technical Pronunciation',
+                    description: 'Accurate pronunciation of complex technical terminology',
+                    icon: '🔧'
+                },
+                {
+                    title: 'Quick Turnaround',
+                    description: 'Consistent 24-48 hour delivery for all voice work',
+                    icon: '⚡'
+                },
+                {
+                    title: 'Audio Mastering',
+                    description: 'Professional audio post-production and mastering',
+                    icon: '🎚️'
+                }
+            ],
+            
+            results: {
+                metrics: [
+                    { label: 'Episodes Completed', value: '24', type: 'number' },
+                    { label: 'Total Downloads', value: '100,000+', type: 'number' },
+                    { label: 'Client Satisfaction', value: '95%', type: 'percentage' },
+                    { label: 'On-time Delivery', value: '100%', type: 'percentage' },
+                    { label: 'Average Episode Rating', value: '4.8/5', type: 'rating' },
+                    { label: 'Listener Retention', value: '78%', type: 'percentage' }
+                ],
+                achievements: [
+                    'Maintained consistent voice quality across all 24 episodes',
+                    'Zero missed deadlines with 24-48 hour turnaround',
+                    'Secured ongoing contract for season 2',
+                    'Positive listener feedback on voice clarity and engagement'
+                ]
+            },
+            
+            testimonial: {
+                quote: "Thanattsitt's voice work elevated our podcast to a professional level that helped us attract major sponsors. The delivery is clear, the timing is perfect, and the turnaround is incredibly fast. Our audience loves the consistent quality, and we've seen significant growth since working together.",
+                author: {
+                    name: 'David Park',
+                    position: 'Podcast Producer',
+                    company: 'Digital Media Network',
+                    avatar: '/assets/images/testimonials/david-park.jpg',
+                    linkedin: 'https://linkedin.com/in/david-park-media'
+                },
+                rating: 5,
+                date: '2024-01-25'
+            },
+            
+            links: {
+                spotify: 'https://open.spotify.com/show/techtalk-podcast',
+                apple: 'https://podcasts.apple.com/podcast/techtalk',
+                soundcloud: 'https://soundcloud.com/techtalk-podcast',
+                website: 'https://techtalkpodcast.com'
+            },
+            
+            tags: ['Voice Over', 'Podcast', 'Narration', 'Audio Production', 'Character Voices', 'Commercial', 'Technology'],
+            seo: {
+                metaTitle: 'TechTalk Podcast Voice Acting - Professional Voice Over Services | Thanattsitt',
+                metaDescription: 'Professional voice acting for technology podcast series. 24 episodes, 100,000+ downloads. Expert narration, character voices, and commercial spots.',
+                keywords: ['podcast voice over', 'voice acting', 'narration', 'audio production', 'tech podcast']
+            }
+        },
+
+        {
+            id: 'luxury-fashion-ecommerce',
+            title: 'Elegant Boutique E-commerce Platform',
+            slug: 'luxury-fashion-ecommerce',
+            category: 'website-design',
+            subcategory: 'ecommerce-development',
+            
+            client: {
+                name: 'Elegant Boutique',
+                industry: 'Fashion Retail',
+                location: 'New York, NY',
+                website: 'https://elegantboutique.com',
+                logo: '/assets/images/clients/elegant-boutique-logo.png'
+            },
+            
+            startDate: '2023-10-20',
+            endDate: '2023-12-15',
+            duration: '8 weeks',
+            status: 'completed',
+            
+            featured: true,
+            priority: 4,
+            complexity: 'advanced',
+            teamSize: 'solo',
+            
+            media: {
+                thumbnail: '/assets/images/portfolio/ecommerce/thumbnail.jpg',
+                hero: '/assets/images/portfolio/ecommerce/hero.jpg',
+                images: [
+                    {
+                        url: '/assets/images/portfolio/ecommerce/homepage-design.jpg',
+                        alt: 'Homepage Design',
+                        caption: 'Elegant homepage showcasing featured collections'
+                    },
+                    {
+                        url: '/assets/images/portfolio/ecommerce/product-catalog.jpg',
+                        alt: 'Product Catalog Page',
+                        caption: 'Advanced filtering and search functionality'
+                    },
+                    {
+                        url: '/assets/images/portfolio/ecommerce/product-detail.jpg',
+                        alt: 'Product Detail Page',
+                        caption: 'Detailed product view with zoom and variations'
+                    },
+                    {
+                        url: '/assets/images/portfolio/ecommerce/checkout-process.jpg',
+                        alt: 'Checkout Process',
+                        caption: 'Streamlined one-page checkout design'
+                    },
+                    {
+                        url: '/assets/images/portfolio/ecommerce/mobile-responsive.jpg',
+                        alt: 'Mobile Responsive Design',
+                        caption: 'Optimized mobile shopping experience'
+                    }
+                ]
+            },
+            
+            description: {
+                short: 'High-end e-commerce platform for luxury fashion boutique featuring custom design, advanced filtering, seamless checkout, and mobile optimization resulting in 180% sales increase.',
+                
+                full: `
+                    <p>Designed and developed a luxury fashion e-commerce platform for Elegant Boutique that combines sophisticated aesthetics with powerful functionality, resulting in a 180% increase in online sales within the first quarter.</p>
+                    
+                    <p>The project focused on creating a premium shopping experience that reflects the boutique's high-end brand while providing modern e-commerce functionality and exceptional performance across all devices.</p>
+                    
+                    <h4>Business Challenge</h4>
+                    <p>Elegant Boutique needed to transition from primarily in-store sales to a strong online presence. Their existing website was outdated, mobile-unfriendly, and didn't reflect their luxury brand positioning.</p>
+                    
+                    <h4>Solution Approach</h4>
+                    <ul>
+                        <li><strong>User Research:</strong> Analyzed luxury fashion shopping behaviors and preferences</li>
+                        <li><strong>Competitive Analysis:</strong> Studied top luxury fashion e-commerce sites</li>
+                        <li><strong>Design Strategy:</strong> Created wireframes and prototypes focused on conversion</li>
+                        <li><strong>Development:</strong> Built custom React/Next.js application with Shopify backend</li>
+                        <li><strong>Optimization:</strong> Implemented performance and SEO optimizations</li>
+                    </ul>
+                    
+                    <h4>Key Features Implemented</h4>
+                    <ul>
+                        <li><strong>Advanced Product Filtering:</strong> Size, color, price, brand, and style filters</li>
+                        <li><strong>Visual Search:</strong> Image-based product discovery</li>
+                        <li><strong>Wishlist & Comparison:</strong> Save and compare favorite items</li>
+                        <li><strong>Size Guide Integration:</strong> Interactive sizing tools</li>
+                        <li><strong>Inventory Sync:</strong> Real-time stock updates across all channels</li>
+                        <li><strong>Multiple Payment Options:</strong> Credit cards, PayPal, Apple Pay, Google Pay</li>
+                    </ul>
+                                `
+            },
+            
+            technologies: {
+                primary: ['React', 'Next.js', 'TypeScript', 'Shopify Plus'],
+                secondary: ['Stripe', 'PWA', 'Framer Motion', 'Tailwind CSS'],
+                tools: ['Figma', 'VS Code', 'Shopify CLI', 'Google Analytics'],
+                apis: ['Shopify Storefront API', 'Stripe API', 'Google Maps API', 'Klaviyo API'],
+                hosting: ['Vercel', 'Shopify CDN', 'CloudFlare']
+            },
+            
+            features: [
+                {
+                    title: 'Custom Product Configurator',
+                    description: 'Interactive tool for customizing products with live preview',
+                    icon: '🎨'
+                },
+                {
+                    title: 'Advanced Search & Filters',
+                    description: 'Multi-faceted filtering with instant results and smart suggestions',
+                    icon: '🔍'
+                },
+                {
+                    title: 'One-Click Checkout',
+                    description: 'Streamlined checkout process reducing cart abandonment',
+                    icon: '⚡'
+                },
+                {
+                    title: 'Inventory Management',
+                    description: 'Real-time stock tracking across online and retail channels',
+                    icon: '📦'
+                },
+                {
+                    title: 'Multi-Currency Support',
+                    description: 'Automatic currency conversion for international customers',
+                    icon: '💰'
+                },
+                {
+                    title: 'Progressive Web App',
+                    description: 'App-like experience with offline capabilities',
+                    icon: '📱'
+                }
+            ],
+            
+            results: {
+                metrics: [
+                    { label: 'Online Sales Increase', value: '180%', type: 'percentage' },
+                    { label: 'Page Load Speed Improvement', value: '60%', type: 'percentage' },
+                    { label: 'Mobile Conversion Rate', value: '145%', type: 'percentage', context: 'increase' },
+                    { label: 'Cart Abandonment Reduction', value: '35%', type: 'percentage' },
+                    { label: 'Average Session Duration', value: '+4.2 min', type: 'time' },
+                    { label: 'Customer Satisfaction Score', value: '4.9/5', type: 'rating' }
+                ],
+                achievements: [
+                    'Exceeded sales targets by 80% in first quarter post-launch',
+                    'Mobile traffic increased from 30% to 65% of total visits',
+                    'Customer acquisition cost decreased by 25%',
+                    'Return customer rate improved by 40%'
+                ]
+            },
+            
+            testimonial: {
+                quote: "Our new website exceeded all expectations. The design is absolutely stunning and perfectly captures our luxury brand, while the functionality is flawless. Sales have nearly tripled since launch, and our customers constantly compliment the shopping experience. Thanattsitt delivered exceptional work.",
+                author: {
+                    name: 'Isabella Rodriguez',
+                    position: 'Owner & Creative Director',
+                    company: 'Elegant Boutique',
+                    avatar: '/assets/images/testimonials/isabella-rodriguez.jpg',
+                    instagram: 'https://instagram.com/elegantboutique'
+                },
+                rating: 5,
+                date: '2023-12-20'
+            },
+            
+            links: {
+                live: 'https://elegantboutique.com',
+                caseStudy: '/case-studies/luxury-fashion-ecommerce',
+                github: null // Private repository
+            },
+            
+            tags: ['E-commerce', 'React', 'Shopify', 'Payment Integration', 'Mobile Responsive', 'Luxury Fashion', 'PWA'],
+            seo: {
+                metaTitle: 'Luxury Fashion E-commerce Platform - Elegant Boutique | Thanattsitt',
+                metaDescription: 'High-end e-commerce platform for luxury fashion boutique. Increased sales by 180% with advanced features and mobile optimization.',
+                keywords: ['luxury ecommerce design', 'fashion website development', 'shopify plus', 'mobile ecommerce']
+            }
+        }
+    ],
+
+    // Skills and Expertise Categories
+    skills: {
+        'ai-consulting': {
+            title: 'AI Consulting & Development',
+            description: 'Custom AI solutions, chatbots, and machine learning implementations',
+            technologies: ['GPT-4', 'Python', 'TensorFlow', 'Node.js', 'OpenAI API', 'LangChain'],
+            services: [
+                'AI Strategy Consulting',
+                'Custom Chatbot Development',
+                'Machine Learning Solutions',
+                'AI Integration Services',
+                'Natural Language Processing',
+                'Automation Workflows'
+            ]
+        },
+        'voice-acting': {
+            title: 'Professional Voice Acting',
+            description: 'High-quality voice over services for various media and applications',
+            technologies: ['Pro Tools', 'Adobe Audition', 'Professional Studio Setup'],
+            services: [
+                'Podcast Narration',
+                'Commercial Voice Overs',
+                'Character Voice Acting',
+                'Educational Content',
+                'Audio Book Narration',
+                'IVR and Phone Systems'
+            ]
+        },
+        'digital-design': {
+            title: 'Digital Design & Branding',
+            description: 'Complete brand identity and digital design solutions',
+            technologies: ['Adobe Creative Suite', 'Figma', 'Sketch', 'Principle'],
+            services: [
+                'Brand Identity Design',
+                'Logo Design & Guidelines',
+                'Marketing Materials',
+                'Social Media Graphics',
+                'Print Design',
+                'Brand Strategy'
+            ]
+        },
+        'website-design': {
+            title: 'Website Design & Development',
+            description: 'Modern, responsive websites and web applications',
+            technologies: ['React', 'Next.js', 'WordPress', 'Shopify', 'TypeScript'],
+            services: [
+                'Custom Website Development',
+                'E-commerce Solutions',
+                'WordPress Development',
+                'UI/UX Design',
+                'Performance Optimization',
+                'SEO Implementation'
+            ]
+        }
+    },
+
+    // Statistics and Metrics
+    stats: {
+        totalProjects: 50,
+        completedProjects: 45,
+        inProgressProjects: 3,
+        upcomingProjects: 2,
+        totalClients: 38,
+        repeatClients: 12,
+        averageProjectDuration: '6 weeks',
+        clientSatisfactionRate: '98%',
+        onTimeDeliveryRate: '100%',
+        totalDownloads: '500K+', // For voice acting work
+        totalSales: '$2.5M+' // Generated for client e-commerce projects
+    },
+
+    // Client Industries
+    industries: [
+        { name: 'Technology', count: 15, percentage: 35 },
+        { name: 'Fashion & Retail', count: 8, percentage: 19 },
+        { name: 'Media & Entertainment', count: 7, percentage: 16 },
+        { name: 'Healthcare', count: 5, percentage: 12 },
+        { name: 'Finance', count: 4, percentage: 9 },
+        { name: 'Education', count: 4, percentage: 9 }
+    ],
+
+    // Awards and Recognition
+    recognition: [
+        {
+            title: 'Best AI Implementation',
+            organization: 'Tech Innovation Awards 2024',
+            project: 'AI Customer Service Chatbot',
+            date: '2024-02-15',
+            description: 'Recognized for innovative use of AI in customer service automation'
+        },
+        {
+            title: 'Excellence in Brand Design',
+            organization: 'Design Excellence Awards',
+            project: 'InnovateAI Brand Identity',
+            date: '2024-03-01',
+            description: 'Outstanding brand identity design for startup company'
+        },
+        {
+            title: 'Featured Project',
+            organization: 'Behance',
+            project: 'Elegant Boutique E-commerce',
+            date: '2024-01-10',
+            description: 'Featured on Behance homepage for exceptional e-commerce design'
+        }
+    ],
+
+    // Frequently Asked Questions
+    faqs: [
+        {
+            question: "What's your typical project timeline?",
+            answer: "Project timelines vary depending on scope and complexity. AI consulting projects typically take 2-4 months, brand identity projects 6-8 weeks, voice acting projects can be completed within 24-48 hours, and website development ranges from 4-12 weeks."
+        },
+        {
+            question: "Do you work with international clients?",
+            answer: "Yes! I work with clients globally across different time zones. I'm experienced in remote collaboration and use various communication tools to ensure smooth project delivery regardless of location."
+        },
+        {
+            question: "What's included in your AI consulting services?",
+            answer: "AI consulting includes strategy development, technical implementation, custom model training, integration with existing systems, testing and optimization, documentation, and ongoing support. Each project is tailored to specific business needs."
+        },
+        {
+            question: "Can you handle rush projects?",
+            answer: "Yes, I can accommodate urgent projects when possible. Voice acting work can often be delivered within 24-48 hours, and other services may be expedited for an additional rush fee. Contact me to discuss your timeline requirements."
+        },
+        {
+            question: "Do you provide ongoing support after project completion?",
+            answer: "Absolutely! I offer various support packages including bug fixes, content updates, performance monitoring, and feature enhancements. The level of support is customized based on your needs and project type."
+        }
+    ]
+};
+
+// Export the portfolio data
+export default portfolioData;
+
+// Additional utility functions for working with portfolio data
+export const portfolioUtils = {
+    // Get projects by category
+    getProjectsByCategory: (category) => {
+        return portfolioData.projects.filter(project => project.category === category);
+    },
+
+    // Get featured projects
+    getFeaturedProjects: () => {
+        return portfolioData.projects.filter(project => project.featured);
+    },
+
+    // Get projects by status
+    getProjectsByStatus: (status) => {
+        return portfolioData.projects.filter(project => project.status === status);
+    },
+
+    // Get recent projects
+    getRecentProjects: (limit = 6) => {
+        return portfolioData.projects
+            .sort((a, b) => new Date(b.endDate) - new Date(a.endDate))
+            .slice(0, limit);
+    },
+
+    // Get project by ID
+    getProjectById: (id) => {
+        return portfolioData.projects.find(project => project.id === id);
+    },
+
+    // Get project by slug
+    getProjectBySlug: (slug) => {
+        return portfolioData.projects.find(project => project.slug === slug);
+    },
+
+    // Search projects
+    searchProjects: (query) => {
+        const searchTerm = query.toLowerCase();
+        return portfolioData.projects.filter(project => {
+            const searchableText = [
+                project.title,
+                project.description.short,
+                project.client.name,
+                ...project.tags,
+                ...project.technologies.primary
+            ].join(' ').toLowerCase();
+            
+            return searchableText.includes(searchTerm);
+        });
+    },
+
+    // Get related projects
+    getRelatedProjects: (currentProject, limit = 3) => {
+        return portfolioData.projects
+            .filter(project => 
+                project.id !== currentProject.id && 
+                (project.category === currentProject.category ||
+                 project.tags.some(tag => currentProject.tags.includes(tag)))
+            )
+            .slice(0, limit);
+    },
+
+    // Get skills by category
+    getSkillsByCategory: (category) => {
+        return portfolioData.skills[category] || null;
+    },
+
+    // Calculate portfolio statistics
+    calculateStats: () => {
+        const projects = portfolioData.projects;
+        const now = new Date();
+        
+        return {
+            totalProjects: projects.length,
+            completedProjects: projects.filter(p => p.status === 'completed').length,
+            inProgressProjects: projects.filter(p => p.status === 'in-progress').length,
+            upcomingProjects: projects.filter(p => p.status === 'upcoming').length,
+            averageProjectDuration: portfolioUtils.calculateAverageProjectDuration(),
+            categoriesCount: Object.keys(portfolioData.skills).length,
+            technologiesUsed: portfolioUtils.getAllTechnologies().length
+        };
+    },
+
+    // Get all technologies used across projects
+    getAllTechnologies: () => {
+        const technologies = new Set();
+        portfolioData.projects.forEach(project => {
+            project.technologies.primary.forEach(tech => technologies.add(tech));
+            project.technologies.secondary.forEach(tech => technologies.add(tech));
+        });
+        return Array.from(technologies);
+    },
+
+    // Calculate average project duration
+    calculateAverageProjectDuration: () => {
+        const durations = portfolioData.projects
+            .filter(p => p.startDate && p.endDate)
+            .map(p => {
+                const start = new Date(p.startDate);
+                const end = new Date(p.endDate);
+                return Math.ceil((end - start) / (1000 * 60 * 60 * 24 * 7)); // weeks
+            });
+        
+        const average = durations.reduce((a, b) => a + b, 0) / durations.length;
+        return Math.round(average);
+    },
+
+    // Generate portfolio summary
+    generateSummary: () => {
+        const stats = portfolioUtils.calculateStats();
+        const categories = Object.keys(portfolioData.skills);
+        
+        return {
+            overview: `${stats.totalProjects} projects completed across ${categories.length} service categories`,
+            expertise: categories.map(cat => portfolioData.skills[cat].title),
+            achievements: portfolioData.recognition.map(r => r.title),
+            clientSatisfaction: portfolioData.stats.clientSatisfactionRate
+        };
+    }
+};
+
+// Example usage:
+/*
+import portfolioData, { portfolioUtils } from './data/portfolio.js';
+
+// Get all AI consulting projects
+const aiProjects = portfolioUtils.getProjectsByCategory('ai-consulting');
+
+// Get featured projects for homepage
+const featuredProjects = portfolioUtils.getFeaturedProjects();
+
+// Search for projects
+const searchResults = portfolioUtils.searchProjects('AI chatbot');
+
+// Get project details
+const project = portfolioUtils.getProjectById('ai-customer-service-chatbot');
+
+// Generate portfolio stats
+const stats = portfolioUtils.calculateStats();
+*/
+
