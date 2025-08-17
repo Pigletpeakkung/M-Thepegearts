@@ -1,0 +1,23 @@
+{
+    "projects": [
+        {
+            "title": "AI-Powered Creative Assistant",
+            "description": "A machine learning model that assists designers in generating creative concepts.",
+            "category": "ai design",
+            "image": { "webp": "/assets/project1.webp", "jpg": "/assets/project1.jpg" },
+            "liveLink": "https://example.com",
+            "githubLink": "https://github.com/example",
+            "tags": ["Python", "TensorFlow", "Computer Vision", "UI Design"]
+        },
+        {
+            "title": "Multilingual E-commerce Platform",
+            "description": "A responsive e-commerce solution with AI-powered recommendations.",
+            "category": "web design",
+            "image": { "webp": "/assets/project2.webp", "jpg": "/assets/project2.jpg" },
+            "liveLink": "https://example.com",
+            "githubLink": "https://github.com/example",
+            "tags": ["React", "Node.js", "AI Recommendations", "i18n"]
+        }
+        // Add more projects as needed
+    ]
+}
