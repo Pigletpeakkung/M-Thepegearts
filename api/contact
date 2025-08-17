@@ -1,0 +1,33 @@
+const express = require('express');
+const csrf = require('csurf');
+const validator = require('validator');
+const app = express();
+
+app.use(express.json());
+app.use(csrf());
+
+app.post('/api/contact', (req, res) => {
+    const { name, email, subject, budget, message } = req.body;
+
+    // Sanitize inputs
+    if (!name || !email || !message || !validator.isEmail(email)) {
+        return res.status(400).json({ success: false, message: 'Invalid input' });
+    }
+
+    // Process form (e.g., send email via Nodemailer or save to database)
+    // Example with Nodemailer (configure with your SMTP service)
+    /*
+    const nodemailer = require('nodemailer');
+    const transporter = nodemailer.createTransport({ ... });
+    transporter.sendMail({
+        from: 'no-reply@pegearts.com',
+        to: 'Thanattsitt.info@yahoo.co.uk',
+        subject: subject || 'New Contact Form Submission',
+        text: `Name: ${name}\nEmail: ${email}\nBudget: ${budget || 'Not specified'}\nMessage: ${message}`
+    });
+    */
+
+    res.json({ success: true, message: 'Message sent successfully' });
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));
