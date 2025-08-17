@@ -1,82 +1,79 @@
 // sw.js
-const CACHE_NAME = 'pegearts-cache-v1';
+const CACHE_NAME = 'pegearts-v1';
 const urlsToCache = [
     '/',
-    '/assets/favicon.ico',
-    '/assets/icon-192.png',
-    '/assets/icon-512.png',
-    '/assets/thanatsitt.webp',
-    '/assets/thanatsitt.jpg',
-    '/assets/project1.webp',
-    '/assets/project1.jpg',
-    '/assets/project2.webp',
-    '/assets/project2.jpg',
-    '/portfolio.json',
-    '/manifest.json',
-    '/offline.html' // Fallback page for offline access
+    '/index.html',
+    '/assets/og-image.jpg',
+    '/assets/twitter-card.jpg',
+    '/favicon.ico',
+    '/icon.svg',
+    '/apple-touch-icon.png',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+    'https://unpkg.com/aos@2.3.1/dist/aos.css',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js',
+    'https://unpkg.com/aos@2.3.1/dist/aos.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js',
+    'https://cdn.jsdelivr.net/npm/typed.js@2.0.16'
 ];
 
 // Install event: Cache essential assets
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => {
-                console.log('[Service Worker] Caching app shell and content');
-                return cache.addAll(urlsToCache);
-            })
-            .then(() => self.skipWaiting())
-            .catch(error => console.error('[Service Worker] Cache failed:', error))
+        caches.open(CACHE_NAME).then(cache => {
+            return cache.addAll(urlsToCache);
+        })
     );
-});
-
-// Fetch event: Serve from cache or network
-self.addEventListener('fetch', event => {
-    if (event.request.method !== 'GET') {
-        console.log('[Service Worker] Fetch ignored:', event.request.method, event.request.url);
-        return;
-    }
-
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                if (response) {
-                    console.log('[Service Worker] Serving from cache:', event.request.url);
-                    return response;
-                }
-                return fetch(event.request)
-                    .then(networkResponse => {
-                        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-                            return networkResponse;
-                        }
-                        const responseToCache = networkResponse.clone();
-                        caches.open(CACHE_NAME)
-                            .then(cache => {
-                                cache.put(event.request, responseToCache);
-                                console.log('[Service Worker] Cached new resource:', event.request.url);
-                            });
-                        return networkResponse;
-                    })
-                    .catch(() => {
-                        console.log('[Service Worker] Fetch failed, serving offline page:', event.request.url);
-                        return caches.match('/offline.html');
-                    });
-            })
-    );
+    self.skipWaiting();
 });
 
 // Activate event: Clean up old caches
 self.addEventListener('activate', event => {
-    const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (!cacheWhitelist.includes(cacheName)) {
-                        console.log('[Service Worker] Deleting old cache:', cacheName);
-                        return caches.delete(cacheName);
-                    }
-                })
+                cacheNames
+                    .filter(name => name !== CACHE_NAME)
+                    .map(name => caches.delete(name))
             );
-        }).then(() => self.clients.claim())
+        })
+    );
+    self.clients.claim();
+});
+
+// Fetch event: Serve cached assets or fetch from network
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        caches.match(event.request).then(response => {
+            return response || fetch(event.request).then(networkResponse => {
+                // Cache new resources dynamically
+                if (event.request.method === 'GET' && networkResponse.ok) {
+                    return caches.open(CACHE_NAME).then(cache => {
+                        cache.put(event.request, networkResponse.clone());
+                        return networkResponse;
+                    });
+                }
+                return networkResponse;
+            });
+        }).catch(() => {
+            // Fallback for offline page
+            return caches.match('/index.html');
+        })
+    );
+});
+
+// Handle push notifications (optional, for future use)
+self.addEventListener('push', event => {
+    const data = event.data.json();
+    const options = {
+        body: data.body,
+        icon: '/assets/icon-192x192.png',
+        badge: '/assets/icon-192x192.png'
+    };
+    event.waitUntil(
+        self.registration.showNotification(data.title, options)
     );
 });
