@@ -349,6 +349,11 @@
             transform: translateY(-50%);
             z-index: 1000;
             background: var(--glass-bg);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
+            -webkit-backdrop-filter: var(--glass-backdrop);
             backdrop-filter: var(--glass-backdrop);
             -webkit-backdrop-filter: var(--glass-backdrop);
             border: 1px solid var(--glass-border);
@@ -1596,6 +1601,7 @@
             color: var(--footer-text-color);
             border-radius: 50%;
             transition: all var(--transition-bounce);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 1.2rem;
@@ -2098,9 +2104,9 @@
                         My journey in the digital space has been driven by curiosity and a constant desire to innovate. From AI research to creative production, I'm always exploring new ways to enhance user experiences and create meaningful connections through technology.
                     </p>
 
-                    <div style="margin-top: 40px;">
+                    <div class="connect-button-wrapper">
                         <a href="#contact-section" class="glass-button">
-                            <i class="fas fa-comments" style="margin-right: 10px;"></i>
+                            <i class="fas fa-comments icon-spacing"></i>
                             Let's Connect
                         </a>
                     </div>
@@ -2128,7 +2134,7 @@
                     <h3>AI & Machine Learning</h3>
                     <p>Advanced AI model training, neural network optimization, and intelligent system development for next-generation applications.</p>
                     <div class="skill-progress" style="width: 100%; height: 4px; background: rgba(var(--primary-light-rgb), 0.2); border-radius: 2px; margin-top: 20px; overflow: hidden;">
-                        <div style="height: 100%; width: 95%; background: var(--gradient-primary); border-radius: 2px; transition: width 2s ease;"></div>
+                        <div class="skill-progress-bar"></div>
                     </div>
                 </div>
 
